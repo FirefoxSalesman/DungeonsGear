@@ -1,0 +1,6 @@
+{
+    "parent": "dungeonsgear:item/bow_of_lost_souls",
+    "textures": {
+        "layer0": "dungeonsgear:item/bow_of_lost_souls_pulling_1"
+    }
+}

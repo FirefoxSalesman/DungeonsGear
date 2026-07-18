@@ -1,0 +1,6 @@
+{
+    "parent": "dungeonsgear:item/feral_soul_crossbow",
+    "textures": {
+        "layer0": "dungeonsgear:item/feral_soul_crossbow_firework"
+    }
+}

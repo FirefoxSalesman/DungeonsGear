@@ -1,0 +1,6 @@
+{
+    "parent": "dungeonsgear:item/shortbow",
+    "textures": {
+        "layer0": "dungeonsgear:item/shortbow_pulling_2"
+    }
+}

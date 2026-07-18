@@ -1,0 +1,6 @@
+{
+    "parent": "dungeonsgear:item/dual_crossbow",
+    "textures": {
+        "layer0": "dungeonsgear:item/dual_crossbow_arrow"
+    }
+}

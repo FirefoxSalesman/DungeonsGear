@@ -1,0 +1,243 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "item",
+          "name": "dungeonsgear:wolf_helmet",
+          "weight": 4
+        },
+	{
+          "type": "item",
+          "name": "dungeonsgear:wolf_chestplate",
+          "weight": 4
+        },
+	{
+          "type": "item",
+          "name": "dungeonsgear:wolf_leggings",
+          "weight": 4
+        },
+	{
+          "type": "item",
+          "name": "dungeonsgear:wolf_boots",
+          "weight": 4
+        },
+	{
+          "type": "item",
+          "name": "dungeonsgear:frost_scythe",
+          "weight": 2
+        },
+	{
+          "type": "item",
+          "name": "dungeonsgear:freezing_foil",
+          "weight": 2
+        },
+	{
+          "type": "item",
+          "name": "dungeonsgear:fang_of_frost",
+          "weight": 2
+        },
+	{
+          "type": "item",
+          "name": "dungeonsgear:frost_slayer",
+          "weight": 2
+        },
+	{
+          "type": "item",
+          "name": "dungeonsgear:tempest_knife",
+          "weight": 2
+        },
+	{
+          "type": "item",
+          "name": "dungeonsgear:snow_bow",
+          "weight": 2
+        },
+	{
+          "type": "item",
+          "name": "dungeonsgear:wind_bow",
+          "weight": 2
+        },
+	{
+          "type": "item",
+          "name": "dungeonsgear:wind_horn",
+          "weight": 2
+        },
+	{
+          "type": "item",
+          "name": "dungeonsgear:satchel_of_elements",
+          "weight": 2
+        },
+	{
+          "type": "item",
+          "name": "dungeonsgear:updraft_tome",
+          "weight": 2
+        },
+	{
+          "type": "item",
+          "name": "dungeonsgear:phantom_helmet",
+          "weight": 2
+        },
+	{
+          "type": "item",
+          "name": "dungeonsgear:phantom_chestplate",
+          "weight": 2
+        },
+	{
+          "type": "item",
+          "name": "dungeonsgear:phantom_leggings",
+          "weight": 2
+        },
+	{
+          "type": "item",
+          "name": "dungeonsgear:phantom_boots",
+          "weight": 2
+        },
+	{
+          "type": "item",
+          "name": "dungeonsgear:snow_helmet",
+          "weight": 2
+        },
+	{
+          "type": "item",
+          "name": "dungeonsgear:snow_chestplate",
+          "weight": 2
+        },
+	{
+          "type": "item",
+          "name": "dungeonsgear:snow_leggings",
+          "weight": 2
+        },
+	{
+          "type": "item",
+          "name": "dungeonsgear:snow_boots",
+          "weight": 2
+        },
+	{
+          "type": "item",
+          "name": "dungeonsgear:arctic_fox_helmet",
+          "weight": 2
+        },
+	{
+          "type": "item",
+          "name": "dungeonsgear:arctic_fox_chestplate",
+          "weight": 2
+        },
+	{
+          "type": "item",
+          "name": "dungeonsgear:arctic_fox_leggings",
+          "weight": 2
+        },
+	{
+          "type": "item",
+          "name": "dungeonsgear:arctic_fox_boots",
+          "weight": 2
+        },
+	{
+          "type": "item",
+          "name": "dungeonsgear:rugged_climbing_helmet",
+          "weight": 2
+        },
+	{
+          "type": "item",
+          "name": "dungeonsgear:rugged_climbing_chestplate",
+          "weight": 2
+        },
+	{
+          "type": "item",
+          "name": "dungeonsgear:rugged_climbing_leggings",
+          "weight": 2
+        },
+	{
+          "type": "item",
+          "name": "dungeonsgear:rugged_climbing_boots",
+          "weight": 2
+        },
+	{
+          "type": "item",
+          "name": "dungeonsgear:resolute_tempest_knife",
+          "weight": 1
+        },
+	{
+          "type": "item",
+          "name": "dungeonsgear:chill_gale_knife",
+          "weight": 1
+        },
+	{
+          "type": "item",
+          "name": "dungeonsgear:winters_touch",
+          "weight": 1
+        },
+	{
+          "type": "item",
+          "name": "dungeonsgear:echo_of_the_valley",
+          "weight": 1
+        },
+	{
+          "type": "item",
+          "name": "dungeonsgear:frost_bite_helmet",
+          "weight": 1
+        },
+	{
+          "type": "item",
+          "name": "dungeonsgear:frost_bite_chestplate",
+          "weight": 1
+        },
+	{
+          "type": "item",
+          "name": "dungeonsgear:frost_bite_leggings",
+          "weight": 1
+        },
+	{
+          "type": "item",
+          "name": "dungeonsgear:frost_bite_boots",
+          "weight": 1
+        },
+	{
+          "type": "item",
+          "name": "dungeonsgear:frost_helmet",
+          "weight": 1
+        },
+	{
+          "type": "item",
+          "name": "dungeonsgear:frost_chestplate",
+          "weight": 1
+        },
+	{
+          "type": "item",
+          "name": "dungeonsgear:frost_leggings",
+          "weight": 1
+        },
+	{
+          "type": "item",
+          "name": "dungeonsgear:frost_boots",
+          "weight": 1
+        },
+	{
+          "type": "item",
+          "name": "dungeonsgear:climbing_helmet",
+          "weight": 1
+        },
+	{
+          "type": "item",
+          "name": "dungeonsgear:climbing_chestplate",
+          "weight": 1
+        },
+	{
+          "type": "item",
+          "name": "dungeonsgear:climbing_leggings",
+          "weight": 1
+        },
+	{
+          "type": "item",
+          "name": "dungeonsgear:climbing_boots",
+          "weight": 1
+        },
+	{
+          "type": "empty",
+          "weight": 90
+        }
+      ]
+    }
+  ]
+}

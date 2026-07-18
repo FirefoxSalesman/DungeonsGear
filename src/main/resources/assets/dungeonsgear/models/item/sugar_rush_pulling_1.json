@@ -1,0 +1,6 @@
+{
+    "parent": "dungeonsgear:item/sugar_rush",
+    "textures": {
+        "layer0": "dungeonsgear:item/sugar_rush_pulling_1"
+    }
+}

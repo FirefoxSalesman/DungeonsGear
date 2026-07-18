@@ -1,0 +1,6 @@
+{
+    "parent": "dungeonsgear:item/purple_storm",
+    "textures": {
+        "layer0": "dungeonsgear:item/purple_storm_pulling_2"
+    }
+}

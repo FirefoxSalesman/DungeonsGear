@@ -1,0 +1,6 @@
+{
+    "parent": "dungeonsgear:item/masters_bow",
+    "textures": {
+        "layer0": "dungeonsgear:item/masters_bow_pulling_1"
+    }
+}

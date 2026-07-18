@@ -1,0 +1,6 @@
+{
+    "parent": "dungeonsgear:item/the_pink_scoundrel",
+    "textures": {
+        "layer0": "dungeonsgear:item/the_pink_scoundrel_pulling_0"
+    }
+}

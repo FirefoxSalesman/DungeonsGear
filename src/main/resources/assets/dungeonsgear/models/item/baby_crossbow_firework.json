@@ -1,0 +1,6 @@
+{
+    "parent": "dungeonsgear:item/baby_crossbow",
+    "textures": {
+        "layer0": "dungeonsgear:item/baby_crossbow_firework"
+    }
+}

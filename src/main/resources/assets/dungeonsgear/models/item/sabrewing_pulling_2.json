@@ -1,0 +1,6 @@
+{
+    "parent": "dungeonsgear:item/sabrewing",
+    "textures": {
+        "layer0": "dungeonsgear:item/sabrewing_pulling_2"
+    }
+}

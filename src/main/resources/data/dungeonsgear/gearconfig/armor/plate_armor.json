@@ -1,0 +1,13 @@
+{
+  "attributes": [
+    {
+      "attribute": "dungeonsgear:roll_cooldown",
+      "amount": 0.25,
+      "operation": 1
+    }
+  ],
+  "built_in_enchantments": [{"enchantment": "dungeonsgear:dodge", "level": 1}],
+  "material": "dungeonsgear:heavy_plate",
+  "unique": false,
+  "rarity": "UNCOMMON"
+}

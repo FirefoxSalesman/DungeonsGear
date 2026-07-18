@@ -1,0 +1,6 @@
+{
+    "parent": "dungeonsgear:item/harp_crossbow",
+    "textures": {
+        "layer0": "dungeonsgear:item/harp_crossbow_pulling_1"
+    }
+}

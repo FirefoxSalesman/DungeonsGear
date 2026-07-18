@@ -1,0 +1,6 @@
+{
+    "parent": "dungeonsgear:item/twin_bow",
+    "textures": {
+        "layer0": "dungeonsgear:item/twin_bow_pulling_1"
+    }
+}

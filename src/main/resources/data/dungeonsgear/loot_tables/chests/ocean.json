@@ -1,0 +1,73 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "item",
+          "name": "dungeonsgear:cutlass",
+          "weight": 4 
+        },
+	{
+          "type": "item",
+          "name": "dungeonsgear:cutlass",
+          "weight": 4 
+        },
+	{
+          "type": "item",
+          "name": "dungeonsgear:scale_mail_helmet",
+          "weight": 4 
+        },
+	{
+          "type": "item",
+          "name": "dungeonsgear:scale_mail_chestplate",
+          "weight": 4 
+        },
+	{
+          "type": "item",
+          "name": "dungeonsgear:scale_mail_leggings",
+          "weight": 4 
+        },
+	{
+          "type": "item",
+          "name": "dungeonsgear:scale_mail_boots",
+          "weight": 4 
+        },
+	{
+          "type": "item",
+          "name": "dungeonsgear:dancers_sword",
+          "weight": 2 
+        },
+	{
+          "type": "item",
+          "name": "dungeonsgear:nameless_blade",
+          "weight": 2 
+        },
+	{
+          "type": "item",
+          "name": "dungeonsgear:sparkler",
+          "weight": 2 
+        },
+	{
+          "type": "item",
+          "name": "dungeonsgear:anchor",
+          "weight": 2 
+        },
+	{
+          "type": "item",
+          "name": "dungeonsgear:eye_of_the_guardian",
+          "weight": 2 
+        },
+	{
+          "type": "item",
+          "name": "dungeonsgear:encrusted_anchor",
+          "weight": 1 
+        },
+	{
+          "type": "empty",
+          "weight": 13
+        }
+      ]
+    }
+  ]
+}

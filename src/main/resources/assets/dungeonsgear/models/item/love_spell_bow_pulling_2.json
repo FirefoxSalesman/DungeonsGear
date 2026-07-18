@@ -1,0 +1,6 @@
+{
+    "parent": "dungeonsgear:item/love_spell_bow",
+    "textures": {
+        "layer0": "dungeonsgear:item/love_spell_bow_pulling_2"
+    }
+}

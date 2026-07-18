@@ -1,0 +1,6 @@
+{
+    "parent": "dungeonsgear:item/hunters_promise",
+    "textures": {
+        "layer0": "dungeonsgear:item/hunters_promise_pulling_0"
+    }
+}

@@ -1,0 +1,108 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+	{
+          "type": "item",
+          "name": "dungeonsgear:beenest_helmet",
+          "weight": 4
+        },
+	{
+          "type": "item",
+          "name": "dungeonsgear:beenest_chestplate",
+          "weight": 4
+        },
+	{
+          "type": "item",
+          "name": "dungeonsgear:beenest_leggings",
+          "weight": 4
+        },
+	{
+          "type": "item",
+          "name": "dungeonsgear:beenest_boots",
+          "weight": 4
+        },
+	{
+          "type": "item",
+          "name": "dungeonsgear:ocelot_helmet",
+          "weight": 4
+        },
+	{
+          "type": "item",
+          "name": "dungeonsgear:ocelot_chestplate",
+          "weight": 4
+        },
+	{
+          "type": "item",
+          "name": "dungeonsgear:ocelot_leggings",
+          "weight": 4
+        },
+	{
+          "type": "item",
+          "name": "dungeonsgear:ocelot_boots",
+          "weight": 4
+        },
+	{
+          "type": "item",
+          "name": "dungeonsgear:shadow_walker_helmet",
+          "weight": 2
+        },
+	{
+          "type": "item",
+          "name": "dungeonsgear:shadow_walker_chestplate",
+          "weight": 2
+        },
+	{
+          "type": "item",
+          "name": "dungeonsgear:shadow_walker_leggings",
+          "weight": 2
+        },
+	{
+          "type": "item",
+          "name": "dungeonsgear:shadow_walker_boots",
+          "weight": 2
+        },
+	{
+          "type": "item",
+          "name": "dungeonsgear:beehive_helmet",
+          "weight": 2
+        },
+	{
+          "type": "item",
+          "name": "dungeonsgear:beehive_chestplate",
+          "weight": 2
+        },
+	{
+          "type": "item",
+          "name": "dungeonsgear:beehive_leggings",
+          "weight": 2
+        },
+	{
+          "type": "item",
+          "name": "dungeonsgear:beehive_boots",
+          "weight": 2
+        },
+	{
+          "type": "item",
+          "name": "dungeonsgear:feral_soul_crossbow",
+          "weight": 2
+        },
+        {
+          "type": "item",
+          "name": "dungeonsgear:mauler",
+          "weight": 1
+        },
+	{
+          "type": "item",
+          "name": "dungeonsgear:corrupted_seeds",
+          "weight": 1
+        },
+	{
+          "type": "empty",
+          "weight": 52
+        }
+      ]
+    }
+  ]
+}

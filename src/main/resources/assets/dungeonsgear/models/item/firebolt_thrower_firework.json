@@ -1,0 +1,6 @@
+{
+    "parent": "dungeonsgear:item/firebolt_thrower",
+    "textures": {
+        "layer0": "dungeonsgear:item/firebolt_thrower_firework"
+    }
+}

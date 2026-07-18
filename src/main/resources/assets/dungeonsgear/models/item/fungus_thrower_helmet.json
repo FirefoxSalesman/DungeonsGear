@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "dungeonsgear:item/fungus_thrower_helmet"
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "attributes": [
+    {
+      "attribute": "dungeonslibs:ranged_damage_multiplier",
+      "amount": 0.075,
+      "operation": 1
+    },
+    {
+      "attribute": "dungeonslibs:soul_gathering",
+      "amount": 0.125,
+      "operation": 1
+    }
+  ],
+  "built_in_enchantments": [],
+  "material": "dungeonsgear:bone",
+  "unique": false,
+  "rarity": "UNCOMMON"
+}

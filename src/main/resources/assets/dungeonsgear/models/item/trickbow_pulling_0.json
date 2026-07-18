@@ -1,0 +1,6 @@
+{
+    "parent": "dungeonsgear:item/trickbow",
+    "textures": {
+        "layer0": "dungeonsgear:item/trickbow_pulling_0"
+    }
+}

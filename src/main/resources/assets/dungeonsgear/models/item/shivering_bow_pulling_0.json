@@ -1,0 +1,6 @@
+{
+    "parent": "dungeonsgear:item/shivering_bow",
+    "textures": {
+        "layer0": "dungeonsgear:item/shivering_bow_pulling_0"
+    }
+}

@@ -1,0 +1,8 @@
+{
+  "attributes": [
+  ],
+  "built_in_enchantments": [{"enchantment": "dungeonsgear:chilling", "level": 1}],
+  "material": "dungeonsgear:heavy_plate",
+  "unique": true,
+  "rarity": "RARE"
+}

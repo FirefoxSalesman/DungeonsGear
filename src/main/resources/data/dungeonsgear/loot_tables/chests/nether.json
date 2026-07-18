@@ -1,0 +1,138 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "item",
+          "name": "dungeonsgear:soul_crossbow",
+          "weight": 4 
+        },
+	{
+          "type": "item",
+          "name": "dungeonsgear:boneclub",
+          "weight": 4 
+        },
+	{
+          "type": "item",
+          "name": "dungeonsgear:soul_helmet",
+          "weight": 4 
+        },
+	{
+          "type": "item",
+          "name": "dungeonsgear:soul_chestplate",
+          "weight": 4 
+        },
+	{
+          "type": "item",
+          "name": "dungeonsgear:soul_leggings",
+          "weight": 4 
+        },
+	{
+          "type": "item",
+          "name": "dungeonsgear:soul_boots",
+          "weight": 4 
+        },
+	{
+          "type": "item",
+          "name": "dungeonsgear:wither_helmet",
+          "weight": 2 
+        },
+	{
+          "type": "item",
+          "name": "dungeonsgear:wither_chestplate",
+          "weight": 2 
+        },
+	{
+          "type": "item",
+          "name": "dungeonsgear:wither_leggings",
+          "weight": 2 
+        },
+	{
+          "type": "item",
+          "name": "dungeonsgear:wither_boots",
+          "weight": 2 
+        },
+	{
+          "type": "item",
+          "name": "dungeonsgear:souldancer_helmet",
+          "weight": 2 
+        },
+	{
+          "type": "item",
+          "name": "dungeonsgear:souldancer_chestplate",
+          "weight": 2 
+        },
+	{
+          "type": "item",
+          "name": "dungeonsgear:souldancer_leggings",
+          "weight": 2 
+        },
+	{
+          "type": "item",
+          "name": "dungeonsgear:souldancer_boots",
+          "weight": 2 
+        },
+	{
+          "type": "item",
+          "name": "dungeonsgear:bone_cudgel",
+          "weight": 2 
+        },
+	{
+          "type": "item",
+          "name": "dungeonsgear:powershaker",
+          "weight": 2 
+        },
+	{
+          "type": "item",
+          "name": "dungeonsgear:soul_lantern",
+          "weight": 2
+        },
+	{
+          "type": "item",
+          "name": "dungeonsgear:fireworks_display",
+          "weight": 2 
+        },
+	{
+          "type": "item",
+          "name": "dungeonsgear:soul_bow",
+          "weight": 2 
+        },
+	{
+          "type": "item",
+          "name": "dungeonsgear:hungry_horror_helmet",
+          "weight": 1 
+        },
+	{
+          "type": "item",
+          "name": "dungeonsgear:hungry_horror_chestplate",
+          "weight": 1 
+        },
+	{
+          "type": "item",
+          "name": "dungeonsgear:hungry_horror_leggings",
+          "weight": 1 
+        },
+	{
+          "type": "item",
+          "name": "dungeonsgear:hungry_horror_boots",
+          "weight": 1 
+        },
+	{
+          "type": "item",
+          "name": "dungeonsgear:bow_of_lost_souls",
+          "weight": 1
+        },
+	{
+          "type": "item",
+          "name": "dungeonsgear:soul_hunter_crossbow",
+          "weight": 1
+        },
+	{
+          "type": "empty",
+          "weight": 30
+        }
+      ]
+    }
+  ]
+}

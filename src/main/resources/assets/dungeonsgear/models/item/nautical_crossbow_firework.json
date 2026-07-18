@@ -1,0 +1,6 @@
+{
+    "parent": "dungeonsgear:item/nautical_crossbow",
+    "textures": {
+        "layer0": "dungeonsgear:item/nautical_crossbow_firework"
+    }
+}

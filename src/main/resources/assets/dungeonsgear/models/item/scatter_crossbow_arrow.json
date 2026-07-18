@@ -1,0 +1,6 @@
+{
+    "parent": "dungeonsgear:item/scatter_crossbow",
+    "textures": {
+        "layer0": "dungeonsgear:item/scatter_crossbow_arrow"
+    }
+}

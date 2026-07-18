@@ -1,0 +1,6 @@
+{
+    "parent": "dungeonsgear:item/soul_hunter_crossbow",
+    "textures": {
+        "layer0": "dungeonsgear:item/soul_hunter_crossbow_arrow"
+    }
+}

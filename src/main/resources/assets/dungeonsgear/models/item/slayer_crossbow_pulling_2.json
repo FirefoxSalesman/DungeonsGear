@@ -1,0 +1,6 @@
+{
+    "parent": "dungeonsgear:item/slayer_crossbow",
+    "textures": {
+        "layer0": "dungeonsgear:item/slayer_crossbow_pulling_2"
+    }
+}

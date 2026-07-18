@@ -1,0 +1,6 @@
+{
+    "parent": "dungeonsgear:item/guardian_bow",
+    "textures": {
+        "layer0": "dungeonsgear:item/guardian_bow_pulling_2"
+    }
+}

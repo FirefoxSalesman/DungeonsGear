@@ -1,0 +1,6 @@
+{
+    "parent": "dungeonsgear:item/the_slicer",
+    "textures": {
+        "layer0": "dungeonsgear:item/the_slicer_pulling_2"
+    }
+}

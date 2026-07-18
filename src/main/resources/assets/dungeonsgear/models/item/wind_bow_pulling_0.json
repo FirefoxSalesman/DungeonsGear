@@ -1,0 +1,6 @@
+{
+    "parent": "dungeonsgear:item/wind_bow",
+    "textures": {
+        "layer0": "dungeonsgear:item/wind_bow_pulling_0"
+    }
+}

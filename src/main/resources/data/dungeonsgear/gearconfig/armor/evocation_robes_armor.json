@@ -1,0 +1,13 @@
+{
+  "attributes": [
+    {
+      "attribute": "dungeonslibs:artifact_cooldown_multiplier",
+      "amount": -0.1,
+      "operation": 1
+    }
+  ],
+  "built_in_enchantments": [{"enchantment": "dungeonsgear:speed_aura", "level": 1}],
+  "material": "dungeonsgear:cloth",
+  "unique": false,
+  "rarity": "UNCOMMON"
+}

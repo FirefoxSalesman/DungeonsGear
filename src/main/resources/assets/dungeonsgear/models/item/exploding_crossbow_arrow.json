@@ -1,0 +1,6 @@
+{
+    "parent": "dungeonsgear:item/exploding_crossbow",
+    "textures": {
+        "layer0": "dungeonsgear:item/exploding_crossbow_arrow"
+    }
+}

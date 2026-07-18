@@ -1,0 +1,8 @@
+{
+  "attributes": [
+  ],
+  "built_in_enchantments": [{"enchantment": "dungeonsgear:melee_aura", "level": 1},{"enchantment": "dungeonsgear:potion_aura", "level": 1}],
+  "material": "dungeonsgear:pelt",
+  "unique": false,
+  "rarity": "UNCOMMON"
+}
