@@ -1,13 +1,13 @@
 {
   "replace": false,
   "entries": [
-    "dungeonsmobs:basic",
-    "dungeonsmobs:cold",
-    "dungeonsmobs:desert",
-    "dungeonsmobs:ocean",
-    "dungeonsmobs:jungle",
-    "dungeonsmobs:nether",
-    "dungeonsmobs:village",
-    "dungeonsmobs:end"
+    "dungeonsgear:basic",
+    "dungeonsgear:cold",
+    "dungeonsgear:desert",
+    "dungeonsgear:ocean",
+    "dungeonsgear:jungle",
+    "dungeonsgear:nether",
+    "dungeonsgear:village",
+    "dungeonsgear:end"
   ]
 }

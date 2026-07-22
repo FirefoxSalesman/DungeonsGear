@@ -2,53 +2,17 @@
   "configs": [
     {
       "handItem": {
-        "id": "dungeonsgear:heavy_crossbow",
+        "id": "dungeonsgear:elite_power_bow",
         "Count": 1
       },
-      "attributes": [
-        {
-          "attribute": "minecraft:generic.armor",
-          "amount": 10,
-          "operation": 0
-        },
-        {
-          "attribute": "minecraft:generic.knockback_resistance",
-          "amount": 0.6,
-          "operation": 0
-        },
-        {
-          "attribute": "minecraft:generic.attack_damage",
-          "amount": 1,
-          "operation": 0
-        }
-      ],
-      "texture": "dungeonsmobs:textures/entity/ocean/red_coral_armored_sunken_skeleton.png",
       "weight": 100
     },
     {
       "handItem": {
-        "id": "dungeonsgear:elite_power_bow",
+        "id": "dungeonsgear:heavy_crossbow",
         "Count": 1
       },
-      "attributes": [
-        {
-          "attribute": "minecraft:generic.armor",
-          "amount": 15,
-          "operation": 0
-        },
-        {
-          "attribute": "minecraft:generic.knockback_resistance",
-          "amount": 0.6,
-          "operation": 0
-        },
-        {
-          "attribute": "minecraft:generic.attack_damage",
-          "amount": 2,
-          "operation": 0
-        }
-      ],
-      "texture": "dungeonsmobs:textures/entity/ocean/yellow_coral_armored_sunken_skeleton.png",
-      "weight": 25
+      "weight": 100
     }
   ]
 }
