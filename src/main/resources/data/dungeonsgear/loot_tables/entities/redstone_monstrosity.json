@@ -1,0 +1,215 @@
+{
+  "type": "minecraft:entity",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "dungeonsgear:great_hammer",
+	  "weight": 8
+        },
+	{
+          "type": "minecraft:item",
+          "name": "dungeonsgear:cutlass",
+	  "weight": 8
+        },
+	{
+          "type": "minecraft:item",
+          "name": "dungeonsgear:burst_crossbow",
+	  "weight": 8
+        },
+	{
+          "type": "minecraft:item",
+          "name": "dungeonsgear:exploding_crossbow",
+	  "weight": 8
+        },
+	{
+          "type": "minecraft:item",
+          "name": "dungeonsgear:power_bow",
+	  "weight": 8
+        },
+	{
+          "type": "minecraft:item",
+          "name": "dungeonsgear:hammer_of_gravity",
+	  "weight": 4
+        },
+	{
+          "type": "minecraft:item",
+          "name": "dungeonsgear:stormlander",
+	  "weight": 4
+        },
+	{
+          "type": "minecraft:item",
+          "name": "dungeonsgear:dancers_sword",
+	  "weight": 4
+        },
+	{
+          "type": "minecraft:item",
+          "name": "dungeonsgear:nameless_blade",
+	  "weight": 4
+        },
+	{
+          "type": "minecraft:item",
+          "name": "dungeonsgear:soul_hunter_crossbow",
+	  "weight": 4
+        },
+	{
+          "type": "minecraft:item",
+          "name": "dungeonsgear:firebolt_thrower",
+	  "weight": 4
+        },
+	{
+          "type": "minecraft:item",
+          "name": "dungeonsgear:imploding_crossbow",
+	  "weight": 4
+        },
+	{
+          "type": "minecraft:item",
+          "name": "dungeonsgear:elite_power_bow",
+	  "weight": 4
+        },
+	{
+          "type": "minecraft:item",
+          "name": "dungeonsgear:sabrewing",
+	  "weight": 4
+        },
+	{
+          "type": "minecraft:item",
+          "name": "dungeonsgear:iron_hide_amulet",
+	  "weight": 4
+        },
+	{
+          "type": "minecraft:item",
+          "name": "dungeonsgear:soul_healer",
+	  "weight": 4
+        },
+	{
+          "type": "minecraft:item",
+          "name": "dungeonsgear:totem_of_regeneration",
+	  "weight": 4
+        },
+	{
+          "type": "minecraft:item",
+          "name": "dungeonsgear:dark_helmet",
+	  "weight": 2
+        },
+	{
+          "type": "minecraft:item",
+          "name": "dungeonsgear:dark_chestplate",
+	  "weight": 2
+        },
+	{
+          "type": "minecraft:item",
+          "name": "dungeonsgear:dark_leggings",
+	  "weight": 2
+        },
+	{
+          "type": "minecraft:item",
+          "name": "dungeonsgear:dark_boots",
+	  "weight": 2
+        },
+        {
+          "type": "minecraft:item",
+          "name": "dungeonsgear:mercenary_helmet",
+	  "weight": 2
+        },
+	{
+          "type": "minecraft:item",
+          "name": "dungeonsgear:mercenary_chestplate",
+	  "weight": 2
+        },
+	{
+          "type": "minecraft:item",
+          "name": "dungeonsgear:mercenary_leggings",
+	  "weight": 2
+        },
+	{
+          "type": "minecraft:item",
+          "name": "dungeonsgear:mercenary_boots",
+	  "weight": 2
+        },
+	{
+          "type": "minecraft:item",
+          "name": "dungeonsgear:plate_helmet",
+	  "weight": 2
+        },
+	{
+          "type": "minecraft:item",
+          "name": "dungeonsgear:plate_chestplate",
+	  "weight": 2
+        },
+	{
+          "type": "minecraft:item",
+          "name": "dungeonsgear:plate_leggings",
+	  "weight": 2
+        },
+	{
+          "type": "minecraft:item",
+          "name": "dungeonsgear:plate_boots",
+	  "weight": 2
+        },
+	{
+          "type": "minecraft:item",
+          "name": "dungeonsgear:scale_mail_helmet",
+	  "weight": 2
+        },
+	{
+          "type": "minecraft:item",
+          "name": "dungeonsgear:scale_mail_chestplate",
+	  "weight": 2
+        },
+	{
+          "type": "minecraft:item",
+          "name": "dungeonsgear:scale_mail_leggings",
+	  "weight": 2
+        },
+	{
+          "type": "minecraft:item",
+          "name": "dungeonsgear:scale_mail_boots",
+	  "weight": 2
+        },
+        {
+          "type": "minecraft:item",
+          "name": "dungeonsgear:titans_shroud_helmet",
+	  "weight": 1
+        },
+	{
+          "type": "minecraft:item",
+          "name": "dungeonsgear:titans_shroud_chestplate",
+	  "weight": 1
+        },
+	{
+          "type": "minecraft:item",
+          "name": "dungeonsgear:titans_shroud_leggings",
+	  "weight": 1
+        },
+	{
+          "type": "minecraft:item",
+          "name": "dungeonsgear:titans_shroud_boots",
+	  "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "dungeonsgear:renegade_helmet",
+	  "weight": 1
+        },
+	{
+          "type": "minecraft:item",
+          "name": "dungeonsgear:renegade_chestplate",
+	  "weight": 1
+        },
+	{
+          "type": "minecraft:item",
+          "name": "dungeonsgear:renegade_leggings",
+	  "weight": 1
+        },
+	{
+          "type": "minecraft:item",
+          "name": "dungeonsgear:renegade_boots",
+	  "weight": 1
+        }
+      ]
+    }
+  ]
+}

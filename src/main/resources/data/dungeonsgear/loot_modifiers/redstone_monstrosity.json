@@ -1,0 +1,19 @@
+{
+  "type": "dungeonslibs:loottable",
+  "conditions": [
+    {
+      "condition": "minecraft:any_of",
+      "terms": [
+        {
+	  "condition": "forge:loot_table_id",
+	  "loot_table_id": "dungeonsmobs:entities/redstone_monstrosity"
+	},
+	{
+	  "condition": "forge:loot_table_id",
+	  "loot_table_id": "goety:entities/hostile_redstone_monstrosity"
+	}
+      ]
+    }
+  ],
+  "table": "dungeonsgear:entities/redstone_monstrosity"
+}
