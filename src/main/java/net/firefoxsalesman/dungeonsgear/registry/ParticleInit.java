@@ -14,7 +14,6 @@ public class ParticleInit {
 			.create(ForgeRegistries.PARTICLE_TYPES, MOD_ID);
 
 	public static final RegistryObject<SimpleParticleType> ELECTRIC_SHOCK = makeParticle("electric_shock");
-	public static final RegistryObject<SimpleParticleType> SNOWFLAKE = makeParticle("snowflake");
 	public static final RegistryObject<SimpleParticleType> SOUL_DUST = makeParticle("soul_dust");
 
 	public static void register(IEventBus eventBus) {

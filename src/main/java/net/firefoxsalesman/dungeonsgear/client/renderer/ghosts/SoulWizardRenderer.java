@@ -2,7 +2,7 @@ package net.firefoxsalesman.dungeonsgear.client.renderer.ghosts;
 
 import com.mojang.blaze3d.vertex.PoseStack;
 
-import net.firefoxsalesman.dungeonsgear.client.renderer.layers.PulsatingGlowLayer;
+import net.firefoxsalesman.dungeonslibs.client.renderer.layers.PulsatingGlowLayer;
 import net.firefoxsalesman.dungeonsgear.client.models.ghosts.SoulWizardModel;
 import net.firefoxsalesman.dungeonsgear.entities.SoulWizardEntity;
 import net.firefoxsalesman.dungeonsgear.utilities.GeneralHelper;

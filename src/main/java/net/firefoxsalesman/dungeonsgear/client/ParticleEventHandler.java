@@ -12,7 +12,6 @@ import net.minecraftforge.fml.common.Mod;
 
 import static net.firefoxsalesman.dungeonsgear.DungeonsGear.MOD_ID;
 
-import net.firefoxsalesman.dungeonsgear.client.particles.SnowflakeParticle;
 import net.firefoxsalesman.dungeonsgear.client.particles.ElectricShockParticle;
 import net.firefoxsalesman.dungeonsgear.client.particles.SoulDustParticle;
 import net.firefoxsalesman.dungeonsgear.registry.ParticleInit;
@@ -24,7 +23,6 @@ public class ParticleEventHandler {
 	public static void onParticleFactory(RegisterParticleProvidersEvent event) {
 		register(ParticleInit.ELECTRIC_SHOCK.get(),
 				ElectricShockParticle.Factory::new);
-		register(ParticleInit.SNOWFLAKE.get(), SnowflakeParticle.Factory::new);
 		register(ParticleInit.SOUL_DUST.get(), SoulDustParticle.Factory::new);
 	}
 
