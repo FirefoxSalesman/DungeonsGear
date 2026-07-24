@@ -2,7 +2,7 @@
   "configs": [
     {
       "headItem": {
-        "id": "dungeonsmobs:cracked_gold_piglin_helmet",
+        "id": "dungeonsgear:cracked_gold_piglin_helmet",
         "Count": 1
       },
       "chestItem": {
@@ -29,7 +29,7 @@
     },
     {
       "headItem": {
-        "id": "dungeonsmobs:cracked_gold_piglin_helmet",
+        "id": "dungeonsgear:cracked_gold_piglin_helmet",
         "Count": 1
       },
       "chestItem": {
@@ -56,7 +56,7 @@
     },
     {
       "headItem": {
-        "id": "dungeonsmobs:cracked_netherite_piglin_helmet",
+        "id": "dungeonsgear:cracked_netherite_piglin_helmet",
         "Count": 1
       },
       "chestItem": {
@@ -83,7 +83,7 @@
     },
     {
       "headItem": {
-        "id": "dungeonsmobs:cracked_netherite_piglin_helmet",
+        "id": "dungeonsgear:cracked_netherite_piglin_helmet",
         "Count": 1
       },
       "chestItem": {

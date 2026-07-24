@@ -1,7 +1,9 @@
 package net.firefoxsalesman.dungeonsgear.registry;
 
+import net.firefoxsalesman.dungeonsgear.items.CustomArmorMaterial;
 import net.firefoxsalesman.dungeonsgear.items.armor.FreezingResistanceArmorGear;
 import net.firefoxsalesman.dungeonsgear.items.armor.PetBatArmorGear;
+import net.firefoxsalesman.dungeonsgear.items.armor.PiglinHelmetItem;
 import net.firefoxsalesman.dungeonsgear.items.artifacts.BootsOfSwiftnessItem;
 import net.firefoxsalesman.dungeonsgear.items.artifacts.BuzzyNestItem;
 import net.firefoxsalesman.dungeonsgear.items.artifacts.CorruptedSeedsItem;
@@ -50,6 +52,7 @@ import net.firefoxsalesman.dungeonslibs.items.gearconfig.MeleeGear;
 import net.firefoxsalesman.dungeonslibs.utils.ResourceLocationHelper;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.ArmorItem.Type;
+import net.minecraft.world.item.ArmorMaterials;
 import net.minecraft.world.item.Item;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
@@ -437,6 +440,14 @@ public class ItemInit {
 	// COLD);
 	public static final ArmorSetInit BEENEST = registerArmorSet("beenest");
 	public static final ArmorSetInit BEEHIVE = registerArmorSet("beehive");
+
+	public static final RegistryObject<Item> CRACKED_NETHERITE_PIGLIN_HELMET = ITEMS
+			.register("cracked_netherite_piglin_helmet",
+					() -> new PiglinHelmetItem(CustomArmorMaterial.PURE_NETHERITE,
+							Type.HELMET, new Item.Properties()));
+	public static final RegistryObject<Item> CRACKED_GOLD_PIGLIN_HELMET = ITEMS.register(
+			"cracked_gold_piglin_helmet",
+			() -> new PiglinHelmetItem(ArmorMaterials.GOLD, Type.HELMET, new Item.Properties()));
 
 	private static RegistryObject<Item> registerArmor(String armorId, Supplier<Item> itemSupplier) {
 		if (armorId == null)
