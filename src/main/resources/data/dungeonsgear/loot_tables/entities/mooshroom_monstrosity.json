@@ -1,0 +1,130 @@
+{
+  "type": "minecraft:entity",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "dungeonsgear:claymore",
+	  "weight": 8
+        },
+	{
+          "type": "minecraft:item",
+          "name": "dungeonsgear:soul_scythe",
+	  "weight": 8
+        },
+	{
+          "type": "minecraft:item",
+          "name": "dungeonsgear:mace",
+	  "weight": 8
+        },
+	{
+          "type": "minecraft:item",
+          "name": "dungeonsgear:exploding_crossbow",
+	  "weight": 8
+        },
+	{
+          "type": "minecraft:item",
+          "name": "dungeonsgear:soul_crossbow",
+	  "weight": 8
+        },
+	{
+          "type": "minecraft:item",
+          "name": "dungeonsgear:broadsword",
+	  "weight": 4
+        },
+	{
+          "type": "minecraft:item",
+          "name": "dungeonsgear:heartstealer",
+	  "weight": 4
+        },
+	{
+          "type": "minecraft:item",
+          "name": "dungeonsgear:frost_slayer",
+	  "weight": 4
+        },
+	{
+          "type": "minecraft:item",
+          "name": "dungeonsgear:frost_scythe",
+	  "weight": 4
+        },
+	{
+          "type": "minecraft:item",
+          "name": "dungeonsgear:jailors_scythe",
+	  "weight": 4
+        },
+	{
+          "type": "minecraft:item",
+          "name": "dungeonsgear:flail",
+	  "weight": 4
+        },
+	{
+          "type": "minecraft:item",
+          "name": "dungeonsgear:suns_grace",
+	  "weight": 4
+        },
+	{
+          "type": "minecraft:item",
+          "name": "dungeonsgear:imploding_crossbow",
+	  "weight": 4
+        },
+	{
+          "type": "minecraft:item",
+          "name": "dungeonsgear:firebolt_thrower",
+	  "weight": 4
+        },
+	{
+          "type": "minecraft:item",
+          "name": "dungeonsgear:feral_soul_crossbow",
+	  "weight": 4
+        },
+	{
+          "type": "minecraft:item",
+          "name": "dungeonsgear:voidcaller",
+	  "weight": 4
+        },
+	{
+          "type": "minecraft:item",
+          "name": "dungeonsgear:wolf_helmet",
+	  "weight": 2
+        },
+	{
+          "type": "minecraft:item",
+          "name": "dungeonsgear:wolf_chestplate",
+	  "weight": 2
+        },
+	{
+          "type": "minecraft:item",
+          "name": "dungeonsgear:wolf_leggings",
+	  "weight": 2
+        },
+	{
+          "type": "minecraft:item",
+          "name": "dungeonsgear:wolf_boots",
+	  "weight": 2
+        },
+	{
+          "type": "minecraft:item",
+          "name": "dungeonsgear:fox_helmet",
+	  "weight": 1
+        },
+	{
+          "type": "minecraft:item",
+          "name": "dungeonsgear:fox_chestplate",
+	  "weight": 1
+        },
+	{
+          "type": "minecraft:item",
+          "name": "dungeonsgear:fox_leggings",
+	  "weight": 1
+        },
+	{
+          "type": "minecraft:item",
+          "name": "dungeonsgear:fox_boots",
+	  "weight": 1
+        }
+      ]
+    }
+  ]
+}
