@@ -8,6 +8,7 @@ import net.firefoxsalesman.dungeonsgear.client.ClientProxy;
 import net.firefoxsalesman.dungeonsgear.config.DungeonsGearConfig;
 import net.firefoxsalesman.dungeonsgear.items.GearRangedItemModelProperties;
 import net.firefoxsalesman.dungeonsgear.network.NetworkHandler;
+import net.firefoxsalesman.dungeonsgear.registry.AttributeInit;
 import net.firefoxsalesman.dungeonsgear.registry.EnchantmentInit;
 import net.firefoxsalesman.dungeonsgear.registry.EntityTypeInit;
 import net.firefoxsalesman.dungeonsgear.registry.ItemInit;
@@ -53,6 +54,7 @@ public class DungeonsGear {
 		new DungeonsGearConfig();
 		PROXY = DistExecutor.safeRunForDist(() -> ClientProxy::new, () -> CommonProxy::new);
 		ParticleInit.register(modEventBus);
+		AttributeInit.register(modEventBus);
 		SoundEventInit.register(modEventBus);
 		EntityTypeInit.register(modEventBus);
 		FMLJavaModLoadingContext.get().getModEventBus().addListener(this::initEntityTypeAttributes);

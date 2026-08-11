@@ -12,6 +12,8 @@
   "enchantment.dungeonsgear.masters_call.desc": "Pets Attack Targeted Mob.",
   "enchantment.dungeonsgear.poison_cloud": "Poison Cloud",
   "enchantment.dungeonsgear.poison_cloud.desc": "Has a 30% chance to summon a poison cloud that deals damage to enemies in an area for three seconds.",
+  "enchantment.dungeonsgear.dynamo": "Dynamo",
+  "enchantment.dungeonsgear.dynamo.desc": "Adds damage to the next attack after jumping or dodging.",
   "enchantment.dungeonsgear.refreshment": "Refreshment",
   "enchantment.dungeonsgear.refreshment.desc": "Defeating a mob can turn a glass bottle in your inventory into a health potion.",
 
@@ -801,5 +803,9 @@
   "item.dungeonsgear.beehive_chestplate": "Beehive Chestplate",
   "item.dungeonsgear.beehive_leggings": "Beehive Leggings",
   "item.dungeonsgear.beehive_boots": "Beehive Boots",
-  "lore.dungeonsgear.beehive_armor": "The Beehive Armor hums with the focused power of countless bees."
+  "lore.dungeonsgear.beehive_armor": "The Beehive Armor hums with the focused power of countless bees.",
+  
+  "ability.dungeonsgear.dynamo": "Boosts Next Attack On Jump (Dynamo I)",
+  
+  "effect.dungeonsgear.dynamo": "Dynamo"
 }

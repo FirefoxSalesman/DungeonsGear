@@ -4,9 +4,11 @@ import net.firefoxsalesman.dungeonsgear.capabilities.bow.RangedAbilities;
 import net.firefoxsalesman.dungeonsgear.capabilities.bow.RangedAbilitiesHelper;
 import net.firefoxsalesman.dungeonsgear.capabilities.combo.Combo;
 import net.firefoxsalesman.dungeonsgear.capabilities.combo.ComboHelper;
+import net.firefoxsalesman.dungeonsgear.capabilities.combo.RollHelper;
 import net.firefoxsalesman.dungeonsgear.enchantments.ranged.FuseShotEnchantment;
 import net.firefoxsalesman.dungeonsgear.registry.EnchantmentInit;
 import net.firefoxsalesman.dungeonsgear.registry.MobEffectInit;
+import net.firefoxsalesman.dungeonsgear.utilities.ArmorEffectHelper;
 import net.firefoxsalesman.dungeonsgear.utilities.ProjectileEffectHelper;
 import net.firefoxsalesman.dungeonslibs.utils.PetHelper;
 import net.minecraft.core.particles.ParticleTypes;
@@ -218,34 +220,34 @@ public class GlobalEvents {
 	}
 
 	// TODO Handle this when we're good & ready
-	// @SubscribeEvent
-	// public static void handleJumpAbilities(LivingEvent.LivingJumpEvent event) {
-	// LivingEntity jumper = event.getEntity();
-	// if (jumper instanceof Player) {
-	// Player playerEntity = (Player) jumper;
-	// ItemStack helmet = playerEntity.getItemBySlot(EquipmentSlot.HEAD);
-	// ItemStack chestplate = playerEntity.getItemBySlot(EquipmentSlot.CHEST);
-	// Combo comboCap = ComboHelper.getComboCapability(playerEntity);
-	// int jumpCooldownTimer = comboCap.getJumpCooldownTimer();
+	@SubscribeEvent
+	public static void handleJumpAbilities(LivingEvent.LivingJumpEvent event) {
+		LivingEntity jumper = event.getEntity();
+		if (jumper instanceof Player) {
+			Player playerEntity = (Player) jumper;
+			ItemStack helmet = playerEntity.getItemBySlot(EquipmentSlot.HEAD);
+			ItemStack chestplate = playerEntity.getItemBySlot(EquipmentSlot.CHEST);
+			Combo comboCap = ComboHelper.getComboCapability(playerEntity);
+			int jumpCooldownTimer = comboCap.getJumpCooldownTimer();
 
-	// if (jumpCooldownTimer <= 0) {
-	// // ArmorEffectHelper.handleJumpBoost(playerEntity, helmet, chestplate);
-	// //
-	// // ArmorEffectHelper.handleInvulnerableJump(playerEntity, helmet,
-	// chestplate);
+			if (jumpCooldownTimer <= 0) {
+				// ArmorEffectHelper.handleJumpBoost(playerEntity, helmet, chestplate);
+				//
+				// ArmorEffectHelper.handleInvulnerableJump(playerEntity, helmet,
+				// chestplate);
 
-	// ArmorEffectHelper.handleJumpEnchantments(playerEntity, helmet, chestplate);
+				ArmorEffectHelper.handleJumpEnchantments(playerEntity, helmet, chestplate);
 
-	// BurstBowstringEnchantment.activateBurstBowString(jumper);
+				// BurstBowstringEnchantment.activateBurstBowString(jumper);
 
-	// RollChargeEnchantment.activateRollCharge(jumper);
-	// }
-	// RollHelper.incrementJumpCounter(playerEntity);
+				// RollChargeEnchantment.activateRollCharge(jumper);
+			}
+			RollHelper.incrementJumpCounter(playerEntity);
 
-	// if (jumpCooldownTimer <= 0 && RollHelper.hasReachedJumpLimit(playerEntity)) {
-	// RollHelper.startCooldown(jumper, comboCap);
-	// }
-	// }
-	// }
+			if (jumpCooldownTimer <= 0 && RollHelper.hasReachedJumpLimit(playerEntity)) {
+				RollHelper.startCooldown(jumper, comboCap);
+			}
+		}
+	}
 
 }

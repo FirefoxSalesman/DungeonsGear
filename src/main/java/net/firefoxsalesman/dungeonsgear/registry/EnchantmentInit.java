@@ -64,6 +64,7 @@ import net.firefoxsalesman.dungeonsgear.enchantments.melee.SwirlingEnchantment;
 import net.firefoxsalesman.dungeonsgear.enchantments.melee.ThunderingEnchantment;
 import net.firefoxsalesman.dungeonsgear.enchantments.melee.WeakeningEnchantment;
 import net.firefoxsalesman.dungeonsgear.enchantments.melee_ranged.AnimaConduitEnchantment;
+import net.firefoxsalesman.dungeonsgear.enchantments.melee_ranged.DynamoEnchantment;
 import net.firefoxsalesman.dungeonsgear.enchantments.melee_ranged.EnigmaResonatorEnchantment;
 import net.firefoxsalesman.dungeonsgear.enchantments.melee_ranged.GravityEnchantment;
 import net.firefoxsalesman.dungeonsgear.enchantments.melee_ranged.MastersCallEnchantment;
@@ -102,6 +103,8 @@ public class EnchantmentInit {
 			MastersCallEnchantment::new);
 	public static RegistryObject<PoisonCloudEnchantment> POISON_CLOUD = ENCHANTMENTS.register("poison_cloud",
 			PoisonCloudEnchantment::new);
+	public static RegistryObject<DynamoEnchantment> DYNAMO = ENCHANTMENTS.register("dynamo",
+			() -> new DynamoEnchantment());
 	public static RegistryObject<RefreshmentEnchantment> REFRESHMENT = ENCHANTMENTS.register("refreshment",
 			RefreshmentEnchantment::new);
 	public static RegistryObject<ArtifactSynergyEnchantment> ARTIFACT_SYNERGY = ENCHANTMENTS
