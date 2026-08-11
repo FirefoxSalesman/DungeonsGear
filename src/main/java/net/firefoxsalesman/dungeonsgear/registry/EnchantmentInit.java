@@ -72,6 +72,7 @@ import net.firefoxsalesman.dungeonsgear.enchantments.melee_ranged.PoisonCloudEnc
 import net.firefoxsalesman.dungeonsgear.enchantments.melee_ranged.RefreshmentEnchantment;
 import net.firefoxsalesman.dungeonsgear.enchantments.ranged.AccelerateEnchantment;
 import net.firefoxsalesman.dungeonsgear.enchantments.ranged.BonusShotEnchantment;
+import net.firefoxsalesman.dungeonsgear.enchantments.ranged.BurstBowstringEnchantment;
 import net.firefoxsalesman.dungeonsgear.enchantments.ranged.ChainReactionEnchantment;
 import net.firefoxsalesman.dungeonsgear.enchantments.ranged.CooldownShotEnchantment;
 import net.firefoxsalesman.dungeonsgear.enchantments.ranged.ExplodingShotEnchantment;
@@ -84,6 +85,7 @@ import net.firefoxsalesman.dungeonsgear.enchantments.ranged.OverchargeEnchantmen
 import net.firefoxsalesman.dungeonsgear.enchantments.ranged.RadianceShotEnchantment;
 import net.firefoxsalesman.dungeonsgear.enchantments.ranged.ReplenishEnchantment;
 import net.firefoxsalesman.dungeonsgear.enchantments.ranged.RicochetEnchantment;
+import net.firefoxsalesman.dungeonsgear.enchantments.ranged.RollChargeEnchantment;
 import net.firefoxsalesman.dungeonsgear.enchantments.ranged.SuperchargeEnchantment;
 import net.firefoxsalesman.dungeonsgear.enchantments.ranged.TempoTheftEnchantment;
 import net.firefoxsalesman.dungeonsgear.enchantments.ranged.VelocityEnchantment;
@@ -156,6 +158,9 @@ public class EnchantmentInit {
 			AccelerateEnchantment::new);
 	public static RegistryObject<BonusShotEnchantment> BONUS_SHOT = ENCHANTMENTS.register("bonus_shot",
 			BonusShotEnchantment::new);
+	public static RegistryObject<BurstBowstringEnchantment> BURST_BOWSTRING = ENCHANTMENTS
+			.register("burst_bowstring", () -> new BurstBowstringEnchantment());
+
 	public static RegistryObject<ChainReactionEnchantment> CHAIN_REACTION = ENCHANTMENTS.register("chain_reaction",
 			ChainReactionEnchantment::new);
 	public static RegistryObject<CooldownShotEnchantment> COOLDOWN_SHOT = ENCHANTMENTS.register("cooldown_shot",
@@ -176,6 +181,9 @@ public class EnchantmentInit {
 			ReplenishEnchantment::new);
 	public static RegistryObject<RicochetEnchantment> RICOCHET = ENCHANTMENTS.register("ricochet",
 			RicochetEnchantment::new);
+	public static RegistryObject<RollChargeEnchantment> ROLL_CHARGE = ENCHANTMENTS.register("roll_charge",
+			() -> new RollChargeEnchantment());
+
 	public static RegistryObject<SuperchargeEnchantment> SUPERCHARGE = ENCHANTMENTS.register("supercharge",
 			SuperchargeEnchantment::new);
 	public static RegistryObject<TempoTheftEnchantment> TEMPO_THEFT = ENCHANTMENTS.register("tempo_theft",

@@ -1,4 +1,4 @@
-* TODO Pull PulsatingGlowLayer into the library
+* TODO Pull Pulsatin
 
 [[file:~/projects/DungeonsGear/src/main/java/net/firefoxsalesman/dungeonsgear/client/renderer/layers/PulsatingGlowLayer.java]]
 * TODO Pull snowflake particle into the library

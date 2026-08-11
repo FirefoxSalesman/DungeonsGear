@@ -5,7 +5,9 @@ import net.firefoxsalesman.dungeonsgear.capabilities.bow.RangedAbilitiesHelper;
 import net.firefoxsalesman.dungeonsgear.capabilities.combo.Combo;
 import net.firefoxsalesman.dungeonsgear.capabilities.combo.ComboHelper;
 import net.firefoxsalesman.dungeonsgear.capabilities.combo.RollHelper;
+import net.firefoxsalesman.dungeonsgear.enchantments.ranged.BurstBowstringEnchantment;
 import net.firefoxsalesman.dungeonsgear.enchantments.ranged.FuseShotEnchantment;
+import net.firefoxsalesman.dungeonsgear.enchantments.ranged.RollChargeEnchantment;
 import net.firefoxsalesman.dungeonsgear.registry.EnchantmentInit;
 import net.firefoxsalesman.dungeonsgear.registry.MobEffectInit;
 import net.firefoxsalesman.dungeonsgear.utilities.ArmorEffectHelper;
@@ -238,9 +240,9 @@ public class GlobalEvents {
 
 				ArmorEffectHelper.handleJumpEnchantments(playerEntity, helmet, chestplate);
 
-				// BurstBowstringEnchantment.activateBurstBowString(jumper);
+				BurstBowstringEnchantment.activateBurstBowString(jumper);
 
-				// RollChargeEnchantment.activateRollCharge(jumper);
+				RollChargeEnchantment.activateRollCharge(jumper);
 			}
 			RollHelper.incrementJumpCounter(playerEntity);
 
