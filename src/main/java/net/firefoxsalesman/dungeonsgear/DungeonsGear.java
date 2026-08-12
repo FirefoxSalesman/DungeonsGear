@@ -73,6 +73,7 @@ public class DungeonsGear {
 
 	private void setup(final FMLCommonSetupEvent event) {
 		event.enqueueWork(NetworkHandler::init);
+		GlobalEvents.registerCombatRoll();
 	}
 
 	// You can use SubscribeEvent and let the Event Bus discover methods to call

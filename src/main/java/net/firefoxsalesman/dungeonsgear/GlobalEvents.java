@@ -1,5 +1,6 @@
 package net.firefoxsalesman.dungeonsgear;
 
+import net.combatroll.api.event.ServerSideRollEvents;
 import net.firefoxsalesman.dungeonsgear.capabilities.bow.RangedAbilities;
 import net.firefoxsalesman.dungeonsgear.capabilities.bow.RangedAbilitiesHelper;
 import net.firefoxsalesman.dungeonsgear.capabilities.combo.Combo;
@@ -12,6 +13,7 @@ import net.firefoxsalesman.dungeonsgear.registry.EnchantmentInit;
 import net.firefoxsalesman.dungeonsgear.registry.MobEffectInit;
 import net.firefoxsalesman.dungeonsgear.utilities.ArmorEffectHelper;
 import net.firefoxsalesman.dungeonsgear.utilities.ProjectileEffectHelper;
+import net.firefoxsalesman.dungeonslibs.utils.ModHelper;
 import net.firefoxsalesman.dungeonslibs.utils.PetHelper;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.server.level.ServerPlayer;
@@ -221,28 +223,18 @@ public class GlobalEvents {
 		// }
 	}
 
-	// TODO Handle this when we're good & ready
 	@SubscribeEvent
 	public static void handleJumpAbilities(LivingEvent.LivingJumpEvent event) {
+		if (ModHelper.hasMod("combatroll"))
+			return;
 		LivingEntity jumper = event.getEntity();
 		if (jumper instanceof Player) {
 			Player playerEntity = (Player) jumper;
-			ItemStack helmet = playerEntity.getItemBySlot(EquipmentSlot.HEAD);
-			ItemStack chestplate = playerEntity.getItemBySlot(EquipmentSlot.CHEST);
 			Combo comboCap = ComboHelper.getComboCapability(playerEntity);
 			int jumpCooldownTimer = comboCap.getJumpCooldownTimer();
 
 			if (jumpCooldownTimer <= 0) {
-				// ArmorEffectHelper.handleJumpBoost(playerEntity, helmet, chestplate);
-				//
-				// ArmorEffectHelper.handleInvulnerableJump(playerEntity, helmet,
-				// chestplate);
-
-				ArmorEffectHelper.handleJumpEnchantments(playerEntity, helmet, chestplate);
-
-				BurstBowstringEnchantment.activateBurstBowString(jumper);
-
-				RollChargeEnchantment.activateRollCharge(jumper);
+				doRollEffects(playerEntity);
 			}
 			RollHelper.incrementJumpCounter(playerEntity);
 
@@ -252,4 +244,26 @@ public class GlobalEvents {
 		}
 	}
 
+	private static void doRollEffects(Player playerEntity) {
+		ItemStack helmet = playerEntity.getItemBySlot(EquipmentSlot.HEAD);
+		ItemStack chestplate = playerEntity.getItemBySlot(EquipmentSlot.CHEST);
+		// ArmorEffectHelper.handleJumpBoost(playerEntity, helmet, chestplate);
+		//
+		// ArmorEffectHelper.handleInvulnerableJump(playerEntity, helmet,
+		// chestplate);
+
+		ArmorEffectHelper.handleJumpEnchantments(playerEntity, helmet, chestplate);
+
+		BurstBowstringEnchantment.activateBurstBowString(playerEntity);
+
+		RollChargeEnchantment.activateRollCharge(playerEntity);
+	}
+
+	public static void registerCombatRoll() {
+		if (ModHelper.hasMod("combatroll")) {
+			ServerSideRollEvents.PLAYER_START_ROLLING.register((player, vec) -> {
+				doRollEffects(player);
+			});
+		}
+	}
 }
