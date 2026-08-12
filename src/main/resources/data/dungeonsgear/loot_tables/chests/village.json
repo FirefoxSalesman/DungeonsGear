@@ -6,131 +6,156 @@
 	{
           "type": "item",
           "name": "dungeonsgear:champions_helmet",
-          "weight": 4 
+          "weight": 4
         },
 	{
           "type": "item",
           "name": "dungeonsgear:champions_chestplate",
-          "weight": 4 
+          "weight": 4
         },
 	{
           "type": "item",
           "name": "dungeonsgear:champions_leggings",
-          "weight": 4 
+          "weight": 4
         },
 	{
           "type": "item",
           "name": "dungeonsgear:champions_boots",
-          "weight": 4 
+          "weight": 4
+        },
+	{
+          "type": "item",
+          "name": "dungeonsgear:great_axeblade",
+          "weight": 2
         },
 	{
           "type": "item",
           "name": "dungeonsgear:heros_helmet",
-          "weight": 2 
+          "weight": 2
         },
 	{
           "type": "item",
           "name": "dungeonsgear:heros_chestplate",
-          "weight": 2 
+          "weight": 2
         },
 	{
           "type": "item",
           "name": "dungeonsgear:heros_leggings",
-          "weight": 2 
+          "weight": 2
         },
 	{
           "type": "item",
           "name": "dungeonsgear:heros_boots",
-          "weight": 2 
+          "weight": 2
         },
 	{
           "type": "item",
           "name": "dungeonsgear:fox_helmet",
-          "weight": 2 
+          "weight": 2
         },
 	{
           "type": "item",
           "name": "dungeonsgear:fox_chestplate",
-          "weight": 2 
+          "weight": 2
         },
 	{
           "type": "item",
           "name": "dungeonsgear:fox_leggings",
-          "weight": 2 
+          "weight": 2
         },
 	{
           "type": "item",
           "name": "dungeonsgear:fox_boots",
-          "weight": 2 
+          "weight": 2
         },
 	{
           "type": "item",
           "name": "dungeonsgear:mercenary_helmet",
-          "weight": 2 
+          "weight": 2
         },
 	{
           "type": "item",
           "name": "dungeonsgear:mercenary_chestplate",
-          "weight": 2 
+          "weight": 2
         },
 	{
           "type": "item",
           "name": "dungeonsgear:mercenary_leggings",
-          "weight": 2 
+          "weight": 2
         },
 	{
           "type": "item",
           "name": "dungeonsgear:mercenary_boots",
-          "weight": 2 
+          "weight": 2
         },
 	{
           "type": "item",
           "name": "dungeonsgear:bonebow",
-          "weight": 2 
+          "weight": 2
         },
 	{
           "type": "item",
           "name": "dungeonsgear:twin_bow",
-          "weight": 2 
+          "weight": 2
         },
 	{
           "type": "item",
           "name": "dungeonsgear:haunted_bow",
-          "weight": 2 
+          "weight": 2
         },
 	{
           "type": "item",
           "name": "dungeonsgear:fireworks_display",
-          "weight": 2 
+          "weight": 2
         },
 	{
           "type": "item",
           "name": "dungeonsgear:broadsword",
-          "weight": 2 
+          "weight": 2
         },
 	{
           "type": "item",
           "name": "dungeonsgear:renegade_helmet",
-          "weight": 1 
+          "weight": 1
         },
 	{
           "type": "item",
           "name": "dungeonsgear:renegade_chestplate",
-          "weight": 1 
+          "weight": 1
         },
 	{
           "type": "item",
           "name": "dungeonsgear:renegade_leggings",
-          "weight": 1 
+          "weight": 1
         },
 	{
           "type": "item",
           "name": "dungeonsgear:renegade_boots",
-          "weight": 1 
+          "weight": 1
+        },
+	{
+          "type": "item",
+          "name": "dungeonsgear:full_metal_helmet",
+          "weight": 1
+        },
+	{
+          "type": "item",
+          "name": "dungeonsgear:full_metal_chestplate",
+          "weight": 1
+        },
+	{
+          "type": "item",
+          "name": "dungeonsgear:full_metal_leggings",
+          "weight": 1
+        },
+	{
+          "type": "item",
+          "name": "dungeonsgear:full_metal_boots",
+          "weight": 1
         },
 	{
           "type": "empty",
-          "weight": 46
+          "weight": 70
         }
       ]
     }

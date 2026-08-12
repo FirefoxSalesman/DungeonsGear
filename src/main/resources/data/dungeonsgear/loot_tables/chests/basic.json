@@ -410,6 +410,26 @@
         },
 	{
           "type": "item",
+          "name": "dungeonsgear:reinforced_mail_helmet",
+          "weight": 2
+        },
+	{
+          "type": "item",
+          "name": "dungeonsgear:reinforced_mail_chestplate",
+          "weight": 2
+        },
+	{
+          "type": "item",
+          "name": "dungeonsgear:reinforced_mail_leggings",
+          "weight": 2
+        },
+	{
+          "type": "item",
+          "name": "dungeonsgear:reinforced_mail_boots",
+          "weight": 2
+        },
+	{
+          "type": "item",
           "name": "dungeonsgear:butterfly_crossbow",
           "weight": 2
         },
@@ -520,6 +540,11 @@
         },
 	{
           "type": "item",
+          "name": "dungeonsgear:ancient_bow",
+          "weight": 1
+        },
+	{
+          "type": "item",
           "name": "dungeonsgear:masters_bow",
           "weight": 1
         },
@@ -546,6 +571,26 @@
 	{
           "type": "item",
           "name": "dungeonsgear:ember_robes_boots",
+          "weight": 1
+        },
+	{
+          "type": "item",
+          "name": "dungeonsgear:stalwart_helmet",
+          "weight": 1
+        },
+	{
+          "type": "item",
+          "name": "dungeonsgear:stalwart_chestplate",
+          "weight": 1
+        },
+	{
+          "type": "item",
+          "name": "dungeonsgear:stalwart_leggings",
+          "weight": 1
+        },
+	{
+          "type": "item",
+          "name": "dungeonsgear:stalwart_boots",
           "weight": 1
         },
 	{
@@ -579,8 +624,13 @@
           "weight": 1
         },
 	{
+          "type": "item",
+          "name": "dungeonsgear:corrupted_crossbow",
+          "weight": 1
+        },
+	{
           "type": "empty",
-          "weight": 204
+          "weight": 254
         }
       ]
     }

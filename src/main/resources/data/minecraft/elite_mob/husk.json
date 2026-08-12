@@ -1,0 +1,58 @@
+{
+  "configs": [
+    {
+      "headItem": {
+        "id": "dungeonsgear:reinforced_mail_helmet",
+        "Count": 1
+      },
+      "chestItem": {
+        "id": "dungeonsgear:scale_mail",
+        "Count": 1
+      },
+      "legsItem": {
+        "id": "minecraft:empty",
+        "Count": 1
+      },
+      "feetItem": {
+        "id": "minecraft:empty",
+        "Count": 1
+      },
+      "handItem": {
+        "id": "dungeonsgear:dagger",
+        "Count": 1
+      },
+      "offhandItem": {
+        "id": "minecraft:empty",
+        "Count": 1
+      },
+      "weight": 75
+    },
+    {
+      "headItem": {
+        "id": "dungeonsgear:reinforced_mail_helmet",
+        "Count": 1
+      },
+      "chestItem": {
+        "id": "dungeonsgear:reinforced_mail_chestplate",
+        "Count": 1
+      },
+      "legsItem": {
+        "id": "minecraft:empty",
+        "Count": 1
+      },
+      "feetItem": {
+        "id": "minecraft:empty",
+        "Count": 1
+      },
+      "handItem": {
+        "id": "minecraft:iron_sword",
+        "Count": 1
+      },
+      "offhandItem": {
+        "id": "minecraft:empty",
+        "Count": 1
+      },
+      "weight": 25
+    }
+  ]
+}

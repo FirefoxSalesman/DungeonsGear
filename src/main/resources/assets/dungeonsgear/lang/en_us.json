@@ -1,4 +1,20 @@
 {
+  "attribute.name.magicDamage": "Magic Damage",
+  "attribute.name.rangedDamage": "Ranged Damage",
+  "attribute.name.artifactCooldown": "Artifact Cooldown",
+  "attribute.name.healthPotionsHealNearbyAllies": "Health Potions Heal Nearby Allies",
+  "attribute.name.healthPotionBoost": "Health Potion Boost",
+  "attribute.name.soulsGathered": "Souls Gathered",
+  "attribute.name.lifeSteal": "Life Steal",
+  "attribute.name.chanceToTeleportAwayWhenHit": "Chance To Teleport Away When Hit",
+  "attribute.name.arrowsPerBundle": "Arrows Per Bundle",
+  "attribute.name.briefInvulnerabilityWhenRolling": "Brief Invulnerability When Jumping or Dodging",
+  "attribute.name.longerRolls": "Higher Jumps and Longer Dodges",
+  "attribute.name.chanceToNegateHits": "Chance To Negate Hits",
+  "attribute.name.longerRollCooldown": "Longer Jump or Dodge Ability Cooldown",
+  "attribute.name.freezingResistance": "Freezing Resistance",
+  "attribute.name.givesYouAPetBat": "Gives You A Pet Bat",
+
   "item.dungeonsgear.cracked_netherite_piglin_helmet": "Cracked Netherite Piglin Helmet",
   "item.dungeonsgear.cracked_gold_piglin_helmet": "Cracked Golden Piglin Helmet",
 
@@ -124,6 +140,8 @@
   "enchantment.dungeonsgear.health_synergy.desc": "When activating any artifact, you regain a small amount of health.",
   "enchantment.dungeonsgear.life_boost": "Life Boost",
   "enchantment.dungeonsgear.life_boost.desc": "Each time you respawn due to enemy interference, your maximum health permanently increases.",
+  "enchantment.dungeonsgear.life_boost": "Life Boost",
+  "enchantment.dungeonsgear.life_boost.desc": "Each time you respawn due to enemy interference, your maximum health permanently increases.",
   "enchantment.dungeonsgear.opulent_shield": "Opulent Shield",
   "enchantment.dungeonsgear.opulent_shield.desc": "Provides a brief invulnerability when collecting XP orbs.",
   "enchantment.dungeonsgear.reckless": "Reckless",
@@ -178,6 +196,9 @@
   "enchantment.dungeonsgear.speed_aura.desc": "Passively increases speed of nearby allies.",
   "enchantment.dungeonsgear.potion_aura": "Potion Aura",
   "enchantment.dungeonsgear.potion_aura.desc": "Using a healing potion, will heal nearby allies as well.",
+
+  "attribute.name.generic.dungeonsgear.attackReach": "Attack Reach",
+  "attribute.name.generic.dungeonsgear.roll_cooldown": "Roll Cooldown",
 
   "item.dungeonsgear.bonebow": "Bonebow",
   "lore.dungeonsgear.bonebow": "The Bonebow is the pride of Pumpkin Pastures, crafted within the walls of their humble village.",

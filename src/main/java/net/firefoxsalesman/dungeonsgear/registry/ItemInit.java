@@ -157,8 +157,7 @@ public class ItemInit {
 	public static final RegistryObject<Item> CLAYMORE = registerMeleeWeapon("claymore", meleeSupplier);
 	public static final RegistryObject<Item> BROADSWORD = registerMeleeWeapon("broadsword", meleeSupplier);
 	public static final RegistryObject<Item> HEARTSTEALER = registerMeleeWeapon("heartstealer", meleeSupplier);
-	// public static final RegistryObject<Item> GREAT_AXEBLADE =
-	// registerMeleeWeapon("great_axeblade", meleeSupplier);
+	public static final RegistryObject<Item> GREAT_AXEBLADE = registerMeleeWeapon("great_axeblade", meleeSupplier);
 	public static final RegistryObject<Item> FROST_SLAYER = registerMeleeWeapon("frost_slayer", meleeSupplier);
 
 	// DPS 8.4, crits once per 2.14 seconds, +2 reach
@@ -218,8 +217,7 @@ public class ItemInit {
 	public static final RegistryObject<Item> HUNTING_BOW = registerRangedWeapon("hunting_bow", bowSupplier);
 	public static final RegistryObject<Item> HUNTERS_PROMISE = registerRangedWeapon("hunters_promise", bowSupplier);
 	public static final RegistryObject<Item> MASTERS_BOW = registerRangedWeapon("masters_bow", bowSupplier);
-	// public static final RegistryObject<Item> ANCIENT_BOW =
-	// registerRangedWeapon("ancient_bow", bowSupplier);
+	public static final RegistryObject<Item> ANCIENT_BOW = registerRangedWeapon("ancient_bow", bowSupplier);
 
 	public static final RegistryObject<Item> SHORTBOW = registerRangedWeapon("shortbow", bowSupplier);
 	public static final RegistryObject<Item> MECHANICAL_SHORTBOW = registerRangedWeapon("mechanical_shortbow",
@@ -240,8 +238,7 @@ public class ItemInit {
 	public static final RegistryObject<Item> WINTERS_TOUCH = registerRangedWeapon("winters_touch", bowSupplier);
 
 	public static final RegistryObject<Item> WIND_BOW = registerRangedWeapon("wind_bow", bowSupplier);
-	// public static final RegistryObject<Item> BURST_GALE_BOW =
-	// registerRangedWeapon("burst_gale_bow", bowSupplier);
+	public static final RegistryObject<Item> BURST_GALE_BOW = registerRangedWeapon("burst_gale_bow", bowSupplier);
 	public static final RegistryObject<Item> ECHO_OF_THE_VALLEY = registerRangedWeapon("echo_of_the_valley",
 			bowSupplier);
 
@@ -284,9 +281,8 @@ public class ItemInit {
 
 	public static final RegistryObject<Item> BURST_CROSSBOW = registerRangedWeapon("burst_crossbow",
 			crossbowSupplier);
-	// public static final RegistryObject<Item> CORRUPTED_CROSSBOW =
-	// registerRangedWeapon("corrupted_crossbow",
-	// crossbowSupplier);
+	public static final RegistryObject<Item> CORRUPTED_CROSSBOW = registerRangedWeapon("corrupted_crossbow",
+			crossbowSupplier);
 	public static final RegistryObject<Item> SOUL_HUNTER_CROSSBOW = registerRangedWeapon("soul_hunter_crossbow",
 			crossbowSupplier);
 
@@ -409,12 +405,9 @@ public class ItemInit {
 	public static final ArmorSetInit PHANTOM_ARMOR = registerArmorSet("phantom");
 	public static final ArmorSetInit FROST_BITE = registerArmorSet("frost_bite");
 	public static final ArmorSetInit PLATE_ARMOR = registerArmorSet("plate");
-	// public static final ArmorSetInit FULL_METAL_ARMOR =
-	// registerArmorSet("full_metal", BASIC);
-	// public static final ArmorSetInit REINFORCED_MAIL =
-	// registerArmorSet("reinforced_mail", BASIC);
-	// public static final ArmorSetInit STALWART_ARMOR =
-	// registerArmorSet("stalwart", BASIC);
+	public static final ArmorSetInit FULL_METAL_ARMOR = registerArmorSet("full_metal");
+	public static final ArmorSetInit REINFORCED_MAIL = registerArmorSet("reinforced_mail");
+	public static final ArmorSetInit STALWART_ARMOR = registerArmorSet("stalwart");
 	public static final ArmorSetInit SCALE_MAIL = registerArmorSet("scale_mail");
 	// public static final ArmorSetInit HIGHLAND_ARMOR =
 	// registerArmorSet("highland", BASIC);

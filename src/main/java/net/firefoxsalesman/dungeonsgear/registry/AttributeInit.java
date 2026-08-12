@@ -7,6 +7,7 @@ import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
+import static net.firefoxsalesman.dungeonsgear.DungeonsGear.MOD_ID;
 
 public class AttributeInit {
 
@@ -16,7 +17,7 @@ public class AttributeInit {
 
 	public static final RegistryObject<Attribute> ATTACK_REACH = ATTRIBUTES.register("attack_reach",
 			() -> new RangedAttribute(
-					"attribute.name.generic.dungeons_gear.attackReach",
+					"attribute.name.generic." + MOD_ID + ".attackReach",
 					3.0D,
 					0.0D,
 					1024.0D)
@@ -24,7 +25,7 @@ public class AttributeInit {
 
 	public static final RegistryObject<Attribute> ROLL_COOLDOWN = ATTRIBUTES.register("roll_cooldown",
 			() -> new RangedAttribute(
-					"attribute.name.generic.dungeons_gear.roll_cooldown",
+					"attribute.name.generic." + MOD_ID + ".roll_cooldown",
 					20.0D,
 					0.0D,
 					1024.0D)
@@ -32,7 +33,7 @@ public class AttributeInit {
 
 	public static final RegistryObject<Attribute> ROLL_LIMIT = ATTRIBUTES.register("roll_limit",
 			() -> new RangedAttribute(
-					"attribute.name.generic.dungeons_gear.roll_limit",
+					"attribute.name.generic." + MOD_ID + ".roll_limit",
 					1.0D,
 					0.0D,
 					1024.0D)
