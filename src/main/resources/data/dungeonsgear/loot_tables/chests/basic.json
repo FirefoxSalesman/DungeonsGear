@@ -470,6 +470,11 @@
         },
 	{
           "type": "item",
+          "name": "dungeonsgear:flaming_quiver",
+          "weight": 2
+        },
+	{
+          "type": "item",
           "name": "dungeonsgear:titans_shroud_helmet",
           "weight": 1
         },
@@ -630,7 +635,7 @@
         },
 	{
           "type": "empty",
-          "weight": 254
+          "weight": 262
         }
       ]
     }

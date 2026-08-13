@@ -1,0 +1,26 @@
+package net.firefoxsalesman.dungeonsgear.items;
+
+import net.firefoxsalesman.dungeonsgear.registry.ItemInit;
+import net.minecraft.client.renderer.item.ItemProperties;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.item.Item;
+
+public class DualWieldItemProperties {
+	public DualWieldItemProperties() {
+		addDualProperty(ItemInit.DUAL_CROSSBOW.get());
+		addDualProperty(ItemInit.BABY_CROSSBOW.get());
+	}
+
+	private static void addDualProperty(Item i) {
+		ItemProperties.register(i, new ResourceLocation("dual"),
+				(stack, world, entity, todo) -> {
+					if (entity == null) {
+						return 1.0F;
+					} else {
+						return entity.getOffhandItem() == stack
+								|| entity.getMainHandItem() == stack ? 0.0F
+										: 1.0F;
+					}
+				});
+	}
+}

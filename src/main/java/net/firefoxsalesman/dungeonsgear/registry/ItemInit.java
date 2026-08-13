@@ -286,12 +286,10 @@ public class ItemInit {
 	public static final RegistryObject<Item> SOUL_HUNTER_CROSSBOW = registerRangedWeapon("soul_hunter_crossbow",
 			crossbowSupplier);
 
-	// public static final RegistryObject<Item> DUAL_CROSSBOW =
-	// registerRangedWeapon("dual_crossbow",
-	// () -> new DualCrossbowGear(PROPERTIES));
-	// public static final RegistryObject<Item> BABY_CROSSBOW =
-	// registerRangedWeapon("baby_crossbow",
-	// () -> new DualCrossbowGear(PROPERTIES));
+	public static final RegistryObject<Item> DUAL_CROSSBOW = registerRangedWeapon("dual_crossbow",
+			() -> new DualCrossbowGear(PROPERTIES));
+	public static final RegistryObject<Item> BABY_CROSSBOW = registerRangedWeapon("baby_crossbow",
+			() -> new DualCrossbowGear(PROPERTIES));
 
 	public static final RegistryObject<Item> HARPOON_CROSSBOW = registerRangedWeapon("harpoon_crossbow",
 			crossbowSupplier);
@@ -330,7 +328,6 @@ public class ItemInit {
 			() -> new SoulHealerItem(PROPERTIES));
 	public static final RegistryObject<Item> LIGHT_FEATHER = registerArtifact("light_feather",
 			() -> new LightFeatherItem(PROPERTIES));
-	// TODO Something is wrong with the setFlamingArrowsCount method in the Combo
 	// capability.
 	public static final RegistryObject<Item> FLAMING_QUIVER = registerArtifact("flaming_quiver",
 			() -> new FlamingQuiverItem(PROPERTIES));

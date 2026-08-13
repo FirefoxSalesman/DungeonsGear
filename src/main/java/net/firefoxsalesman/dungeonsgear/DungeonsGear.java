@@ -7,6 +7,7 @@ import com.mojang.logging.LogUtils;
 import net.firefoxsalesman.dungeonsgear.capabilities.GearCapabilities;
 import net.firefoxsalesman.dungeonsgear.client.ClientProxy;
 import net.firefoxsalesman.dungeonsgear.config.DungeonsGearConfig;
+import net.firefoxsalesman.dungeonsgear.items.DualWieldItemProperties;
 import net.firefoxsalesman.dungeonsgear.items.GearRangedItemModelProperties;
 import net.firefoxsalesman.dungeonsgear.network.NetworkHandler;
 import net.firefoxsalesman.dungeonsgear.registry.AttributeInit;
@@ -85,6 +86,7 @@ public class DungeonsGear {
 
 	private void doClientStuff(final FMLClientSetupEvent event) {
 		GearRangedItemModelProperties.init();
+		new DualWieldItemProperties();
 	}
 
 	// You can use EventBusSubscriber to automatically register all static methods

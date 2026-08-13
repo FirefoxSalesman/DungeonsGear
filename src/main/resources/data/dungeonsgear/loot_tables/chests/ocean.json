@@ -5,7 +5,7 @@
       "entries": [
         {
           "type": "item",
-          "name": "dungeonsgear:cutlass",
+          "name": "dungeonsgear:harpoon_crossbow",
           "weight": 4 
         },
 	{
@@ -60,12 +60,27 @@
         },
 	{
           "type": "item",
+          "name": "dungeonsgear:nautical_crossbow",
+          "weight": 2 
+        },
+	{
+          "type": "item",
+          "name": "dungeonsgear:thundering_quiver",
+          "weight": 2 
+        },
+	{
+          "type": "item",
+          "name": "dungeonsgear:harpoon_quiver",
+          "weight": 2 
+        },
+	{
+          "type": "item",
           "name": "dungeonsgear:encrusted_anchor",
           "weight": 1 
         },
 	{
           "type": "empty",
-          "weight": 13
+          "weight": 53
         }
       ]
     }
