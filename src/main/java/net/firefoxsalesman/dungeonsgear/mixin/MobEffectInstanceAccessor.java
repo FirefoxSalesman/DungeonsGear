@@ -12,4 +12,8 @@ public interface MobEffectInstanceAccessor {
 	@Mutable
 	public void setAmplifier(int amplifier);
 
+	@Accessor
+	@Mutable
+	public void setDuration(int duration);
+
 }

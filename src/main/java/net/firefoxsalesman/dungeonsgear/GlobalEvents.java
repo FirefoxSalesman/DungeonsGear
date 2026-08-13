@@ -260,6 +260,7 @@ public class GlobalEvents {
 	}
 
 	public static void registerCombatRoll() {
+		// TODO Make this affected by roll cooldown & roll limit
 		if (ModHelper.hasMod("combatroll")) {
 			ServerSideRollEvents.PLAYER_START_ROLLING.register((player, vec) -> {
 				doRollEffects(player);

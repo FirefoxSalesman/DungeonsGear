@@ -4,6 +4,7 @@ import org.slf4j.Logger;
 
 import com.mojang.logging.LogUtils;
 
+import net.firefoxsalesman.dungeonsgear.capabilities.GearCapabilities;
 import net.firefoxsalesman.dungeonsgear.client.ClientProxy;
 import net.firefoxsalesman.dungeonsgear.config.DungeonsGearConfig;
 import net.firefoxsalesman.dungeonsgear.items.GearRangedItemModelProperties;
@@ -54,6 +55,7 @@ public class DungeonsGear {
 		new DungeonsGearConfig();
 		PROXY = DistExecutor.safeRunForDist(() -> ClientProxy::new, () -> CommonProxy::new);
 		ParticleInit.register(modEventBus);
+		GearCapabilities.setupCapabilities();
 		AttributeInit.register(modEventBus);
 		SoundEventInit.register(modEventBus);
 		EntityTypeInit.register(modEventBus);
