@@ -293,12 +293,10 @@ public class ItemInit {
 	// registerRangedWeapon("baby_crossbow",
 	// () -> new DualCrossbowGear(PROPERTIES));
 
-	// public static final RegistryObject<Item> HARPOON_CROSSBOW =
-	// registerRangedWeapon("harpoon_crossbow",
-	// crossbowSupplier);
-	// public static final RegistryObject<Item> NAUTICAL_CROSSBOW =
-	// registerRangedWeapon("nautical_crossbow",
-	// crossbowSupplier);
+	public static final RegistryObject<Item> HARPOON_CROSSBOW = registerRangedWeapon("harpoon_crossbow",
+			crossbowSupplier);
+	public static final RegistryObject<Item> NAUTICAL_CROSSBOW = registerRangedWeapon("nautical_crossbow",
+			crossbowSupplier);
 
 	public static final RegistryObject<Item> BOOTS_OF_SWIFTNESS = registerArtifact("boots_of_swiftness",
 			() -> new BootsOfSwiftnessItem(PROPERTIES));
@@ -334,12 +332,10 @@ public class ItemInit {
 			() -> new LightFeatherItem(PROPERTIES));
 	// TODO Something is wrong with the setFlamingArrowsCount method in the Combo
 	// capability.
-	// public static final RegistryObject<Item> FLAMING_QUIVER =
-	// registerArtifact("flaming_quiver",
-	// () -> new FlamingQuiverItem(PROPERTIES));
-	// public static final RegistryObject<Item> TORMENT_QUIVER =
-	// registerArtifact("torment_quiver",
-	// () -> new TormentQuiverItem(PROPERTIES));
+	public static final RegistryObject<Item> FLAMING_QUIVER = registerArtifact("flaming_quiver",
+			() -> new FlamingQuiverItem(PROPERTIES));
+	public static final RegistryObject<Item> TORMENT_QUIVER = registerArtifact("torment_quiver",
+			() -> new TormentQuiverItem(PROPERTIES));
 	public static final RegistryObject<Item> TOTEM_OF_REGENERATION = registerArtifact("totem_of_regeneration",
 			() -> new TotemOfRegenerationItem(PROPERTIES));
 	public static final RegistryObject<Item> TOTEM_OF_SHIELDING = registerArtifact("totem_of_shielding",
@@ -355,12 +351,10 @@ public class ItemInit {
 	// () -> new EnchantedGrassItem(PROPERTIES));
 	public static final RegistryObject<Item> CORRUPTED_PUMPKIN = registerArtifact("corrupted_pumpkin",
 			() -> new CorruptedPumpkinItem(PROPERTIES));
-	// public static final RegistryObject<Item> THUNDERING_QUIVER =
-	// registerArtifact("thundering_quiver",
-	// () -> new ThunderingQuiverItem(PROPERTIES));
-	// public static final RegistryObject<Item> HARPOON_QUIVER =
-	// registerArtifact("harpoon_quiver",
-	// () -> new HarpoonQuiverItem(PROPERTIES));
+	public static final RegistryObject<Item> THUNDERING_QUIVER = registerArtifact("thundering_quiver",
+			() -> new ThunderingQuiverItem(PROPERTIES));
+	public static final RegistryObject<Item> HARPOON_QUIVER = registerArtifact("harpoon_quiver",
+			() -> new HarpoonQuiverItem(PROPERTIES));
 	// public static final RegistryObject<Item> SATCHEL_OF_ELIXIRS =
 	// registerArtifact("satchel_of_elixirs",
 	// () -> new SatchelOfElixirsItem(PROPERTIES));

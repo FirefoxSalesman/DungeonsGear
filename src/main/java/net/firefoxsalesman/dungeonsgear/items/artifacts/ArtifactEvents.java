@@ -8,6 +8,8 @@ import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.animal.Sheep;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.projectile.AbstractArrow;
+import net.minecraft.world.phys.BlockHitResult;
+import net.minecraft.world.phys.EntityHitResult;
 import net.minecraftforge.event.entity.EntityJoinLevelEvent;
 import net.minecraftforge.event.entity.ProjectileImpactEvent;
 import net.minecraftforge.event.entity.ProjectileImpactEvent.ImpactResult;
@@ -24,6 +26,8 @@ import net.firefoxsalesman.dungeonsgear.DungeonsGear;
 import net.firefoxsalesman.dungeonsgear.capabilities.combo.Combo;
 import net.firefoxsalesman.dungeonsgear.capabilities.combo.ComboHelper;
 import net.firefoxsalesman.dungeonsgear.registry.MobEffectInit;
+import net.firefoxsalesman.dungeonsgear.utilities.AreaOfEffectHelper;
+import net.firefoxsalesman.dungeonsgear.utilities.SoundHelper;
 import net.firefoxsalesman.dungeonslibs.capabilities.minionmaster.Follower;
 
 @Mod.EventBusSubscriber(modid = DungeonsGear.MOD_ID)
@@ -94,7 +98,6 @@ public class ArtifactEvents {
 					count--;
 					comboCap.setFlamingArrowsCount(count);
 				}
-				System.out.println("Torment Arrows Count: " + comboCap.getTormentArrowsCount());
 				if (comboCap.getTormentArrowsCount() > 0) {
 					arrowEntity.addTag(TormentQuiverItem.TORMENT_ARROW);
 					int count = comboCap.getTormentArrowsCount();
@@ -103,21 +106,20 @@ public class ArtifactEvents {
 					count--;
 					comboCap.setTormentArrowCount(count);
 				}
-				// TODO Uncomment these when the appropriate artifacts are added
-				// if (comboCap.getThunderingArrowsCount() > 0) {
-				// arrowEntity.addTag(ThunderingQuiverItem.THUNDERING_ARROW);
-				// int count = comboCap.getThunderingArrowsCount();
-				// count--;
-				// comboCap.setThunderingArrowsCount(count);
-				// }
-				// if (comboCap.getHarpoonCount() > 0) {
-				// arrowEntity.addTag(HarpoonQuiverItem.HARPOON_QUIVER);
-				// int count = comboCap.getHarpoonCount();
-				// count--;
-				// comboCap.setHarpoonCount(count);
-				// arrowEntity.setDeltaMovement(arrowEntity.getDeltaMovement().scale(1.5D));
-				// arrowEntity.setPierceLevel((byte) (arrowEntity.getPierceLevel() + 1));
-				// }
+				if (comboCap.getThunderingArrowsCount() > 0) {
+					arrowEntity.addTag(ThunderingQuiverItem.THUNDERING_ARROW);
+					int count = comboCap.getThunderingArrowsCount();
+					count--;
+					comboCap.setThunderingArrowsCount(count);
+				}
+				if (comboCap.getHarpoonCount() > 0) {
+					arrowEntity.addTag(HarpoonQuiverItem.HARPOON_QUIVER);
+					int count = comboCap.getHarpoonCount();
+					count--;
+					comboCap.setHarpoonCount(count);
+					arrowEntity.setDeltaMovement(arrowEntity.getDeltaMovement().scale(1.5D));
+					arrowEntity.setPierceLevel((byte) (arrowEntity.getPierceLevel() + 1));
+				}
 			}
 		}
 	}
@@ -138,33 +140,32 @@ public class ArtifactEvents {
 					event.setImpactResult(ImpactResult.STOP_AT_CURRENT_NO_DAMAGE);
 				}
 
-				// TODO Uncomment these when the appropriate artifacts are added
-				// if (event.getRayTraceResult() instanceof EntityHitResult) {
-				// EntityHitResult entityRayTraceResult = (EntityHitResult) event
-				// .getRayTraceResult();
-				// Entity targetEntity = entityRayTraceResult.getEntity();
-				// if (!(targetEntity instanceof LivingEntity)) {
-				// event.setCanceled(true);
-				// }
+				if (event.getRayTraceResult() instanceof EntityHitResult) {
+					EntityHitResult entityRayTraceResult = (EntityHitResult) event
+							.getRayTraceResult();
+					Entity targetEntity = entityRayTraceResult.getEntity();
+					if (!(targetEntity instanceof LivingEntity)) {
+						event.setCanceled(true);
+					}
 
-				// int currentKnockbackStrength = arrow.knockback;
-				// (arrow).setKnockback(currentKnockbackStrength + 1);
-				// }
+					int currentKnockbackStrength = arrow.getKnockback();
+					(arrow).setKnockback(currentKnockbackStrength + 1);
+				}
 
-				// if (event.getRayTraceResult() instanceof BlockHitResult)
-				// event.setCanceled(true);
-				// }
-				// if (arrow.getTags().contains(ThunderingQuiverItem.THUNDERING_ARROW)) {
-				// if (event.getRayTraceResult() instanceof EntityHitResult) {
-				// EntityHitResult entityRayTraceResult = (EntityHitResult) event
-				// .getRayTraceResult();
-				// Entity targetEntity = entityRayTraceResult.getEntity();
-				// if (targetEntity instanceof LivingEntity) {
-				// SoundHelper.playLightningStrikeSounds(arrow);
-				// AreaOfEffectHelper.electrifyNearbyEnemies(arrow, 5, 5,
-				// Integer.MAX_VALUE);
-				// }
-				// }
+				if (event.getRayTraceResult() instanceof BlockHitResult)
+					event.setCanceled(true);
+			}
+			if (arrow.getTags().contains(ThunderingQuiverItem.THUNDERING_ARROW)) {
+				if (event.getRayTraceResult() instanceof EntityHitResult) {
+					EntityHitResult entityRayTraceResult = (EntityHitResult) event
+							.getRayTraceResult();
+					Entity targetEntity = entityRayTraceResult.getEntity();
+					if (targetEntity instanceof LivingEntity) {
+						SoundHelper.playLightningStrikeSounds(arrow);
+						AreaOfEffectHelper.electrifyNearbyEnemies(arrow, 5, 5,
+								Integer.MAX_VALUE);
+					}
+				}
 			}
 		}
 	}

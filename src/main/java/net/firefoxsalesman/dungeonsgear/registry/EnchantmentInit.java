@@ -81,6 +81,7 @@ import net.firefoxsalesman.dungeonsgear.enchantments.ranged.FuseShotEnchantment;
 import net.firefoxsalesman.dungeonsgear.enchantments.ranged.GaleShotEnchantment;
 import net.firefoxsalesman.dungeonsgear.enchantments.ranged.GravityShotEnchantment;
 import net.firefoxsalesman.dungeonsgear.enchantments.ranged.GrowingEnchantment;
+import net.firefoxsalesman.dungeonsgear.enchantments.ranged.HarpoonShotEnchantment;
 import net.firefoxsalesman.dungeonsgear.enchantments.ranged.OverchargeEnchantment;
 import net.firefoxsalesman.dungeonsgear.enchantments.ranged.RadianceShotEnchantment;
 import net.firefoxsalesman.dungeonsgear.enchantments.ranged.ReplenishEnchantment;
@@ -113,6 +114,8 @@ public class EnchantmentInit {
 			.register("artifact_synergy", () -> new ArtifactSynergyEnchantment());
 	public static RegistryObject<ExplodingShotEnchantment> EXPLODING_SHOT = ENCHANTMENTS.register("exploding_shot",
 			ExplodingShotEnchantment::new);
+	public static RegistryObject<HarpoonShotEnchantment> HARPOON_SHOT = ENCHANTMENTS.register("harpoon_shot",
+			() -> new HarpoonShotEnchantment());
 	public static RegistryObject<FreezingEnchantment> FREEZING = ENCHANTMENTS.register("freezing",
 			FreezingEnchantment::new);
 	public static RegistryObject<BusyBeeEnchantment> BUSY_BEE = ENCHANTMENTS.register("busy_bee",

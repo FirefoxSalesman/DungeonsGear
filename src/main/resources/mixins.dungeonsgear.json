@@ -5,6 +5,7 @@
   "minVersion": "0.8.4",
   "refmap": "mixins.dungeonsgear.refmap.json",
   "mixins": [
+    "AbstractArrowEntityMixin",
     "AbstractHorseAccessor",
     "LlamaInvoker",
     "MobEffectInstanceAccessor"

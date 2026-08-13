@@ -90,6 +90,8 @@
   "enchantment.dungeonsgear.cooldown_shot.desc": "When you attack with a charged shot, artifact cooldowns are decreased.",
   "enchantment.dungeonsgear.exploding_shot": "Exploding Shot",
   "enchantment.dungeonsgear.exploding_shot.desc": "Causes an explosion at the arrow's impact point.",
+  "enchantment.dungeonsgear.harpoon_shot": "Harpoon Shot",
+  "enchantment.dungeonsgear.harpoon_shot.desc": "Shoots piercing harpoons, instead of standard arrows.",
   "enchantment.dungeonsgear.freezing_shot": "Freezing Shot",
   "enchantment.dungeonsgear.freezing_shot.desc": "Slows mobs after impact for three seconds.",
   "enchantment.dungeonsgear.fuse_shot": "Fuse Shot",
