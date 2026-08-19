@@ -5,7 +5,6 @@ import org.slf4j.Logger;
 import com.mojang.logging.LogUtils;
 
 import net.firefoxsalesman.dungeonsgear.capabilities.GearCapabilities;
-import net.firefoxsalesman.dungeonsgear.client.ClientProxy;
 import net.firefoxsalesman.dungeonsgear.config.DungeonsGearConfig;
 import net.firefoxsalesman.dungeonsgear.items.DualWieldItemProperties;
 import net.firefoxsalesman.dungeonsgear.items.GearRangedItemModelProperties;
@@ -17,6 +16,7 @@ import net.firefoxsalesman.dungeonsgear.registry.ItemInit;
 import net.firefoxsalesman.dungeonsgear.registry.MobEffectInit;
 import net.firefoxsalesman.dungeonsgear.registry.ParticleInit;
 import net.firefoxsalesman.dungeonsgear.registry.SoundEventInit;
+import net.firefoxsalesman.dungeonslibs.client.ClientProxy;
 import net.firefoxsalesman.dungeonsgear.entities.SoulWizardEntity;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.item.Item;
@@ -33,6 +33,7 @@ import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.registries.RegistryObject;
+import net.firefoxsalesman.dungeonslibs.network.CommonProxy;
 
 // The value here should match an entry in the META-INF/mods.toml file
 @Mod(DungeonsGear.MOD_ID)
@@ -41,6 +42,7 @@ public class DungeonsGear {
 	public static final String MOD_ID = "dungeonsgear";
 	// Directly reference a slf4j logger
 	public static final Logger LOGGER = LogUtils.getLogger();
+
 	public static CommonProxy PROXY;
 
 	public DungeonsGear() {

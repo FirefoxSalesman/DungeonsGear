@@ -154,7 +154,7 @@ dependencies {
     // Use the full Curios API jar at runtime
     runtimeOnly(fg.deobf("top.theillusivec4.curios:curios-forge:${curios_version}"))
 
-    implementation fg.deobf("curse.maven:dungeons-libraries-port-1605448:8494459")
+    implementation fg.deobf("curse.maven:dungeons-libraries-port-1605448:8664505")
 
     compileOnly(annotationProcessor("io.github.llamalad7:mixinextras-common:${mixinextras_version}"))
     implementation fg.deobf("curse.maven:combat-roll-678036:5625925")

@@ -1,9 +1,3 @@
 * TODO Pull this into the library
 
 [[file:~/projects/DungeonsGear/src/main/java/net/firefoxsalesman/dungeonsgear/DungeonsGear.java::public static CommonProxy PROXY;]]
-* TODO Pull Pulsatin
-
-[[file:~/projects/DungeonsGear/src/main/java/net/firefoxsalesman/dungeonsgear/client/renderer/layers/PulsatingGlowLayer.java]]
-* TODO Pull snowflake particle into the library
-
-[[file:~/projects/DungeonsGear/src/main/java/net/firefoxsalesman/dungeonsgear/registry/ParticleInit.java::public static final RegistryObject<SimpleParticleType> SNOWFLAKE = makeParticle("snowflake");]]
