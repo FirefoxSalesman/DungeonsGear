@@ -167,15 +167,12 @@ public class ItemInit {
 			meleeSupplier);
 
 	// DPS 9.6, crits once per 2.5 seconds, +2 reach
-	// public static final RegistryObject<Item> GLAIVE =
-	// registerMeleeWeapon("glaive",
-	// meleeSupplier);
-	// public static final RegistryObject<Item> GRAVE_BANE =
-	// registerMeleeWeapon("grave_bane",
-	// meleeSupplier);
-	// public static final RegistryObject<Item> VENOM_GLAIVE =
-	// registerMeleeWeapon("venom_glaive",
-	// meleeSupplier);
+	public static final RegistryObject<Item> GLAIVE = registerMeleeWeapon("glaive",
+			meleeSupplier);
+	public static final RegistryObject<Item> GRAVE_BANE = registerMeleeWeapon("grave_bane",
+			meleeSupplier);
+	public static final RegistryObject<Item> VENOM_GLAIVE = registerMeleeWeapon("venom_glaive",
+			meleeSupplier);
 
 	// DPS 7.2, crits once per 1.25 seconds
 	public static final RegistryObject<Item> TEMPEST_KNIFE = registerMeleeWeapon("tempest_knife", meleeSupplier);

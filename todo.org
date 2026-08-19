@@ -1,3 +1,0 @@
-* TODO Pull this into the library
-
-[[file:~/projects/DungeonsGear/src/main/java/net/firefoxsalesman/dungeonsgear/DungeonsGear.java::public static CommonProxy PROXY;]]

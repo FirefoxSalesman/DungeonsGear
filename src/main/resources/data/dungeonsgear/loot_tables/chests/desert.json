@@ -5,97 +5,112 @@
       "entries": [
         {
           "type": "item",
+          "name": "dungeonsgear:glaive",
+          "weight": 4
+        },
+	{
+          "type": "item",
           "name": "dungeonsgear:battlestaff",
-          "weight": 4 
+          "weight": 4
         },
 	{
           "type": "item",
           "name": "dungeonsgear:sickle",
-          "weight": 4 
+          "weight": 4
+        },
+	{
+          "type": "item",
+          "name": "dungeonsgear:venom_glaive",
+          "weight": 2
+        },
+	{
+          "type": "item",
+          "name": "dungeonsgear:grave_bane",
+          "weight": 2
         },
 	{
           "type": "item",
           "name": "dungeonsgear:the_last_laugh",
-          "weight": 2 
+          "weight": 2
         },
 	{
           "type": "item",
           "name": "dungeonsgear:jailors_scythe",
-          "weight": 2 
+          "weight": 2
         },
 	{
           "type": "item",
           "name": "dungeonsgear:battlestaff_of_terror",
-          "weight": 2 
+          "weight": 2
         },
 	{
           "type": "item",
           "name": "dungeonsgear:growing_staff",
-          "weight": 2 
+          "weight": 2
         },
 	{
           "type": "item",
           "name": "dungeonsgear:soul_scythe",
-          "weight": 2 
+          "weight": 2
         },
 	{
           "type": "item",
           "name": "dungeonsgear:soul_knife",
-          "weight": 2 
+          "weight": 2
         },
 	{
           "type": "item",
           "name": "dungeonsgear:nightmares_bite",
-          "weight": 2 
+          "weight": 2
         },
 	{
           "type": "item",
           "name": "dungeonsgear:gong_of_weakening",
-          "weight": 2 
+          "weight": 2
         },
 	{
           "type": "item",
           "name": "dungeonsgear:soul_healer",
-          "weight": 2 
+          "weight": 2
         },
 	{
           "type": "item",
           "name": "dungeonsgear:totem_of_regeneration",
-          "weight": 2 
+          "weight": 2
         },
 	{
           "type": "item",
           "name": "dungeonsgear:totem_of_shielding",
-          "weight": 2 
+          "weight": 2
         },
 	{
           "type": "item",
           "name": "dungeonsgear:totem_of_soul_protection",
-          "weight": 2 
+          "weight": 2
         },
 	{
           "type": "item",
           "name": "dungeonsgear:corrupted_beacon",
-          "weight": 2 
+          "weight": 2
         },
 	{
           "type": "item",
           "name": "dungeonsgear:moon_dagger",
-          "weight": 1 
+          "weight": 1
         },
 	{
           "type": "item",
           "name": "dungeonsgear:truthseeker",
-          "weight": 1 
+          "weight": 1
         },
 	{
           "type": "item",
           "name": "dungeonsgear:eternal_knife",
-          "weight": 1 
+          "weight": 1
         },
 	{
           "type": "empty",
-          "weight": 31
+          "weight": 64
         }
       ]
     }

@@ -45,6 +45,11 @@
         },
 	{
           "type": "item",
+          "name": "dungeonsgear:spear",
+          "weight": 4
+        },
+	{
+          "type": "item",
           "name": "dungeonsgear:mace",
           "weight": 4
         },
@@ -181,6 +186,11 @@
 	{
           "type": "item",
           "name": "dungeonsgear:great_hammer",
+          "weight": 2
+        },
+	{
+          "type": "item",
+          "name": "dungeonsgear:fortune_spear",
           "weight": 2
         },
 	{
@@ -635,7 +645,7 @@
         },
 	{
           "type": "empty",
-          "weight": 262
+          "weight": 286
         }
       ]
     }

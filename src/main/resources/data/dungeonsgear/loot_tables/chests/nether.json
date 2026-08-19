@@ -100,6 +100,11 @@
         },
 	{
           "type": "item",
+          "name": "dungeonsgear:whispering_spear",
+          "weight": 2 
+        },
+	{
+          "type": "item",
           "name": "dungeonsgear:torment_quiver",
           "weight": 2 
         },
@@ -135,7 +140,7 @@
         },
 	{
           "type": "empty",
-          "weight": 38
+          "weight": 46
         }
       ]
     }

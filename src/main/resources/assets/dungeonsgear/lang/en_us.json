@@ -435,6 +435,13 @@
   "item.dungeonsgear.soul_fist": "Soul Fist",
   "lore.dungeonsgear.soul_fist": "Soul Fists are gauntlets clad with great gemstones, each containing a powerful soul.",
 
+  "item.dungeonsgear.grave_bane": "Grave Bane",
+  "lore.dungeonsgear.grave_bane": "A relic from ages of darkness; this glaives radiates potent magical energy to ward off the undead.",
+  "item.dungeonsgear.venom_glaive": "Venom Glaive",
+  "lore.dungeonsgear.venom_glaive": "A toxic cloud seems to follow the Venom Glaive wherever it goes...",
+  "item.dungeonsgear.glaive": "Glaive",
+  "lore.dungeonsgear.glaive": "The glaive, wielded by the servants of the Nameless One, is a weapon with style and power.",
+
   "item.dungeonsgear.hammer_of_gravity": "Hammer of Gravity",
   "lore.dungeonsgear.hammer_of_gravity": "A hammer, embedded with a crystal that harnesses the power of gravity, that is incredibly powerful.",
   "item.dungeonsgear.stormlander": "Stormlander",
