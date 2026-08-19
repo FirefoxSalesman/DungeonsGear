@@ -161,13 +161,10 @@ public class ItemInit {
 	public static final RegistryObject<Item> FROST_SLAYER = registerMeleeWeapon("frost_slayer", meleeSupplier);
 
 	// DPS 8.4, crits once per 2.14 seconds, +2 reach
-	// public static final RegistryObject<Item> SPEAR = registerMeleeWeapon("spear",
-	// meleeSupplier);
-	// public static final RegistryObject<Item> FORTUNE_SPEAR =
-	// registerMeleeWeapon("fortune_spear", meleeSupplier);
-	// public static final RegistryObject<Item> WHISPERING_SPEAR =
-	// registerMeleeWeapon("whispering_spear",
-	// meleeSupplier);
+	public static final RegistryObject<Item> SPEAR = registerMeleeWeapon("spear", meleeSupplier);
+	public static final RegistryObject<Item> FORTUNE_SPEAR = registerMeleeWeapon("fortune_spear", meleeSupplier);
+	public static final RegistryObject<Item> WHISPERING_SPEAR = registerMeleeWeapon("whispering_spear",
+			meleeSupplier);
 
 	// DPS 9.6, crits once per 2.5 seconds, +2 reach
 	// public static final RegistryObject<Item> GLAIVE =

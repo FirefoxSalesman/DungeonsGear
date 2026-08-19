@@ -19,6 +19,10 @@ public class NetworkHandler {
 	}
 
 	public static void init() {
+		INSTANCE.registerMessage(incrementAndGetPacketCounter(), PacketOffhandAttack.class,
+				PacketOffhandAttack::encode,
+				PacketOffhandAttack::decode, PacketOffhandAttack.OffhandHandler::handle);
+
 		INSTANCE.registerMessage(incrementAndGetPacketCounter(), PlayerBeamMessage.class,
 				PlayerBeamMessage::encode, PlayerBeamMessage::decode,
 				PlayerBeamMessage.PlayerBeamMessageHandler::handle);

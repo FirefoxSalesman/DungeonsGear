@@ -1,5 +1,10 @@
 package net.firefoxsalesman.dungeonsgear;
 
+import static net.firefoxsalesman.dungeonsgear.DungeonsGear.PROXY;
+import static net.firefoxsalesman.dungeonsgear.config.DungeonsGearConfig.ENABLE_FRIENDLY_PET_FIRE;
+
+import java.util.Optional;
+
 import net.combatroll.api.event.ServerSideRollEvents;
 import net.firefoxsalesman.dungeonsgear.capabilities.bow.RangedAbilities;
 import net.firefoxsalesman.dungeonsgear.capabilities.bow.RangedAbilitiesHelper;
@@ -9,10 +14,12 @@ import net.firefoxsalesman.dungeonsgear.capabilities.combo.RollHelper;
 import net.firefoxsalesman.dungeonsgear.enchantments.ranged.BurstBowstringEnchantment;
 import net.firefoxsalesman.dungeonsgear.enchantments.ranged.FuseShotEnchantment;
 import net.firefoxsalesman.dungeonsgear.enchantments.ranged.RollChargeEnchantment;
+import net.firefoxsalesman.dungeonsgear.items.interfaces.IDualWieldWeapon;
 import net.firefoxsalesman.dungeonsgear.registry.EnchantmentInit;
 import net.firefoxsalesman.dungeonsgear.registry.MobEffectInit;
 import net.firefoxsalesman.dungeonsgear.utilities.ArmorEffectHelper;
 import net.firefoxsalesman.dungeonsgear.utilities.ProjectileEffectHelper;
+import net.firefoxsalesman.dungeonslibs.items.interfaces.IComboWeapon;
 import net.firefoxsalesman.dungeonslibs.utils.ModHelper;
 import net.firefoxsalesman.dungeonslibs.utils.PetHelper;
 import net.minecraft.core.particles.ParticleTypes;
@@ -28,15 +35,16 @@ import net.minecraft.world.item.BowItem;
 import net.minecraft.world.item.CrossbowItem;
 import net.minecraft.world.item.ItemStack;
 import net.minecraftforge.event.entity.EntityJoinLevelEvent;
-import net.minecraftforge.event.entity.living.*;
+import net.minecraftforge.event.entity.living.LivingAttackEvent;
+import net.minecraftforge.event.entity.living.LivingDamageEvent;
+import net.minecraftforge.event.entity.living.LivingEquipmentChangeEvent;
+import net.minecraftforge.event.entity.living.LivingEvent;
+import net.minecraftforge.event.entity.living.MobEffectEvent;
+import net.minecraftforge.event.entity.player.CriticalHitEvent;
+import net.minecraftforge.eventbus.api.Event;
 import net.minecraftforge.eventbus.api.EventPriority;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
-
-import java.util.Optional;
-
-import static net.firefoxsalesman.dungeonsgear.DungeonsGear.PROXY;
-import static net.firefoxsalesman.dungeonsgear.config.DungeonsGearConfig.ENABLE_FRIENDLY_PET_FIRE;
 
 @Mod.EventBusSubscriber(modid = DungeonsGear.MOD_ID)
 public class GlobalEvents {
@@ -115,22 +123,21 @@ public class GlobalEvents {
 	}
 
 	// TODO Handle this when we're good & ready
-	// @SubscribeEvent(priority = EventPriority.HIGHEST)
-	// public static void comboForceCrit(CriticalHitEvent event) {
-	// if (event.getEntity().getMainHandItem().getItem() instanceof
-	// IDualWieldWeapon) {
-	// Player p = event.getEntity();
-	// ItemStack is = p.getMainHandItem();
-	// IComboWeapon ic = (IComboWeapon) is.getItem();
-	// Combo cap = ComboHelper.getComboCapability(p);
-	// if (ic.shouldProcSpecialEffects(is, p, cap.getComboCount())) {
-	// event.setResult(Event.Result.ALLOW);
-	// event.setDamageModifier(ic.damageMultiplier(is, p, cap.getComboCount()));
-	// cap.setComboCount(cap.getComboCount() % ic.getComboLength(is, p));
-	// } else
-	// event.setResult(Event.Result.DENY);
-	// }
-	// }
+	@SubscribeEvent(priority = EventPriority.HIGHEST)
+	public static void comboForceCrit(CriticalHitEvent event) {
+		if (event.getEntity().getMainHandItem().getItem() instanceof IDualWieldWeapon) {
+			Player p = event.getEntity();
+			ItemStack is = p.getMainHandItem();
+			IComboWeapon ic = (IComboWeapon) is.getItem();
+			Combo cap = ComboHelper.getComboCapability(p);
+			if (ic.shouldProcSpecialEffects(is, p, cap.getComboCount())) {
+				event.setResult(Event.Result.ALLOW);
+				event.setDamageModifier(ic.damageMultiplier(is, p, cap.getComboCount()));
+				cap.setComboCount(cap.getComboCount() % ic.getComboLength(is, p));
+			} else
+				event.setResult(Event.Result.DENY);
+		}
+	}
 
 	@SubscribeEvent
 	public static void resetCombo(LivingEquipmentChangeEvent event) {

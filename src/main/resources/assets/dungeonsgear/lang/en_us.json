@@ -390,6 +390,13 @@
   "item.dungeonsgear.soul_scythe": "Soul Scythe",
   "lore.dungeonsgear.soul_scythe": "A cruel reaper of souls, the Soul Scythe is unsentimental in its work.",
 
+  "item.dungeonsgear.fortune_spear": "Fortune Spear",
+  "lore.dungeonsgear.fortune_spear": "A spear that is watched over by lucky souls, bringing luck to any who wield it.",
+  "item.dungeonsgear.whispering_spear": "Whispering Spear",
+  "lore.dungeonsgear.whispering_spear": "Legend says that this cursed spear is plagued by a soul that controls the mind of any who wield it.",
+  "item.dungeonsgear.spear": "Spear",
+  "lore.dungeonsgear.spear": "The spear, with its long reach and powerful range, is a solid choice of weapon.",
+
   "item.dungeonsgear.battlestaff": "Battlestaff",
   "lore.dungeonsgear.battlestaff": "The battlestaff is a perfectly balanced staff that is ready for any battle.",
   "item.dungeonsgear.battlestaff_of_terror": "Battlestaff of Terror",
