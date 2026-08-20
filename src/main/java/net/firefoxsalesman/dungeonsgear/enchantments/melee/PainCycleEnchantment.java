@@ -14,6 +14,7 @@ import net.firefoxsalesman.dungeonsgear.capabilities.combo.ComboHelper;
 import net.firefoxsalesman.dungeonsgear.enchantments.ModEnchantmentTypes;
 import net.firefoxsalesman.dungeonsgear.enchantments.types.DungeonsEnchantment;
 import net.firefoxsalesman.dungeonsgear.registry.EnchantmentInit;
+import net.firefoxsalesman.dungeonsgear.registry.ModDamageSources;
 import net.firefoxsalesman.dungeonsgear.utilities.PlayerAttackHelper;
 
 @Mod.EventBusSubscriber(modid = MOD_ID)
@@ -25,7 +26,8 @@ public class PainCycleEnchantment extends DungeonsEnchantment {
 
 	@SubscribeEvent
 	public static void onPainfulAttack(LivingDamageEvent event) {
-		if (PlayerAttackHelper.isProbablyNotMeleeDamage(event.getSource()))
+		if (PlayerAttackHelper.isProbablyNotMeleeDamage(event.getSource())
+				|| event.getSource().is(ModDamageSources.OFFHAND))
 			return;
 		if (event.getEntity().level().isClientSide)
 			return;

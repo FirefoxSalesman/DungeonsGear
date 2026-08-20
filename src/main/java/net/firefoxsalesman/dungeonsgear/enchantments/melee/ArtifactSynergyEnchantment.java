@@ -13,8 +13,8 @@ import net.firefoxsalesman.dungeonsgear.capabilities.combo.Combo;
 import net.firefoxsalesman.dungeonsgear.capabilities.combo.ComboHelper;
 import net.firefoxsalesman.dungeonsgear.enchantments.ModEnchantmentTypes;
 import net.firefoxsalesman.dungeonsgear.enchantments.types.DungeonsEnchantment;
-import net.firefoxsalesman.dungeonsgear.registry.DamageSourceInit;
 import net.firefoxsalesman.dungeonsgear.registry.EnchantmentInit;
+import net.firefoxsalesman.dungeonsgear.registry.ModDamageSources;
 import net.firefoxsalesman.dungeonsgear.utilities.PlayerAttackHelper;
 import net.firefoxsalesman.dungeonslibs.event.ArtifactEvent;
 
@@ -34,7 +34,7 @@ public class ArtifactSynergyEnchantment extends DungeonsEnchantment {
 	public static void onArtifactSynergyAttack(LivingDamageEvent event) {
 		if (PlayerAttackHelper.isProbablyNotMeleeDamage(event.getSource()))
 			return;
-		if (event.getSource().is(DamageSourceInit.OFFHAND))
+		if (event.getSource().is(ModDamageSources.OFFHAND))
 			return;
 		if (!(event.getSource().getEntity() instanceof LivingEntity))
 			return;

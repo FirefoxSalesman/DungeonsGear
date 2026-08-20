@@ -24,6 +24,7 @@ import net.firefoxsalesman.dungeonsgear.DungeonsGear;
 import net.firefoxsalesman.dungeonsgear.config.DungeonsGearConfig;
 import net.firefoxsalesman.dungeonsgear.enchantments.ModEnchantmentTypes;
 import net.firefoxsalesman.dungeonsgear.enchantments.types.DungeonsEnchantment;
+import net.firefoxsalesman.dungeonsgear.registry.ModDamageSources;
 import net.firefoxsalesman.dungeonsgear.utilities.AOECloudHelper;
 import net.firefoxsalesman.dungeonsgear.utilities.ModEnchantmentHelper;
 import net.firefoxsalesman.dungeonsgear.utilities.PlayerAttackHelper;
@@ -41,7 +42,8 @@ public class PoisonCloudEnchantment extends DungeonsEnchantment {
 
 	@SubscribeEvent
 	public static void onPoisonousWeaponAttack(LivingAttackEvent event) {
-		if (event.getSource().getDirectEntity() != event.getSource().getEntity())
+		if (event.getSource().getDirectEntity() != event.getSource().getEntity()
+				|| event.getSource().is(ModDamageSources.OFFHAND))
 			return;
 		if (!(event.getSource().getEntity() instanceof LivingEntity))
 			return;

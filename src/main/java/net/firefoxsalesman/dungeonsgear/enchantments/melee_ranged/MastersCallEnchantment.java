@@ -4,6 +4,7 @@ import net.firefoxsalesman.dungeonsgear.DungeonsGear;
 import net.firefoxsalesman.dungeonsgear.enchantments.ModEnchantmentTypes;
 import net.firefoxsalesman.dungeonsgear.enchantments.types.DungeonsEnchantment;
 import net.firefoxsalesman.dungeonsgear.registry.EnchantmentInit;
+import net.firefoxsalesman.dungeonsgear.registry.ModDamageSources;
 import net.firefoxsalesman.dungeonsgear.utilities.ModEnchantmentHelper;
 import net.firefoxsalesman.dungeonslibs.utils.PetHelper;
 import net.minecraft.world.entity.EquipmentSlot;
@@ -32,7 +33,8 @@ public class MastersCallEnchantment extends DungeonsEnchantment {
 	public static void onWeaponAttack(LivingAttackEvent event) {
 		if (event.getSource().getDirectEntity() != event.getSource().getEntity())
 			return;
-		if (!(event.getSource().getEntity() instanceof LivingEntity))
+		if (!(event.getSource().getEntity() instanceof LivingEntity)
+				|| event.getSource().is(ModDamageSources.OFFHAND))
 			return;
 		LivingEntity attacker = (LivingEntity) event.getSource().getEntity();
 		if (attacker.getLastHurtMobTimestamp() == attacker.tickCount)

@@ -13,7 +13,7 @@ import net.firefoxsalesman.dungeonsgear.DungeonsGear;
 import net.firefoxsalesman.dungeonsgear.config.DungeonsGearConfig;
 import net.firefoxsalesman.dungeonsgear.enchantments.types.FocusEnchantment;
 import net.firefoxsalesman.dungeonsgear.registry.EnchantmentInit;
-import net.firefoxsalesman.dungeonslibs.utils.DamageSourceHelper;
+import net.firefoxsalesman.dungeonsgear.registry.ModDamageSources;
 
 @Mod.EventBusSubscriber(modid = DungeonsGear.MOD_ID)
 public class LightningFocusEnchantment extends FocusEnchantment {
@@ -29,7 +29,7 @@ public class LightningFocusEnchantment extends FocusEnchantment {
 
 	@SubscribeEvent
 	public static void onLightningAttack(LivingDamageEvent event) {
-		if (!DamageSourceHelper.isSource(event.getSource(), event.getEntity().damageSources().lightningBolt()))
+		if (!event.getSource().is(ModDamageSources.ELECTRIC_SHOCK))
 			return;
 		if (event.getEntity().level().isClientSide)
 			return;
