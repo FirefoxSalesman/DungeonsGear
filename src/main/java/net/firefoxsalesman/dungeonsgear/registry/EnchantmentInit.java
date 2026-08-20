@@ -90,6 +90,7 @@ import net.firefoxsalesman.dungeonsgear.enchantments.ranged.RollChargeEnchantmen
 import net.firefoxsalesman.dungeonsgear.enchantments.ranged.SuperchargeEnchantment;
 import net.firefoxsalesman.dungeonsgear.enchantments.ranged.TempoTheftEnchantment;
 import net.firefoxsalesman.dungeonsgear.enchantments.ranged.VelocityEnchantment;
+import net.firefoxsalesman.dungeonsgear.enchantments.ranged.WildRageEnchantment;
 
 public class EnchantmentInit {
 	public static final DeferredRegister<Enchantment> ENCHANTMENTS = DeferredRegister
@@ -193,6 +194,8 @@ public class EnchantmentInit {
 			TempoTheftEnchantment::new);
 	public static RegistryObject<VelocityEnchantment> VELOCITY = ENCHANTMENTS.register("velocity",
 			VelocityEnchantment::new);
+	public static RegistryObject<WildRageEnchantment> WILD_RAGE = ENCHANTMENTS.register("wild_rage",
+			() -> new WildRageEnchantment());
 	public static RegistryObject<BagOfSoulsEnchantment> BAG_OF_SOULS = ENCHANTMENTS.register("bag_of_souls",
 			BagOfSoulsEnchantment::new);
 	public static RegistryObject<BeastBossEnchantment> BEAST_BOSS = ENCHANTMENTS.register("beast_boss",

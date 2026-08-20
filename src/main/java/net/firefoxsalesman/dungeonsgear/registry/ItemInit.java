@@ -222,11 +222,9 @@ public class ItemInit {
 	public static final RegistryObject<Item> TRICKBOW = registerRangedWeapon("trickbow", bowSupplier);
 	public static final RegistryObject<Item> THE_GREEN_MENACE = registerRangedWeapon("the_green_menace",
 			bowSupplier);
-	// public static final RegistryObject<Item> THE_PINK_SCOUNDREL =
-	// registerRangedWeapon("the_pink_scoundrel",
-	// bowSupplier);
-	// public static final RegistryObject<Item> SUGAR_RUSH =
-	// registerRangedWeapon("sugar_rush", bowSupplier);
+	public static final RegistryObject<Item> THE_PINK_SCOUNDREL = registerRangedWeapon("the_pink_scoundrel",
+			bowSupplier);
+	public static final RegistryObject<Item> SUGAR_RUSH = registerRangedWeapon("sugar_rush", bowSupplier);
 
 	public static final RegistryObject<Item> SNOW_BOW = registerRangedWeapon("snow_bow", bowSupplier);
 	public static final RegistryObject<Item> WINTERS_TOUCH = registerRangedWeapon("winters_touch", bowSupplier);
