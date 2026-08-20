@@ -33,9 +33,9 @@ import net.firefoxsalesman.dungeonslibs.capabilities.minionmaster.Follower;
 @Mod.EventBusSubscriber(modid = DungeonsGear.MOD_ID)
 public class ArtifactEvents {
 
-	public static final String FIRE_SHEEP_TAG = "FireSheep";
-	public static final String POISON_SHEEP_TAG = "PoisonSheep";
-	public static final String SPEED_SHEEP_TAG = "SpeedSheep";
+	public static final String FIRE_SHEEP_TAG = "Fire";
+	public static final String POISON_SHEEP_TAG = "Poison";
+	public static final String SPEED_SHEEP_TAG = "Speed";
 
 	@SubscribeEvent
 	public static void onEnchantedSheepAttack(LivingDamageEvent event) {
