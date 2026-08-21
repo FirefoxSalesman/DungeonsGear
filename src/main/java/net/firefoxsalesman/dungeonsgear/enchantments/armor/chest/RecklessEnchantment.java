@@ -40,6 +40,10 @@ public class RecklessEnchantment extends DungeonsEnchantment {
 				livingEntity);
 		// equipping armor with reckless
 		if (levelTo > 0) {
+			if (!livingEntity.getAttributes().hasAttribute(Attributes.MAX_HEALTH)
+					|| !livingEntity.getAttributes().hasAttribute(Attributes.ATTACK_DAMAGE))
+				return;
+
 			// remove any existing modifiers
 			livingEntity.getAttribute(Attributes.MAX_HEALTH).removeModifier(RECKLESS);
 			livingEntity.getAttribute(Attributes.ATTACK_DAMAGE).removeModifier(RECKLESS);
@@ -60,7 +64,9 @@ public class RecklessEnchantment extends DungeonsEnchantment {
 					AttributeModifier.Operation.MULTIPLY_BASE));
 		}
 		// removing reckless armor
-		else {
+		else
+
+		{
 			// remove the modifiers and regain health lost from reckless
 			AttributeModifier existingRecklessHealthMod = livingEntity.getAttribute(Attributes.MAX_HEALTH)
 					.getModifier(RECKLESS);
