@@ -32,12 +32,14 @@ import net.firefoxsalesman.dungeonsgear.enchantments.armor.head.LightningFocusEn
 import net.firefoxsalesman.dungeonsgear.enchantments.armor.head.PoisonFocusEnchantment;
 import net.firefoxsalesman.dungeonsgear.enchantments.armor.head.PotionBarrierEnchantment;
 import net.firefoxsalesman.dungeonsgear.enchantments.armor.head.SoulFocusEnchantment;
+import net.firefoxsalesman.dungeonsgear.enchantments.armor.legs.AcrobatEnchantment;
 import net.firefoxsalesman.dungeonsgear.enchantments.armor.legs.AltruisticEnchantment;
 import net.firefoxsalesman.dungeonsgear.enchantments.armor.legs.BurningEnchantment;
 import net.firefoxsalesman.dungeonsgear.enchantments.armor.legs.ChillingEnchantment;
 import net.firefoxsalesman.dungeonsgear.enchantments.armor.legs.GravityPulseEnchantment;
 import net.firefoxsalesman.dungeonsgear.enchantments.armor.legs.LifeStealAuraEnchantment;
 import net.firefoxsalesman.dungeonsgear.enchantments.armor.legs.MeleeAuraEnchantment;
+import net.firefoxsalesman.dungeonsgear.enchantments.armor.legs.MultiRollEnchantment;
 import net.firefoxsalesman.dungeonsgear.enchantments.armor.legs.PotionAuraEnchantment;
 import net.firefoxsalesman.dungeonsgear.enchantments.armor.legs.SnowballEnchantment;
 import net.firefoxsalesman.dungeonsgear.enchantments.armor.legs.SpeedAuraEnchantment;
@@ -196,6 +198,9 @@ public class EnchantmentInit {
 			VelocityEnchantment::new);
 	public static RegistryObject<WildRageEnchantment> WILD_RAGE = ENCHANTMENTS.register("wild_rage",
 			() -> new WildRageEnchantment());
+
+	public static RegistryObject<AcrobatEnchantment> ACROBAT = ENCHANTMENTS.register("acrobat",
+			() -> new AcrobatEnchantment());
 	public static RegistryObject<BagOfSoulsEnchantment> BAG_OF_SOULS = ENCHANTMENTS.register("bag_of_souls",
 			BagOfSoulsEnchantment::new);
 	public static RegistryObject<BeastBossEnchantment> BEAST_BOSS = ENCHANTMENTS.register("beast_boss",
@@ -236,6 +241,8 @@ public class EnchantmentInit {
 			FireFocusEnchantment::new);
 	public static RegistryObject<LightningFocusEnchantment> LIGHTNING_FOCUS = ENCHANTMENTS
 			.register("lightning_focus", LightningFocusEnchantment::new);
+	public static RegistryObject<MultiRollEnchantment> MULTI_ROLL = ENCHANTMENTS.register("multi_roll",
+			() -> new MultiRollEnchantment());
 	public static RegistryObject<PoisonFocusEnchantment> POISON_FOCUS = ENCHANTMENTS.register("poison_focus",
 			PoisonFocusEnchantment::new);
 	public static RegistryObject<PotionBarrierEnchantment> POTION_BARRIER = ENCHANTMENTS.register("potion_barrier",

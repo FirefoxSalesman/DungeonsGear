@@ -122,7 +122,6 @@ public class GlobalEvents {
 		}
 	}
 
-	// TODO Handle this when we're good & ready
 	@SubscribeEvent(priority = EventPriority.HIGHEST)
 	public static void comboForceCrit(CriticalHitEvent event) {
 		if (event.getEntity().getMainHandItem().getItem() instanceof IDualWieldWeapon) {
@@ -162,6 +161,15 @@ public class GlobalEvents {
 			} else if (mobEntity.isNoAi() && mobEntity.getTags().contains(STUNNED_TAG)) {
 				mobEntity.setNoAi(false);
 				mobEntity.removeTag(STUNNED_TAG);
+			}
+		}
+
+		if (!ModHelper.hasMod("combatroll") && living instanceof Player player) {
+			Combo comboCap = ComboHelper.getComboCapability(player);
+			int jumpCounter = comboCap.getJumpCounter();
+			if (comboCap.getJumpCooldownTimer() <= 0 && jumpCounter > 0) {
+				comboCap.setJumpCounter(jumpCounter - 1);
+				RollHelper.startCooldown(player, comboCap);
 			}
 		}
 	}
@@ -240,13 +248,9 @@ public class GlobalEvents {
 			Combo comboCap = ComboHelper.getComboCapability(playerEntity);
 			int jumpCooldownTimer = comboCap.getJumpCooldownTimer();
 
-			if (jumpCooldownTimer <= 0) {
+			if (!RollHelper.hasReachedJumpLimit(jumper)) {
 				doRollEffects(playerEntity);
-			}
-			RollHelper.incrementJumpCounter(playerEntity);
-
-			if (jumpCooldownTimer <= 0 && RollHelper.hasReachedJumpLimit(playerEntity)) {
-				RollHelper.startCooldown(jumper, comboCap);
+				RollHelper.incrementJumpCounter(playerEntity);
 			}
 		}
 	}

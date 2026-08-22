@@ -407,7 +407,7 @@ public class ItemInit {
 	public static final ArmorSetInit ARCTIC_FOX_ARMOR = registerArmorSet("arctic_fox");
 	public static final ArmorSetInit CLIMBING_GEAR = registerArmorSet("climbing");
 	public static final ArmorSetInit RUGGED_CLIMBING_GEAR = registerFreezingResistanceArmorSet("rugged_climbing");
-	// public static final ArmorSetInit GOAT_GEAR = registerArmorSet("goat", COLD);
+	public static final ArmorSetInit GOAT_GEAR = registerArmorSet("goat");
 	// public static final ArmorSetInit EMERALD_ARMOR = registerArmorSet("emerald",
 	// COLD);
 	// public static final ArmorSetInit GILDED_GLORY =

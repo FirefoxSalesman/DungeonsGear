@@ -25,6 +25,26 @@
         },
 	{
           "type": "item",
+          "name": "dungeonsgear:goat_helmet",
+          "weight": 4
+        },
+	{
+          "type": "item",
+          "name": "dungeonsgear:goat_chestplate",
+          "weight": 4
+        },
+	{
+          "type": "item",
+          "name": "dungeonsgear:goat_leggings",
+          "weight": 4
+        },
+	{
+          "type": "item",
+          "name": "dungeonsgear:goat_boots",
+          "weight": 4
+        },
+	{
+          "type": "item",
           "name": "dungeonsgear:frost_scythe",
           "weight": 2
         },
@@ -240,7 +260,7 @@
         },
 	{
           "type": "empty",
-          "weight": 94
+          "weight": 126
         }
       ]
     }

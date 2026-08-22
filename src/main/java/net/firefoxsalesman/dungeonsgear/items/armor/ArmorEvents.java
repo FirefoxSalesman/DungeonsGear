@@ -127,10 +127,8 @@ public class ArmorEvents {
 			Combo comboCap = ComboHelper.getComboCapability(player);
 
 			if (comboCap.getJumpCooldownTimer() > 0) {
-				// System.out.println("This actually runs");
 				comboCap.setJumpCooldownTimer(comboCap.getJumpCooldownTimer() - 1);
 			} else if (comboCap.getJumpCooldownTimer() < 0) {
-				// System.out.println("This actually runs");
 				comboCap.setJumpCooldownTimer(0);
 			}
 

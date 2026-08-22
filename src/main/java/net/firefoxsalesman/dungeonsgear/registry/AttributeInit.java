@@ -26,7 +26,7 @@ public class AttributeInit {
 	public static final RegistryObject<Attribute> ROLL_COOLDOWN = ATTRIBUTES.register("roll_cooldown",
 			() -> new RangedAttribute(
 					"attribute.name.generic." + MOD_ID + ".roll_cooldown",
-					20.0D,
+					180.0D,
 					0.0D,
 					1024.0D)
 					.setSyncable(true));

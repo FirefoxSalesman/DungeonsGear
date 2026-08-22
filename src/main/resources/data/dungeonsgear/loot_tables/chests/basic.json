@@ -485,6 +485,16 @@
         },
 	{
           "type": "item",
+          "name": "dungeonsgear:the_pink_scoundrel",
+          "weight": 2
+        },
+	{
+          "type": "item",
+          "name": "dungeonsgear:sugar_rush",
+          "weight": 2
+        },
+	{
+          "type": "item",
           "name": "dungeonsgear:titans_shroud_helmet",
           "weight": 1
         },
@@ -645,7 +655,7 @@
         },
 	{
           "type": "empty",
-          "weight": 286
+          "weight": 302
         }
       ]
     }
