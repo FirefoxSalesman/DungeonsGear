@@ -11,6 +11,7 @@ import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 import net.firefoxsalesman.dungeonsgear.enchantments.types.DungeonsEnchantment;
+import net.firefoxsalesman.dungeonsgear.utilities.GeneralHelper;
 import net.firefoxsalesman.dungeonslibs.integration.curios.CuriosIntegration;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.LivingEntity;
@@ -23,21 +24,10 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 import top.theillusivec4.curios.api.event.CurioChangeEvent;
 
 public class CooldownEnchantment extends DungeonsEnchantment {
-	private final static Map<EquipmentSlot, UUID> EQUIPMENT_ATTRIBUTE_UUID_MAP = Stream.of(
-			new AbstractMap.SimpleImmutableEntry<>(EquipmentSlot.HEAD,
-					UUID.fromString("bf62ed9a-6c97-4ecd-a5be-230c788b1569")),
-			new AbstractMap.SimpleImmutableEntry<>(EquipmentSlot.CHEST,
-					UUID.fromString("1231b1d0-839a-488d-bafd-c840a650ae8f")),
-			new AbstractMap.SimpleImmutableEntry<>(EquipmentSlot.LEGS,
-					UUID.fromString("978c008f-ca08-47bd-a00a-2d6a021b4006")),
-			new AbstractMap.SimpleImmutableEntry<>(EquipmentSlot.FEET,
-					UUID.fromString("dc47e161-9d69-415a-a00e-75e9a161f9d4")),
-			new AbstractMap.SimpleImmutableEntry<>(EquipmentSlot.MAINHAND,
-					UUID.fromString("333ffc0c-faac-4172-bad6-41162121549b")),
-			new AbstractMap.SimpleImmutableEntry<>(EquipmentSlot.OFFHAND,
-					UUID.fromString("a2d4d691-41b1-4575-85fb-a36c16bdf741")))
-			.collect(Collectors.toMap(AbstractMap.SimpleImmutableEntry::getKey,
-					AbstractMap.SimpleImmutableEntry::getValue));
+	private final static Map<EquipmentSlot, UUID> EQUIPMENT_ATTRIBUTE_UUID_MAP = GeneralHelper.genTotalAttributeMap(
+			"bf62ed9a-6c97-4ecd-a5be-230c788b1569", "1231b1d0-839a-488d-bafd-c840a650ae8f",
+			"978c008f-ca08-47bd-a00a-2d6a021b4006", "dc47e161-9d69-415a-a00e-75e9a161f9d4",
+			"333ffc0c-faac-4172-bad6-41162121549b", "a2d4d691-41b1-4575-85fb-a36c16bdf741");
 	private final static Map<Integer, UUID> CURIO_ATTRIBUTE_UUID_MAP = Stream.of(
 			new AbstractMap.SimpleImmutableEntry<>(0,
 					UUID.fromString("7d3b3ddd-e905-464a-9aff-89b92ae7e940")),

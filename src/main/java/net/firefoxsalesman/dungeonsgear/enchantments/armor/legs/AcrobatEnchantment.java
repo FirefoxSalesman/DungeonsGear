@@ -4,14 +4,12 @@ import static net.firefoxsalesman.dungeonsgear.enchantments.ModEnchantmentTypes.
 import static net.firefoxsalesman.dungeonsgear.registry.AttributeInit.ROLL_COOLDOWN;
 import static net.firefoxsalesman.dungeonsgear.registry.EnchantmentInit.ACROBAT;
 
-import java.util.AbstractMap;
 import java.util.Map;
 import java.util.UUID;
-import java.util.stream.Collectors;
-import java.util.stream.Stream;
 
 import net.firefoxsalesman.dungeonsgear.DungeonsGear;
 import net.firefoxsalesman.dungeonsgear.enchantments.types.JumpingEnchantment;
+import net.firefoxsalesman.dungeonsgear.utilities.GeneralHelper;
 import net.firefoxsalesman.dungeonslibs.utils.ModHelper;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.LivingEntity;
@@ -27,17 +25,9 @@ import net.minecraftforge.fml.common.Mod;
 
 @Mod.EventBusSubscriber(modid = DungeonsGear.MOD_ID)
 public class AcrobatEnchantment extends JumpingEnchantment {
-	private final static Map<EquipmentSlot, UUID> EQUIPMENT_ATTRIBUTE_UUID_MAP = Stream.of(
-			new AbstractMap.SimpleImmutableEntry<>(EquipmentSlot.HEAD,
-					UUID.fromString("4dc1b9d3-938e-46e0-bb0d-df77fb10569b")),
-			new AbstractMap.SimpleImmutableEntry<>(EquipmentSlot.CHEST,
-					UUID.fromString("ecfeb9e3-2601-4220-bf90-fad110cbd7c4")),
-			new AbstractMap.SimpleImmutableEntry<>(EquipmentSlot.LEGS,
-					UUID.fromString("809a007f-c280-456a-a467-c748f9e7e4f4")),
-			new AbstractMap.SimpleImmutableEntry<>(EquipmentSlot.FEET,
-					UUID.fromString("6b5e8d49-9639-45cf-8a70-43fc3dcfc7ab")))
-			.collect(Collectors.toMap(AbstractMap.SimpleImmutableEntry::getKey,
-					AbstractMap.SimpleImmutableEntry::getValue));
+	private final static Map<EquipmentSlot, UUID> EQUIPMENT_ATTRIBUTE_UUID_MAP = GeneralHelper.genArmorAttributeMap(
+			"4dc1b9d3-938e-46e0-bb0d-df77fb10569b", "ecfeb9e3-2601-4220-bf90-fad110cbd7c4",
+			"809a007f-c280-456a-a467-c748f9e7e4f4", "6b5e8d49-9639-45cf-8a70-43fc3dcfc7ab");
 
 	public AcrobatEnchantment() {
 		super(Rarity.RARE, EnchantmentCategory.ARMOR_LEGS, ARMOR_SLOT);

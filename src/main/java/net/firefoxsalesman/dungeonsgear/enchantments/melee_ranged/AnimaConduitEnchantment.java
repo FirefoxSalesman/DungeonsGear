@@ -2,6 +2,7 @@ package net.firefoxsalesman.dungeonsgear.enchantments.melee_ranged;
 
 import net.firefoxsalesman.dungeonsgear.enchantments.ModEnchantmentTypes;
 import net.firefoxsalesman.dungeonsgear.enchantments.types.HealingEnchantment;
+import net.firefoxsalesman.dungeonsgear.utilities.GeneralHelper;
 import net.firefoxsalesman.dungeonsgear.utilities.ModEnchantmentHelper;
 import net.firefoxsalesman.dungeonslibs.event.PlayerSoulEvent;
 import net.firefoxsalesman.dungeonslibs.integration.curios.CuriosIntegration;
@@ -30,21 +31,10 @@ import static net.firefoxsalesman.dungeonslibs.attribute.AttributeRegistry.SOUL_
 
 @Mod.EventBusSubscriber(modid = MOD_ID)
 public class AnimaConduitEnchantment extends HealingEnchantment {
-	private final static Map<EquipmentSlot, UUID> EQUIPMENT_ATTRIBUTE_UUID_MAP = Stream.of(
-			new AbstractMap.SimpleImmutableEntry<>(EquipmentSlot.HEAD,
-					UUID.fromString("8eadc4ca-b5f4-4412-88e0-5d07f5eb79e8")),
-			new AbstractMap.SimpleImmutableEntry<>(EquipmentSlot.CHEST,
-					UUID.fromString("7cf5cebe-d8e3-4a17-9235-c0eed2a63813")),
-			new AbstractMap.SimpleImmutableEntry<>(EquipmentSlot.LEGS,
-					UUID.fromString("35035bf5-cc19-4d8f-9b9b-4d3b303d2cf8")),
-			new AbstractMap.SimpleImmutableEntry<>(EquipmentSlot.FEET,
-					UUID.fromString("29363940-366c-4c0c-bcae-ff01d399235a")),
-			new AbstractMap.SimpleImmutableEntry<>(EquipmentSlot.MAINHAND,
-					UUID.fromString("4c1e2969-701b-4391-8043-c364f88a21ab")),
-			new AbstractMap.SimpleImmutableEntry<>(EquipmentSlot.OFFHAND,
-					UUID.fromString("723452ec-16cf-494e-979b-9518731eacee")))
-			.collect(Collectors.toMap(AbstractMap.SimpleImmutableEntry::getKey,
-					AbstractMap.SimpleImmutableEntry::getValue));
+	private final static Map<EquipmentSlot, UUID> EQUIPMENT_ATTRIBUTE_UUID_MAP = GeneralHelper.genTotalAttributeMap(
+			"8eadc4ca-b5f4-4412-88e0-5d07f5eb79e8", "7cf5cebe-d8e3-4a17-9235-c0eed2a63813",
+			"35035bf5-cc19-4d8f-9b9b-4d3b303d2cf8", "29363940-366c-4c0c-bcae-ff01d399235a",
+			"4c1e2969-701b-4391-8043-c364f88a21ab", "723452ec-16cf-494e-979b-9518731eacee");
 	private final static Map<Integer, UUID> CURIO_ATTRIBUTE_UUID_MAP = Stream.of(
 			new AbstractMap.SimpleImmutableEntry<>(0,
 					UUID.fromString("44f6cd12-9cff-4e09-9c27-c3c8acf4d51d")),

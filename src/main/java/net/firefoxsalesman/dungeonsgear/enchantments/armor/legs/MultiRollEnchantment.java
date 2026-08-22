@@ -4,11 +4,8 @@ import static net.firefoxsalesman.dungeonsgear.enchantments.ModEnchantmentTypes.
 import static net.firefoxsalesman.dungeonsgear.registry.AttributeInit.ROLL_LIMIT;
 import static net.firefoxsalesman.dungeonsgear.registry.EnchantmentInit.MULTI_ROLL;
 
-import java.util.AbstractMap;
 import java.util.Map;
 import java.util.UUID;
-import java.util.stream.Collectors;
-import java.util.stream.Stream;
 
 import net.firefoxsalesman.dungeonsgear.DungeonsGear;
 import net.firefoxsalesman.dungeonsgear.enchantments.types.JumpingEnchantment;
@@ -29,17 +26,9 @@ import net.minecraftforge.fml.common.Mod;
 
 @Mod.EventBusSubscriber(modid = DungeonsGear.MOD_ID)
 public class MultiRollEnchantment extends JumpingEnchantment {
-	private final static Map<EquipmentSlot, UUID> EQUIPMENT_ATTRIBUTE_UUID_MAP = Stream.of(
-			new AbstractMap.SimpleImmutableEntry<>(EquipmentSlot.HEAD,
-					UUID.fromString("cbbf06ac-3c9c-4edb-a7cb-860ff4c4264f")),
-			new AbstractMap.SimpleImmutableEntry<>(EquipmentSlot.CHEST,
-					UUID.fromString("4084f142-000f-4311-ab9c-0491682f26e4")),
-			new AbstractMap.SimpleImmutableEntry<>(EquipmentSlot.LEGS,
-					UUID.fromString("afff129c-2a8a-48b5-9548-865f148d88f0")),
-			new AbstractMap.SimpleImmutableEntry<>(EquipmentSlot.FEET,
-					UUID.fromString("70c675d6-e38c-451c-badd-4388755df31a")))
-			.collect(Collectors.toMap(AbstractMap.SimpleImmutableEntry::getKey,
-					AbstractMap.SimpleImmutableEntry::getValue));
+	private final static Map<EquipmentSlot, UUID> EQUIPMENT_ATTRIBUTE_UUID_MAP = GeneralHelper.genArmorAttributeMap(
+			"cbbf06ac-3c9c-4edb-a7cb-860ff4c4264f", "4084f142-000f-4311-ab9c-0491682f26e4",
+			"afff129c-2a8a-48b5-9548-865f148d88f0", "70c675d6-e38c-451c-badd-4388755df31a");
 
 	public MultiRollEnchantment() {
 		super(Rarity.RARE, EnchantmentCategory.ARMOR_LEGS, ARMOR_SLOT);

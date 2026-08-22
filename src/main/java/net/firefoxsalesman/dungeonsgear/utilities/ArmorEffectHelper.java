@@ -1,5 +1,9 @@
 package net.firefoxsalesman.dungeonsgear.utilities;
 
+import static net.firefoxsalesman.dungeonslibs.capabilities.minionmaster.FollowerLeaderHelper.getLeaderCapability;
+
+import java.util.List;
+
 import net.firefoxsalesman.dungeonsgear.enchantments.melee_ranged.DynamoEnchantment;
 import net.firefoxsalesman.dungeonslibs.capabilities.minionmaster.Leader;
 import net.firefoxsalesman.dungeonslibs.summon.SummonHelper;
@@ -15,10 +19,6 @@ import net.minecraft.world.entity.animal.Fox;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
-
-import java.util.List;
-
-import static net.firefoxsalesman.dungeonslibs.capabilities.minionmaster.FollowerLeaderHelper.getLeaderCapability;
 
 public class ArmorEffectHelper {
 	public static void summonOrTeleportBat(Player playerEntity, Level world) {
@@ -117,5 +117,4 @@ public class ArmorEffectHelper {
 
 		DynamoEnchantment.handleAddDynamoEnchantment(playerEntity);
 	}
-
 }
