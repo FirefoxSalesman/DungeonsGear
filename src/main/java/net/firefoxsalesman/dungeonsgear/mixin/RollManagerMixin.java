@@ -15,7 +15,7 @@ import net.minecraft.client.player.LocalPlayer;
 import net.minecraft.world.entity.ai.attributes.AttributeInstance;
 
 @Mixin(RollManager.class)
-public abstract class RollManagerAccessor {
+public abstract class RollManagerMixin {
 	@Shadow
 	private int currentCooldownLength;
 

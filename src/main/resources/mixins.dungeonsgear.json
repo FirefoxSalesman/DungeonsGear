@@ -7,10 +7,11 @@
   "mixins": [
     "AbstractArrowEntityMixin",
     "AbstractHorseAccessor",
+    "EntityAttributesCombatrollMixin",
     "LlamaInvoker",
     "MobEffectInstanceAccessor",
     "PlayerEntityMixin",
-    "RollManagerAccessor"
+    "RollManagerMixin"
   ],
   "client": [
     "GameRendererMixin"

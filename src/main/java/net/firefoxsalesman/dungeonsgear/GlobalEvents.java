@@ -6,8 +6,6 @@ import static net.firefoxsalesman.dungeonsgear.config.DungeonsGearConfig.ENABLE_
 import java.util.Optional;
 
 import net.combatroll.api.event.ServerSideRollEvents;
-import net.combatroll.internals.RollManager;
-import net.combatroll.internals.RollingEntity;
 import net.firefoxsalesman.dungeonsgear.capabilities.bow.RangedAbilities;
 import net.firefoxsalesman.dungeonsgear.capabilities.bow.RangedAbilitiesHelper;
 import net.firefoxsalesman.dungeonsgear.capabilities.combo.Combo;
@@ -17,7 +15,6 @@ import net.firefoxsalesman.dungeonsgear.enchantments.ranged.BurstBowstringEnchan
 import net.firefoxsalesman.dungeonsgear.enchantments.ranged.FuseShotEnchantment;
 import net.firefoxsalesman.dungeonsgear.enchantments.ranged.RollChargeEnchantment;
 import net.firefoxsalesman.dungeonsgear.items.interfaces.IDualWieldWeapon;
-import net.firefoxsalesman.dungeonsgear.mixin.RollManagerAccessor;
 import net.firefoxsalesman.dungeonsgear.registry.EnchantmentInit;
 import net.firefoxsalesman.dungeonsgear.registry.MobEffectInit;
 import net.firefoxsalesman.dungeonsgear.utilities.ArmorEffectHelper;
@@ -25,7 +22,6 @@ import net.firefoxsalesman.dungeonsgear.utilities.ProjectileEffectHelper;
 import net.firefoxsalesman.dungeonslibs.items.interfaces.IComboWeapon;
 import net.firefoxsalesman.dungeonslibs.utils.ModHelper;
 import net.firefoxsalesman.dungeonslibs.utils.PetHelper;
-import net.minecraft.client.player.LocalPlayer;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.effect.MobEffects;
@@ -168,13 +164,7 @@ public class GlobalEvents {
 			}
 		}
 
-		if (ModHelper.hasMod("combatroll")) {
-			if (living instanceof LocalPlayer localPlayer) {
-				// RollManagerAccessor manager = (RollManagerAccessor) ((RollingEntity)
-				// localPlayer)
-				// .getRollManager();
-			}
-		} else if (living instanceof Player player) {
+		if (!ModHelper.hasMod("combatroll") && living instanceof Player player) {
 			Combo comboCap = ComboHelper.getComboCapability(player);
 			int jumpCounter = comboCap.getJumpCounter();
 			if (comboCap.getJumpCooldownTimer() <= 0 && jumpCounter > 0) {
