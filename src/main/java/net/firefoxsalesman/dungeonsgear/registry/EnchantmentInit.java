@@ -36,6 +36,7 @@ import net.firefoxsalesman.dungeonsgear.enchantments.armor.legs.AcrobatEnchantme
 import net.firefoxsalesman.dungeonsgear.enchantments.armor.legs.AltruisticEnchantment;
 import net.firefoxsalesman.dungeonsgear.enchantments.armor.legs.BurningEnchantment;
 import net.firefoxsalesman.dungeonsgear.enchantments.armor.legs.ChillingEnchantment;
+import net.firefoxsalesman.dungeonsgear.enchantments.armor.legs.ElectrifiedEnchantment;
 import net.firefoxsalesman.dungeonsgear.enchantments.armor.legs.GravityPulseEnchantment;
 import net.firefoxsalesman.dungeonsgear.enchantments.armor.legs.LifeStealAuraEnchantment;
 import net.firefoxsalesman.dungeonsgear.enchantments.armor.legs.MeleeAuraEnchantment;
@@ -43,6 +44,7 @@ import net.firefoxsalesman.dungeonsgear.enchantments.armor.legs.MultiRollEnchant
 import net.firefoxsalesman.dungeonsgear.enchantments.armor.legs.PotionAuraEnchantment;
 import net.firefoxsalesman.dungeonsgear.enchantments.armor.legs.SnowballEnchantment;
 import net.firefoxsalesman.dungeonsgear.enchantments.armor.legs.SpeedAuraEnchantment;
+import net.firefoxsalesman.dungeonsgear.enchantments.armor.legs.TumblebeeEnchantment;
 import net.firefoxsalesman.dungeonsgear.enchantments.melee.ArtifactSynergyEnchantment;
 import net.firefoxsalesman.dungeonsgear.enchantments.melee.BusyBeeEnchantment;
 import net.firefoxsalesman.dungeonsgear.enchantments.melee.ChainsEnchantment;
@@ -213,6 +215,8 @@ public class EnchantmentInit {
 			DeathBarterEnchantment::new);
 	public static RegistryObject<DeflectEnchantment> DEFLECT = ENCHANTMENTS.register("deflect",
 			DeflectEnchantment::new);
+	public static RegistryObject<ElectrifiedEnchantment> ELECTRIFIED = ENCHANTMENTS.register("electrified",
+			() -> new ElectrifiedEnchantment());
 	public static RegistryObject<FinalShoutEnchantment> FINAL_SHOUT = ENCHANTMENTS.register("final_shout",
 			FinalShoutEnchantment::new);
 	public static RegistryObject<FortuneOfTheSeaEnchantment> FORTUNE_OF_THE_SEA = ENCHANTMENTS
@@ -265,6 +269,8 @@ public class EnchantmentInit {
 			PotionAuraEnchantment::new);
 	public static RegistryObject<SnowballEnchantment> SNOWBALL = ENCHANTMENTS.register("snowball",
 			SnowballEnchantment::new);
+	public static RegistryObject<TumblebeeEnchantment> TUMBLEBEE = ENCHANTMENTS.register("tumblebee",
+			() -> new TumblebeeEnchantment());
 	public static RegistryObject<SpeedAuraEnchantment> SPEED_AURA = ENCHANTMENTS.register("speed_aura",
 			SpeedAuraEnchantment::new);
 

@@ -4,7 +4,9 @@ import static net.firefoxsalesman.dungeonslibs.capabilities.minionmaster.Followe
 
 import java.util.List;
 
+import net.firefoxsalesman.dungeonsgear.config.DungeonsGearConfig;
 import net.firefoxsalesman.dungeonsgear.enchantments.melee_ranged.DynamoEnchantment;
+import net.firefoxsalesman.dungeonsgear.registry.EnchantmentInit;
 import net.firefoxsalesman.dungeonslibs.capabilities.minionmaster.Leader;
 import net.firefoxsalesman.dungeonslibs.summon.SummonHelper;
 import net.minecraft.server.level.ServerLevel;
@@ -18,6 +20,7 @@ import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.animal.Fox;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.enchantment.EnchantmentHelper;
 import net.minecraft.world.level.Level;
 
 public class ArmorEffectHelper {
@@ -72,11 +75,11 @@ public class ArmorEffectHelper {
 	}
 
 	public static void handleJumpEnchantments(Player playerEntity, ItemStack helmet, ItemStack chestplate) {
-		// if (ModEnchantmentHelper.hasEnchantment(playerEntity,
-		// EnchantmentInit.ELECTRIFIED.get())) {
-		// SoundHelper.playLightningStrikeSounds(playerEntity);
-		// AreaOfEffectHelper.electrifyNearbyEnemies(playerEntity, 5, 5, 3);
-		// }
+		if (ModEnchantmentHelper.hasEnchantment(playerEntity,
+				EnchantmentInit.ELECTRIFIED.get())) {
+			SoundHelper.playLightningStrikeSounds(playerEntity);
+			AreaOfEffectHelper.electrifyNearbyEnemies(playerEntity, 5, 5, 3);
+		}
 
 		// if (ModEnchantmentHelper.hasEnchantment(playerEntity,
 		// EnchantmentInit.FIRE_TRAIL.get())) {
@@ -87,22 +90,20 @@ public class ArmorEffectHelper {
 		// 1.5F);
 		// }
 
-		// // TODO: Beenest Armor and Buzzynest Armor
-		// if (ModEnchantmentHelper.hasEnchantment(playerEntity,
-		// EnchantmentInit.TUMBLEBEE.get())) {
-		// int tumblebeeLevel =
-		// EnchantmentHelper.getEnchantmentLevel(EnchantmentInit.TUMBLEBEE.get(),
-		// playerEntity);
+		if (ModEnchantmentHelper.hasEnchantment(playerEntity,
+				EnchantmentInit.TUMBLEBEE.get())) {
+			int tumblebeeLevel = EnchantmentHelper.getEnchantmentLevel(EnchantmentInit.TUMBLEBEE.get(),
+					playerEntity);
 
-		// float tumblebeeRand = playerEntity.getRandom().nextFloat();
-		// if (tumblebeeRand <= DungeonsGearConfig.TUMBLE_BEE_CHANCE_PER_LEVEL.get() *
-		// tumblebeeLevel) {
-		// if (SummonHelper.summonEntity(playerEntity, playerEntity.blockPosition(),
-		// EntityType.BEE) != null) {
-		// SoundHelper.playCreatureSound(playerEntity, SoundEvents.BEE_LOOP);
-		// }
-		// }
-		// }
+			float tumblebeeRand = playerEntity.getRandom().nextFloat();
+			if (tumblebeeRand <= DungeonsGearConfig.TUMBLE_BEE_CHANCE_PER_LEVEL.get() *
+					tumblebeeLevel) {
+				if (SummonHelper.summonEntity(playerEntity, playerEntity.blockPosition(),
+						EntityType.BEE) != null) {
+					SoundHelper.playCreatureSound(playerEntity, SoundEvents.BEE_LOOP);
+				}
+			}
+		}
 
 		// if (ModEnchantmentHelper.hasEnchantment(playerEntity,
 		// EnchantmentInit.SWIFTFOOTED.get())) {

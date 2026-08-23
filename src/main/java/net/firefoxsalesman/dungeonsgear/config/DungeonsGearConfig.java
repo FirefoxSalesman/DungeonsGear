@@ -24,8 +24,7 @@ public class DungeonsGearConfig {
 	// Enchanting specific values
 	public static ForgeConfigSpec.ConfigValue<Double> BUSY_BEE_BASE_CHANCE;
 	public static ForgeConfigSpec.ConfigValue<Double> BUSY_BEE_CHANCE_PER_LEVEL;
-	// public static ForgeConfigSpec.ConfigValue<Double>
-	// TUMBLE_BEE_CHANCE_PER_LEVEL;
+	public static ForgeConfigSpec.ConfigValue<Double> TUMBLE_BEE_CHANCE_PER_LEVEL;
 	public static ForgeConfigSpec.ConfigValue<Double> RAMPAGING_CHANCE;
 	public static ForgeConfigSpec.ConfigValue<Integer> RAMPAGING_DURATION;
 	public static ForgeConfigSpec.ConfigValue<Integer> WEAKENING_DURATION;
@@ -137,10 +136,9 @@ public class DungeonsGearConfig {
 		BUSY_BEE_CHANCE_PER_LEVEL = builder.comment(
 				"The decimal chance per level added for a busy bee to spawn [0.0-1.0, default: 0.1]")
 				.defineInRange("busyBeeChancePerLevel", 0.1, 0, 1.0);
-		// TUMBLE_BEE_CHANCE_PER_LEVEL = builder
-		// .comment("The decimal chance per level added for a tumble bee to spawn
-		// [0.0-1.0, default: 0.1]")
-		// .defineInRange("tumbleBeeChancePerLevel", 0.1, 0, 1.0);
+		TUMBLE_BEE_CHANCE_PER_LEVEL = builder.comment(
+				"The decimal chance per level added for a tumble bee to spawn [0.0-1.0, default: 0.1]")
+				.defineInRange("tumbleBeeChancePerLevel", 0.1, 0, 1.0);
 		RAMPAGING_CHANCE = builder
 				.comment("The decimal chance for rampaging to trigger [0.0-1.0, default: 0.1]")
 				.defineInRange("rampagingChance", 0.2, 0, 1.0);

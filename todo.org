@@ -1,6 +1,5 @@
 * TODO Add tumblebee
 
 [[file:~/projects/DungeonsGear/src/main/java/net/firefoxsalesman/dungeonsgear/utilities/ArmorEffectHelper.java::// if (tumblebeeRand <= DungeonsGearConfig.TUMBLE_BEE_CHANCE_PER_LEVEL.get() *]]
-* TODO Fix combat roll
 * TODO Parcool (maybe)
 * TODO Fix damage source checks
