@@ -240,14 +240,11 @@ public class GlobalEvents {
 
 	@SubscribeEvent
 	public static void handleJumpAbilities(LivingEvent.LivingJumpEvent event) {
-		if (ModHelper.hasMod("combatroll"))
+		if (ModHelper.hasMod("combatroll") || ModHelper.hasMod("parcool"))
 			return;
 		LivingEntity jumper = event.getEntity();
 		if (jumper instanceof Player) {
 			Player playerEntity = (Player) jumper;
-			Combo comboCap = ComboHelper.getComboCapability(playerEntity);
-			int jumpCooldownTimer = comboCap.getJumpCooldownTimer();
-
 			if (!RollHelper.hasReachedJumpLimit(jumper)) {
 				doRollEffects(playerEntity);
 				RollHelper.incrementJumpCounter(playerEntity);
@@ -255,7 +252,7 @@ public class GlobalEvents {
 		}
 	}
 
-	private static void doRollEffects(Player playerEntity) {
+	public static void doRollEffects(Player playerEntity) {
 		ItemStack helmet = playerEntity.getItemBySlot(EquipmentSlot.HEAD);
 		ItemStack chestplate = playerEntity.getItemBySlot(EquipmentSlot.CHEST);
 		// ArmorEffectHelper.handleJumpBoost(playerEntity, helmet, chestplate);
@@ -271,11 +268,11 @@ public class GlobalEvents {
 	}
 
 	public static void registerCombatRoll() {
-		// TODO Make this affected by roll cooldown & roll limit
 		if (ModHelper.hasMod("combatroll")) {
 			ServerSideRollEvents.PLAYER_START_ROLLING.register((player, vec) -> {
 				doRollEffects(player);
 			});
 		}
 	}
+
 }

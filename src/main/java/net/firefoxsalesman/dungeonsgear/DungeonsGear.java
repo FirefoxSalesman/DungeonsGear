@@ -5,6 +5,7 @@ import org.slf4j.Logger;
 import com.mojang.logging.LogUtils;
 
 import net.firefoxsalesman.dungeonsgear.capabilities.GearCapabilities;
+import net.firefoxsalesman.dungeonsgear.combat.ParcoolEvents;
 import net.firefoxsalesman.dungeonsgear.config.DungeonsGearConfig;
 import net.firefoxsalesman.dungeonsgear.items.DualWieldItemProperties;
 import net.firefoxsalesman.dungeonsgear.items.GearRangedItemModelProperties;
@@ -34,6 +35,7 @@ import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.registries.RegistryObject;
 import net.firefoxsalesman.dungeonslibs.network.CommonProxy;
+import net.firefoxsalesman.dungeonslibs.utils.ModHelper;
 
 // The value here should match an entry in the META-INF/mods.toml file
 @Mod(DungeonsGear.MOD_ID)
@@ -66,6 +68,9 @@ public class DungeonsGear {
 		ItemInit.register(modEventBus);
 		MobEffectInit.register(modEventBus);
 		EnchantmentInit.register(modEventBus);
+
+		if (ModHelper.hasMod("parcool"))
+			new ParcoolEvents().register();
 	}
 
 	private void commonSetup(final FMLCommonSetupEvent event) {

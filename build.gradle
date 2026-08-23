@@ -157,6 +157,7 @@ dependencies {
     implementation fg.deobf("curse.maven:dungeons-libraries-port-1605448:8664505")
 
     compileOnly(annotationProcessor("io.github.llamalad7:mixinextras-common:${mixinextras_version}"))
+    implementation fg.deobf("curse.maven:parcool-482378:7760589")
     implementation fg.deobf("curse.maven:combat-roll-678036:5625925")
     implementation fg.deobf("curse.maven:cloth-config-348521:5729105")
     implementation fg.deobf("dev.kosmx.player-anim:player-animation-lib-forge:${player_animation_library_version}")
