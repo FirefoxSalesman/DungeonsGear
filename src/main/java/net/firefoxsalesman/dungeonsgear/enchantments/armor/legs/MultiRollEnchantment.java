@@ -59,8 +59,11 @@ public class MultiRollEnchantment extends JumpingEnchantment {
 
 	@SubscribeEvent
 	public static void onLivingEquipmentChange(LivingEquipmentChangeEvent event) {
-		removeAttribute(event.getFrom(), event.getEntity(), EQUIPMENT_ATTRIBUTE_UUID_MAP.get(event.getSlot()));
-		addAttribute(event.getTo(), event.getEntity(), EQUIPMENT_ATTRIBUTE_UUID_MAP.get(event.getSlot()));
+		UUID id = EQUIPMENT_ATTRIBUTE_UUID_MAP.get(event.getSlot());
+		if (id != null) {
+			removeAttribute(event.getFrom(), event.getEntity(), id);
+			addAttribute(event.getTo(), event.getEntity(), id);
+		}
 	}
 
 	private static void removeAttribute(ItemStack itemStack, LivingEntity livingEntity,

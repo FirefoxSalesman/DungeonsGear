@@ -1,6 +1,3 @@
-* TODO Abstract this out, because it is ugly
-
-[[file:~/projects/DungeonsGear/src/main/java/net/firefoxsalesman/dungeonsgear/enchantments/armor/legs/AcrobatEnchantment.java::private final static Map<EquipmentSlot, UUID> EQUIPMENT_ATTRIBUTE_UUID_MAP = Stream.of(]]
 * TODO Add tumblebee
 
 [[file:~/projects/DungeonsGear/src/main/java/net/firefoxsalesman/dungeonsgear/utilities/ArmorEffectHelper.java::// if (tumblebeeRand <= DungeonsGearConfig.TUMBLE_BEE_CHANCE_PER_LEVEL.get() *]]

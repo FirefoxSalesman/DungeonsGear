@@ -9,7 +9,8 @@
     "AbstractHorseAccessor",
     "LlamaInvoker",
     "MobEffectInstanceAccessor",
-    "PlayerEntityMixin"
+    "PlayerEntityMixin",
+    "RollManagerAccessor"
   ],
   "client": [
     "GameRendererMixin"
