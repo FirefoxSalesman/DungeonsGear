@@ -14,6 +14,8 @@ import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.util.Mth;
+import net.minecraft.world.effect.MobEffectInstance;
+import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.LivingEntity;
@@ -81,14 +83,12 @@ public class ArmorEffectHelper {
 			AreaOfEffectHelper.electrifyNearbyEnemies(playerEntity, 5, 5, 3);
 		}
 
-		// if (ModEnchantmentHelper.hasEnchantment(playerEntity,
-		// EnchantmentInit.FIRE_TRAIL.get())) {
-		// int fireTrailLevel =
-		// EnchantmentHelper.getEnchantmentLevel(EnchantmentInit.FIRE_TRAIL.get(),
-		// playerEntity);
-		// AreaOfEffectHelper.burnNearbyEnemies(playerEntity, 1.0F * fireTrailLevel,
-		// 1.5F);
-		// }
+		if (ModEnchantmentHelper.hasEnchantment(playerEntity, EnchantmentInit.FIRE_TRAIL.get())) {
+			int fireTrailLevel = EnchantmentHelper.getEnchantmentLevel(EnchantmentInit.FIRE_TRAIL.get(),
+					playerEntity);
+			AreaOfEffectHelper.burnNearbyEnemies(playerEntity, 1.0F * fireTrailLevel,
+					1.5F);
+		}
 
 		if (ModEnchantmentHelper.hasEnchantment(playerEntity,
 				EnchantmentInit.TUMBLEBEE.get())) {
@@ -105,16 +105,13 @@ public class ArmorEffectHelper {
 			}
 		}
 
-		// if (ModEnchantmentHelper.hasEnchantment(playerEntity,
-		// EnchantmentInit.SWIFTFOOTED.get())) {
-		// int swiftfootedLevel =
-		// EnchantmentHelper.getEnchantmentLevel(EnchantmentInit.SWIFTFOOTED.get(),
-		// playerEntity);
-		// MobEffectInstance speedBoost = new
-		// MobEffectInstance(MobEffects.MOVEMENT_SPEED, 60,
-		// swiftfootedLevel - 1);
-		// playerEntity.addEffect(speedBoost);
-		// }
+		if (ModEnchantmentHelper.hasEnchantment(playerEntity, EnchantmentInit.SWIFTFOOTED.get())) {
+			int swiftfootedLevel = EnchantmentHelper.getEnchantmentLevel(EnchantmentInit.SWIFTFOOTED.get(),
+					playerEntity);
+			MobEffectInstance speedBoost = new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 60,
+					swiftfootedLevel - 1);
+			playerEntity.addEffect(speedBoost);
+		}
 
 		DynamoEnchantment.handleAddDynamoEnchantment(playerEntity);
 	}
