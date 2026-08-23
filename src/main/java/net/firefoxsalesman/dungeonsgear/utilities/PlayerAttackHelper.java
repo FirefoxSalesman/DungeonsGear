@@ -8,6 +8,7 @@ import net.minecraft.network.protocol.game.ClientboundAnimatePacket;
 import net.minecraft.server.level.ServerChunkCache;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.level.ServerPlayer;
+import net.minecraft.tags.DamageTypeTags;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.damagesource.DamageSources;
@@ -107,12 +108,10 @@ public class PlayerAttackHelper {
 			return false;
 		}
 		DamageSources ds = e.damageSources();
-		return isSource(damageSource, ds.onFire())
-				|| isSource(damageSource, ds.inFire())
-				|| isSource(damageSource, ds.explosion(damageSource.getEntity(), null))
+		return damageSource.is(DamageTypeTags.IS_FIRE)
+				|| damageSource.is(DamageTypeTags.IS_EXPLOSION)
 				|| isSource(damageSource, ds.magic())
-				|| isSource(damageSource, ds.mobProjectile(damageSource.getDirectEntity(),
-						(LivingEntity) damageSource.getEntity()))
+				|| damageSource.is(DamageTypeTags.IS_PROJECTILE)
 				|| !DamageSourceHelper.isDirectDamage(damageSource);
 	}
 }
