@@ -118,6 +118,7 @@ public class ItemInit {
 	public static final RegistryObject<Item> SINISTER_SWORD = registerMeleeWeapon("sinister_sword", meleeSupplier);
 	public static final RegistryObject<Item> VOID_TOUCHED_BLADE = registerMeleeWeapon("void_touched_blade",
 			meleeSupplier);
+	public static final RegistryObject<Item> THE_BEGINNING = registerMeleeWeapon("the_beginning", meleeSupplier);
 
 	// DPS 12, crits once per 5 seconds
 	public static final RegistryObject<Item> BATTLESTAFF = registerMeleeWeapon("battlestaff", staffSupplier);
