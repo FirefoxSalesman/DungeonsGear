@@ -26,6 +26,10 @@ public class MobEffectInit {
 			() -> new CustomEffect(MobEffectCategory.HARMFUL, 4738376));
 	public static RegistryObject<MobEffect> PARTY_STARTER = MOB_EFFECTS.register("party_starter",
 			() -> new PartyStarterEffect(MobEffectCategory.BENEFICIAL, 0xE25822));
+	public static RegistryObject<MobEffect> VOID_STRIKE = MOB_EFFECTS.register("void_strike",
+			() -> new CustomEffect(MobEffectCategory.HARMFUL, 0X272736));
+	public static RegistryObject<MobEffect> VOID_SHOT = MOB_EFFECTS.register("void_shot",
+			() -> new CustomEffect(MobEffectCategory.HARMFUL, 0X272736));
 	public static RegistryObject<MobEffect> DYNAMO = MOB_EFFECTS.register("dynamo",
 			() -> new CustomEffect(MobEffectCategory.BENEFICIAL, 0xFFBB2E));
 	public static RegistryObject<MobEffect> LIFE_STEAL = MOB_EFFECTS.register("life_steal",

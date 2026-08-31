@@ -1,5 +1,7 @@
 package net.firefoxsalesman.dungeonsgear.registry;
 
+import net.firefoxsalesman.dungeonsgear.enchantments.ranged.VoidShotEnchantment;
+
 import net.minecraft.world.item.enchantment.Enchantment;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
@@ -68,6 +70,7 @@ import net.firefoxsalesman.dungeonsgear.enchantments.melee.SoulSiphonEnchantment
 import net.firefoxsalesman.dungeonsgear.enchantments.melee.StunningEnchantment;
 import net.firefoxsalesman.dungeonsgear.enchantments.melee.SwirlingEnchantment;
 import net.firefoxsalesman.dungeonsgear.enchantments.melee.ThunderingEnchantment;
+import net.firefoxsalesman.dungeonsgear.enchantments.melee.VoidStrikeEnchantment;
 import net.firefoxsalesman.dungeonsgear.enchantments.melee.WeakeningEnchantment;
 import net.firefoxsalesman.dungeonsgear.enchantments.melee_ranged.AnimaConduitEnchantment;
 import net.firefoxsalesman.dungeonsgear.enchantments.melee_ranged.DynamoEnchantment;
@@ -162,6 +165,8 @@ public class EnchantmentInit {
 			SwirlingEnchantment::new);
 	public static RegistryObject<ThunderingEnchantment> THUNDERING = ENCHANTMENTS.register("thundering",
 			ThunderingEnchantment::new);
+	public static RegistryObject<VoidStrikeEnchantment> VOID_STRIKE = ENCHANTMENTS.register("void_strike",
+			VoidStrikeEnchantment::new);
 	public static RegistryObject<WeakeningEnchantment> WEAKENING = ENCHANTMENTS.register("weakening",
 			WeakeningEnchantment::new);
 	public static RegistryObject<AccelerateEnchantment> ACCELERATE = ENCHANTMENTS.register("accelerate",
@@ -200,6 +205,8 @@ public class EnchantmentInit {
 			TempoTheftEnchantment::new);
 	public static RegistryObject<VelocityEnchantment> VELOCITY = ENCHANTMENTS.register("velocity",
 			VelocityEnchantment::new);
+	public static RegistryObject<VoidShotEnchantment> VOID_SHOT = ENCHANTMENTS.register("void_shot",
+			VoidShotEnchantment::new);
 	public static RegistryObject<WildRageEnchantment> WILD_RAGE = ENCHANTMENTS.register("wild_rage",
 			() -> new WildRageEnchantment());
 

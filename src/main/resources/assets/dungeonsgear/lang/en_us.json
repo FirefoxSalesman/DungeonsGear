@@ -73,6 +73,8 @@
   "enchantment.dungeonsgear.stunning.desc": "Chance to temporarily stun enemies.",
   "enchantment.dungeonsgear.thundering": "Thundering",
   "enchantment.dungeonsgear.thundering.desc": "Has a 30% chance to summon a lightning strike that damages nearby enemies.",
+  "enchantment.dungeonsgear.void_strike": "Void Strike",
+  "enchantment.dungeonsgear.void_strike.desc": "Inflicts voidstruck on targets, causing them to take more damage the closer voidstruck is to wearing out.",
   "enchantment.dungeonsgear.weakening": "Weakening",
   "enchantment.dungeonsgear.weakening.desc": "Your attacks decrease the attack damage of nearby enemies for five seconds.",
 
@@ -122,6 +124,8 @@
   "enchantment.dungeonsgear.wild_rage.desc": "Hitting an enemy has a chance to send it into a rage, making it hostile towards everyone.",
   "enchantment.dungeonsgear.velocity": "Velocity",
   "enchantment.dungeonsgear.velocity.desc": "Projectiles shot by this weapon move faster.",
+  "enchantment.dungeonsgear.void_shot": "Void Shot",
+  "enchantment.dungeonsgear.void_shot.desc": "Inflicts gluestruck on targets, causing them to take more damage the closer gluestruck is to wearing out.",
   "enchantment.dungeonsgear.bag_of_souls": "Bag of Souls",
   "enchantment.dungeonsgear.bag_of_souls.desc": "Increases the maximum number of souls that can be carried.",
   "enchantment.dungeonsgear.beast_boss": "Beast Boss",
@@ -902,6 +906,8 @@
   "effect.dungeonsgear.stunned": "Stunned",
   "effect.dungeonsgear.party_starter": "Party Starter",
   "effect.dungeonsgear.dynamo": "Dynamo",
+  "effect.dungeonsgear.void_strike": "Voidstruck",
+  "effect.dungeonsgear.void_shot": "Gluestruck",
   "effect.dungeonsgear.life_steal": "Lifesteal",
   "effect.dungeonsgear.bow_charge": "Charged Up"
 }

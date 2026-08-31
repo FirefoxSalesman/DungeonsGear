@@ -14,13 +14,14 @@ import net.minecraftforge.fml.common.Mod;
 import static net.firefoxsalesman.dungeonsgear.DungeonsGear.MOD_ID;
 
 import net.firefoxsalesman.dungeonsgear.enchantments.ModEnchantmentTypes;
-import net.firefoxsalesman.dungeonsgear.enchantments.types.DungeonsEnchantment;
+import net.firefoxsalesman.dungeonsgear.enchantments.types.AOEDamageEnchantment;
+import net.firefoxsalesman.dungeonsgear.enchantments.types.DamageBoostEnchantment;
 import net.firefoxsalesman.dungeonsgear.registry.EnchantmentInit;
 import net.firefoxsalesman.dungeonsgear.utilities.ModEnchantmentHelper;
 import net.firefoxsalesman.dungeonslibs.utils.ArrowHelper;
 
 @Mod.EventBusSubscriber(modid = MOD_ID)
-public class GrowingEnchantment extends DungeonsEnchantment {
+public class GrowingEnchantment extends DamageBoostEnchantment {
 
 	public GrowingEnchantment() {
 		super(Rarity.RARE, ModEnchantmentTypes.RANGED, new EquipmentSlot[] {
@@ -34,7 +35,8 @@ public class GrowingEnchantment extends DungeonsEnchantment {
 
 	@Override
 	public boolean checkCompatibility(Enchantment enchantment) {
-		return enchantment != Enchantments.POWER_ARROWS;
+		return enchantment != Enchantments.POWER_ARROWS && !(enchantment instanceof DamageBoostEnchantment
+				|| enchantment instanceof AOEDamageEnchantment);
 	}
 
 	@SubscribeEvent

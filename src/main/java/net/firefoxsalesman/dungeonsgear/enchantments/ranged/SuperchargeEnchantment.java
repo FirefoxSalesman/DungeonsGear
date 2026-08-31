@@ -11,13 +11,14 @@ import net.minecraftforge.fml.common.Mod;
 import static net.firefoxsalesman.dungeonsgear.DungeonsGear.MOD_ID;
 
 import net.firefoxsalesman.dungeonsgear.enchantments.ModEnchantmentTypes;
-import net.firefoxsalesman.dungeonsgear.enchantments.types.DungeonsEnchantment;
+import net.firefoxsalesman.dungeonsgear.enchantments.types.AOEDamageEnchantment;
+import net.firefoxsalesman.dungeonsgear.enchantments.types.DamageBoostEnchantment;
 import net.firefoxsalesman.dungeonsgear.registry.EnchantmentInit;
 import net.firefoxsalesman.dungeonsgear.utilities.ModEnchantmentHelper;
 import net.firefoxsalesman.dungeonslibs.utils.ArrowHelper;
 
 @Mod.EventBusSubscriber(modid = MOD_ID)
-public class SuperchargeEnchantment extends DungeonsEnchantment {
+public class SuperchargeEnchantment extends DamageBoostEnchantment {
 
 	public SuperchargeEnchantment() {
 		super(Rarity.RARE, ModEnchantmentTypes.RANGED, new EquipmentSlot[] {
@@ -30,7 +31,9 @@ public class SuperchargeEnchantment extends DungeonsEnchantment {
 
 	@Override
 	public boolean checkCompatibility(Enchantment enchantment) {
-		return enchantment != Enchantments.PUNCH_ARROWS || enchantment != Enchantments.POWER_ARROWS;
+		return (enchantment != Enchantments.PUNCH_ARROWS || enchantment != Enchantments.POWER_ARROWS)
+				&& !(enchantment instanceof DamageBoostEnchantment
+						|| enchantment instanceof AOEDamageEnchantment);
 	}
 
 	@SubscribeEvent
