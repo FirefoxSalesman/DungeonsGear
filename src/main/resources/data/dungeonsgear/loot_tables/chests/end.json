@@ -5,12 +5,17 @@
       "entries": [
 	{
           "type": "item",
+          "name": "dungeonsgear:void_touched_blade",
+          "weight": 2
+        },
+	{
+          "type": "item",
           "name": "dungeonsgear:voidcaller",
           "weight": 2
         },
         {
           "type": "empty",
-          "weight": 2
+          "weight": 4
         }
       ]
     }
