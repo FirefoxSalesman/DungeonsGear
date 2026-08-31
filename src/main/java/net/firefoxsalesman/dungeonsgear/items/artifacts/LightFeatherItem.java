@@ -4,6 +4,8 @@ import net.firefoxsalesman.dungeonsgear.registry.MobEffectInit;
 import net.firefoxsalesman.dungeonslibs.items.artifacts.ArtifactItem;
 import net.firefoxsalesman.dungeonslibs.items.artifacts.ArtifactUseContext;
 import net.firefoxsalesman.dungeonslibs.network.BreakItemMessage;
+import net.firefoxsalesman.dungeonslibs.utils.ModHelper;
+import net.firefoxsalesman.dungeonsgear.GlobalEvents;
 import net.firefoxsalesman.dungeonsgear.network.NetworkHandler;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.world.InteractionResult;
@@ -19,6 +21,9 @@ import net.minecraftforge.network.PacketDistributor;
 
 import java.util.List;
 
+import com.alrex.parcool.common.action.impl.Roll;
+import com.alrex.parcool.common.capability.Parkourability;
+
 import static net.firefoxsalesman.dungeonsgear.DungeonsGear.PROXY;
 import static net.firefoxsalesman.dungeonslibs.utils.PetHelper.isPetOf;
 
@@ -32,8 +37,12 @@ public class LightFeatherItem extends ArtifactItem {
 		ItemStack itemstack = c.getItemStack();
 		Level worldIn = c.getLevel();
 
-		// Jump instead of roll
-		playerIn.jumpFromGround();
+		if (ModHelper.hasMod("parcool")) {
+			Parkourability.get(playerIn).get(Roll.class).startRoll(playerIn);
+		} else {
+			playerIn.jumpFromGround();
+			GlobalEvents.doRollEffects(playerIn);
+		}
 
 		List<LivingEntity> nearbyEntities = worldIn.getEntitiesOfClass(LivingEntity.class,
 				new AABB(playerIn.getX() - 5, playerIn.getY() - 5, playerIn.getZ() - 5,
