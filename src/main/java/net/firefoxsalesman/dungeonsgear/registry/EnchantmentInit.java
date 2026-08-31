@@ -1,6 +1,7 @@
 package net.firefoxsalesman.dungeonsgear.registry;
 
 import net.firefoxsalesman.dungeonsgear.enchantments.ranged.VoidShotEnchantment;
+import net.firefoxsalesman.dungeonsgear.enchantments.armor.chest.RecyclerEnchantment;
 
 import net.minecraft.world.item.enchantment.Enchantment;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -238,6 +239,8 @@ public class EnchantmentInit {
 			OpulentShieldEnchantment::new);
 	public static RegistryObject<RecklessEnchantment> RECKLESS = ENCHANTMENTS.register("reckless",
 			RecklessEnchantment::new);
+	public static RegistryObject<RecyclerEnchantment> RECYCLER = ENCHANTMENTS.register("recycler",
+			() -> new RecyclerEnchantment());
 	public static RegistryObject<DodgeEnchantment> DODGE = ENCHANTMENTS.register("dodge", DodgeEnchantment::new);
 	public static RegistryObject<RushEnchantment> RUSH = ENCHANTMENTS.register("rush", RushEnchantment::new);
 	public static RegistryObject<SpeedSynergyEnchantment> SPEED_SYNERGY = ENCHANTMENTS.register("speed_synergy",
