@@ -7,6 +7,7 @@ import net.firefoxsalesman.dungeonslibs.network.BreakItemMessage;
 import net.firefoxsalesman.dungeonslibs.utils.ModHelper;
 import net.firefoxsalesman.dungeonsgear.GlobalEvents;
 import net.firefoxsalesman.dungeonsgear.network.NetworkHandler;
+import net.minecraft.client.player.LocalPlayer;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.InteractionResultHolder;
@@ -17,6 +18,7 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.phys.AABB;
+import net.minecraft.world.phys.Vec3;
 import net.minecraftforge.network.PacketDistributor;
 
 import java.util.List;
@@ -36,13 +38,11 @@ public class LightFeatherItem extends ArtifactItem {
 		Player playerIn = c.getPlayer();
 		ItemStack itemstack = c.getItemStack();
 		Level worldIn = c.getLevel();
-
-		if (ModHelper.hasMod("parcool")) {
-			Parkourability.get(playerIn).get(Roll.class).startRoll(playerIn);
-		} else {
-			playerIn.jumpFromGround();
-			GlobalEvents.doRollEffects(playerIn);
-		}
+		float lookDirection = playerIn.yHeadRot;
+		// Credit: Math borrowed from Parcool
+		playerIn.setDeltaMovement(new Vec3(-Math.sin(Math.toRadians(lookDirection)), 0,
+				Math.cos(Math.toRadians(lookDirection))).scale(1.5));
+		GlobalEvents.doRollEffects(playerIn);
 
 		List<LivingEntity> nearbyEntities = worldIn.getEntitiesOfClass(LivingEntity.class,
 				new AABB(playerIn.getX() - 5, playerIn.getY() - 5, playerIn.getZ() - 5,
