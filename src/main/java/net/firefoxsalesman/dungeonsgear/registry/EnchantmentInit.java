@@ -80,6 +80,7 @@ import net.firefoxsalesman.dungeonsgear.enchantments.melee_ranged.GravityEnchant
 import net.firefoxsalesman.dungeonsgear.enchantments.melee_ranged.MastersCallEnchantment;
 import net.firefoxsalesman.dungeonsgear.enchantments.melee_ranged.PoisonCloudEnchantment;
 import net.firefoxsalesman.dungeonsgear.enchantments.melee_ranged.RefreshmentEnchantment;
+import net.firefoxsalesman.dungeonsgear.enchantments.melee_ranged.UnchantingEnchantment;
 import net.firefoxsalesman.dungeonsgear.enchantments.ranged.AccelerateEnchantment;
 import net.firefoxsalesman.dungeonsgear.enchantments.ranged.BonusShotEnchantment;
 import net.firefoxsalesman.dungeonsgear.enchantments.ranged.BurstBowstringEnchantment;
@@ -166,6 +167,8 @@ public class EnchantmentInit {
 			SwirlingEnchantment::new);
 	public static RegistryObject<ThunderingEnchantment> THUNDERING = ENCHANTMENTS.register("thundering",
 			ThunderingEnchantment::new);
+	public static RegistryObject<UnchantingEnchantment> UNCHANTING = ENCHANTMENTS.register("unchanting",
+			UnchantingEnchantment::new);
 	public static RegistryObject<VoidStrikeEnchantment> VOID_STRIKE = ENCHANTMENTS.register("void_strike",
 			VoidStrikeEnchantment::new);
 	public static RegistryObject<WeakeningEnchantment> WEAKENING = ENCHANTMENTS.register("weakening",

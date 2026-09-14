@@ -22,3 +22,4 @@
 * TODO Unchanting
 * TODO Fix the custom loot table issues
 * TODO Put the electrified damage source in the library
+* TODO Update parcool dependency

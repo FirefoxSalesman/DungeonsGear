@@ -164,6 +164,9 @@ dependencies {
     implementation(jarJar("io.github.llamalad7:mixinextras-forge:${mixinextras_version}")) {
         jarJar.ranged(it, "[${mixinextras_version},)")
     }
+    
+    runtimeOnly(fg.deobf("curse.maven:bagus-lib-866533:6944371"))
+    implementation fg.deobf("curse.maven:enchant-with-mob-913523:7187787")
 
     // Example mod dependency with JEI - using fg.deobf() ensures the dependency is remapped to your development mappings
     // The JEI API is declared for compile time use, while the full JEI artifact is used at runtime

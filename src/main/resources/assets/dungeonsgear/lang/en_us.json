@@ -32,6 +32,8 @@
   "enchantment.dungeonsgear.dynamo.desc": "Adds damage to the next attack after rolling.",
   "enchantment.dungeonsgear.refreshment": "Refreshment",
   "enchantment.dungeonsgear.refreshment.desc": "Defeating a mob can turn a glass bottle in your inventory into a health potion.",
+  "enchantment.dungeonsgear.unchanting": "Unchanting",
+  "enchantment.dungeonsgear.unchanting.desc": "Enchanted mobs take more damage.",
 
   "enchantment.dungeonsgear.artifact_synergy": "Artifact Synergy",
   "enchantment.dungeonsgear.artifact_synergy.desc": "Whenever you use an artifact, your next attack deals bonus damage.",
