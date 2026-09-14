@@ -15,12 +15,17 @@
         },
 	{
           "type": "item",
+          "name": "dungeonsgear:void_bow",
+          "weight": 2
+        },
+	{
+          "type": "item",
           "name": "dungeonsgear:the_beginning",
           "weight": 1
         },
         {
           "type": "empty",
-          "weight": 5
+          "weight": 7
         }
       ]
     }
