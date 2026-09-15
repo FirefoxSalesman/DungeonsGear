@@ -1,0 +1,6 @@
+{
+    "parent": "dungeonsgear:item/call_of_the_void",
+    "textures": {
+        "layer0": "dungeonsgear:item/call_of_the_void_pulling_0"
+    }
+}

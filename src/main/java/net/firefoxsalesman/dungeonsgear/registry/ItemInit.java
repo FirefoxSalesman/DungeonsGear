@@ -231,6 +231,7 @@ public class ItemInit {
 	public static final RegistryObject<Item> ECHO_OF_THE_VALLEY = registerBow("echo_of_the_valley");
 
 	public static final RegistryObject<Item> VOID_BOW = registerBow("void_bow");
+	public static final RegistryObject<Item> CALL_OF_THE_VOID = registerBow("call_of_the_void");
 
 	public static final RegistryObject<Item> RAPID_CROSSBOW = registerCrossbow("rapid_crossbow");
 	public static final RegistryObject<Item> BUTTERFLY_CROSSBOW = registerCrossbow("butterfly_crossbow");

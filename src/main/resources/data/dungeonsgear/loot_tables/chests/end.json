@@ -23,9 +23,14 @@
           "name": "dungeonsgear:the_beginning",
           "weight": 1
         },
+	{
+          "type": "item",
+          "name": "dungeonsgear:call_of_the_void",
+          "weight": 1
+        },
         {
           "type": "empty",
-          "weight": 7
+          "weight": 8
         }
       ]
     }
