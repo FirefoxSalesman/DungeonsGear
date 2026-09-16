@@ -163,6 +163,9 @@ public class ItemInit {
 	public static final RegistryObject<Item> GREAT_AXEBLADE = registerMeleeWeapon("great_axeblade", meleeSupplier);
 	public static final RegistryObject<Item> FROST_SLAYER = registerMeleeWeapon("frost_slayer", meleeSupplier);
 
+	public static final RegistryObject<Item> OBSIDIAN_CLAYMORE = registerMeleeWeapon("obsidian_claymore",
+			meleeSupplier);
+
 	// DPS 8.4, crits once per 2.14 seconds, +2 reach
 	public static final RegistryObject<Item> SPEAR = registerMeleeWeapon("spear", meleeSupplier);
 	public static final RegistryObject<Item> FORTUNE_SPEAR = registerMeleeWeapon("fortune_spear", meleeSupplier);

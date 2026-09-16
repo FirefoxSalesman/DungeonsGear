@@ -16,6 +16,7 @@ import net.firefoxsalesman.dungeonsgear.enchantments.ranged.FuseShotEnchantment;
 import net.firefoxsalesman.dungeonsgear.enchantments.ranged.RollChargeEnchantment;
 import net.firefoxsalesman.dungeonsgear.items.interfaces.IDualWieldWeapon;
 import net.firefoxsalesman.dungeonsgear.registry.EnchantmentInit;
+import net.firefoxsalesman.dungeonsgear.registry.ItemInit;
 import net.firefoxsalesman.dungeonsgear.registry.MobEffectInit;
 import net.firefoxsalesman.dungeonsgear.utilities.ArmorEffectHelper;
 import net.firefoxsalesman.dungeonsgear.utilities.ProjectileEffectHelper;
@@ -124,9 +125,15 @@ public class GlobalEvents {
 
 	@SubscribeEvent(priority = EventPriority.HIGHEST)
 	public static void comboForceCrit(CriticalHitEvent event) {
-		if (event.getEntity().getMainHandItem().getItem() instanceof IDualWieldWeapon) {
+		ItemStack is = event.getEntity().getMainHandItem();
+		if (!ModHelper.hasMod("bettercombat")
+				&& is.is(ItemInit.OBSIDIAN_CLAYMORE.get())) {
+			event.setDamageModifier(event.getDamageModifier() + 1);
+		}
+		if (event.getEntity().getMainHandItem().getItem() instanceof IDualWieldWeapon)
+
+		{
 			Player p = event.getEntity();
-			ItemStack is = p.getMainHandItem();
 			IComboWeapon ic = (IComboWeapon) is.getItem();
 			Combo cap = ComboHelper.getComboCapability(p);
 			if (ic.shouldProcSpecialEffects(is, p, cap.getComboCount())) {

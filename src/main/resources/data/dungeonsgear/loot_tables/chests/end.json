@@ -10,6 +10,11 @@
         },
 	{
           "type": "item",
+          "name": "dungeonsgear:obsidian_claymore",
+          "weight": 2
+        },
+	{
+          "type": "item",
           "name": "dungeonsgear:voidcaller",
           "weight": 2
         },
@@ -30,7 +35,7 @@
         },
         {
           "type": "empty",
-          "weight": 8
+          "weight": 10
         }
       ]
     }
