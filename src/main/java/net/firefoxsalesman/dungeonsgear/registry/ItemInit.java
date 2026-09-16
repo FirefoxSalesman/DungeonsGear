@@ -329,9 +329,8 @@ public class ItemInit {
 	// public static final RegistryObject<Item> SATCHEL_OF_ELIXIRS =
 	// registerArtifact("satchel_of_elixirs",
 	// () -> new SatchelOfElixirsItem(PROPERTIES));
-	// public static final RegistryObject<Item> SATCHEL_OF_SNACKS =
-	// registerArtifact("satchel_of_snacks",
-	// () -> new SatchelOfSnacksItem(PROPERTIES));
+	public static final RegistryObject<Item> SATCHEL_OF_SNACKS = registerArtifact("satchel_of_snacks",
+			() -> new SatchelOfSnacksItem(PROPERTIES));
 	public static final RegistryObject<Item> SATCHEL_OF_ELEMENTS = registerArtifact("satchel_of_elements",
 			() -> new SatchelOfElementsItem(PROPERTIES));
 	public static final RegistryObject<Item> POWERSHAKER = registerArtifact("powershaker",

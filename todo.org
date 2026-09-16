@@ -17,7 +17,6 @@
 * TODO Obsidian claymore
 + [ ] Without better combat, its critical hits do more damage.
 + [ ] With better combat, it does extra damage on the last hit in its moveset
-* TODO Spellbound Crossbows
 * TODO Rebalance the custom loot tables
 * TODO Put the electrified damage source in the library
 * TODO Update parcool dependency

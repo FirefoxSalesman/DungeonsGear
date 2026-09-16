@@ -1,0 +1,51 @@
+{
+  "type": "minecraft:chest",
+  "pools": [
+    {
+      "rolls": 1.0,
+      "bonus_rolls": 0.0,
+      "entries": [
+        {
+          "type": "item",
+          "name": "minecraft:apple",
+          "weight": 1
+        },
+	{
+          "type": "item",
+          "name": "minecraft:bread",
+          "weight": 1
+        },
+	{
+          "type": "item",
+          "name": "minecraft:porkchop",
+          "weight": 1
+        },
+	{
+          "type": "item",
+          "name": "minecraft:melon_slice",
+          "weight": 1
+        },
+	{
+          "type": "item",
+          "name": "minecraft:cooked_salmon",
+          "weight": 1
+        },
+	{
+          "type": "item",
+          "name": "minecraft:sweet_berries",
+          "weight": 1
+        },
+	{
+          "type": "item",
+          "name": "minecraft:tropical_fish",
+          "weight": 1
+        },
+	{
+          "type": "item",
+          "name": "minecraft:chorus_fruit",
+          "weight": 1
+        }
+      ]
+    }
+  ]
+}
