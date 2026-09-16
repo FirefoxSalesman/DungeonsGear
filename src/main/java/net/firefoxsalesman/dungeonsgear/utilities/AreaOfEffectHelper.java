@@ -266,7 +266,8 @@ public class AreaOfEffectHelper {
 	public static void electrify(LivingEntity attacker, LivingEntity victim, float damageAmount) {
 		createVisualLightningBoltOnEntity(victim);
 		PROXY.spawnParticles(victim, ParticleInit.ELECTRIC_SHOCK.get());
-		victim.hurt(ModDamageSources.source(attacker.level(), ModDamageSources.ELECTRIC_SHOCK, attacker,
+		victim.hurt(ModDamageSources.source(attacker.level(),
+				net.firefoxsalesman.dungeonslibs.init.ModDamageSources.ELECTRIC_SHOCK, attacker,
 				null),
 				damageAmount);
 	}

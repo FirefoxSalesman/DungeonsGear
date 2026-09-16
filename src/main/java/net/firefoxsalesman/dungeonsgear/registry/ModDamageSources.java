@@ -16,7 +16,6 @@ import net.minecraft.world.level.Level;
  */
 public class ModDamageSources {
 	public static ResourceKey<DamageType> OFFHAND = create("offhand");
-	public static ResourceKey<DamageType> ELECTRIC_SHOCK = create("electric_shock");
 
 	public static ResourceKey<DamageType> create(String name) {
 		return ResourceKey.create(Registries.DAMAGE_TYPE, GeneralHelper.modLoc(name));

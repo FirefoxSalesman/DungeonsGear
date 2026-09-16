@@ -1,2 +1,0 @@
-* TODO Rebalance the custom loot tables
-* DONE Put the electrified damage source in the library
