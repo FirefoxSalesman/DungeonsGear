@@ -101,6 +101,10 @@
       "required": false
     },
     {
+      "id": "alexsmobs:mimicube",
+      "required": false
+    },
+    {
       "id": "alexsmobs:spectre",
       "required": false
     },
@@ -138,6 +142,42 @@
     },
     {
       "id": "endergetic:purpoid",
+      "required": false
+    },
+    {
+      "id": "enlightened_end:ringling",
+      "required": false
+    },
+    {
+      "id": "enlightened_end:fumesplat",
+      "required": false
+    },
+    {
+      "id": "enlightened_end:gloop",
+      "required": false
+    },
+    {
+      "id": "enlightened_end:bouncer",
+      "required": false
+    },
+    {
+      "id": "enlightened_end:stalker",
+      "required": false
+    },
+    {
+      "id": "enlightened_end:void_leviathan",
+      "required": false
+    },
+    {
+      "id": "traveloptics:the_nightwarden",
+      "required": false
+    },
+    {
+      "id": "traveloptics:void_tome",
+      "required": false
+    },
+    {
+      "id": "traveloptics:voidshelf_golem",
       "required": false
     }
   ]
