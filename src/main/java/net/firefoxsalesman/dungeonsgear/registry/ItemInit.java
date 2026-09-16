@@ -264,6 +264,8 @@ public class ItemInit {
 			() -> new DualCrossbowGear(PROPERTIES));
 	public static final RegistryObject<Item> BABY_CROSSBOW = registerRangedWeapon("baby_crossbow",
 			() -> new DualCrossbowGear(PROPERTIES));
+	public static final RegistryObject<Item> SPELLBOUND_CROSSBOW = registerRangedWeapon("spellbound_crossbow",
+			() -> new DualCrossbowGear(PROPERTIES));
 
 	public static final RegistryObject<Item> HARPOON_CROSSBOW = registerCrossbow("harpoon_crossbow");
 	public static final RegistryObject<Item> NAUTICAL_CROSSBOW = registerCrossbow("nautical_crossbow");

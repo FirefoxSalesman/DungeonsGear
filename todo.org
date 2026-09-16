@@ -14,13 +14,10 @@
   - [ ] Dragonfly, end slime, & end fish from better end
   - [ ] cosmic cod, spectre, enderphage, endergrade, & void worm from alex's mobs
   - [ ] Booflo & puffbug from endergetic expansion
-* DONE Light feather sucks
-+ Instead of trying to force a true roll, just have it propel the player forwards & do rolling effects
 * TODO Obsidian claymore
 + [ ] Without better combat, its critical hits do more damage.
 + [ ] With better combat, it does extra damage on the last hit in its moveset
 * TODO Spellbound Crossbows
-* DONE Unchanting
 * TODO Rebalance the custom loot tables
 * TODO Put the electrified damage source in the library
 * TODO Update parcool dependency

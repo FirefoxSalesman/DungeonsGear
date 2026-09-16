@@ -1,0 +1,6 @@
+{
+    "parent": "dungeonsgear:item/spellbound_crossbow",
+    "textures": {
+        "layer0": "dungeonsgear:item/spellbound_crossbow_pulling_2"
+    }
+}

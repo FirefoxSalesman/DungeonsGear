@@ -79,8 +79,13 @@
           "weight": 1 
         },
 	{
+          "type": "item",
+          "name": "dungeonsgear:spellbound_crossbow",
+          "weight": 1 
+        },
+	{
           "type": "empty",
-          "weight": 53
+          "weight": 54
         }
       ]
     }

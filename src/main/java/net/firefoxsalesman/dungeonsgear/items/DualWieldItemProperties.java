@@ -9,6 +9,7 @@ public class DualWieldItemProperties {
 	public DualWieldItemProperties() {
 		addDualProperty(ItemInit.DUAL_CROSSBOW.get());
 		addDualProperty(ItemInit.BABY_CROSSBOW.get());
+		addDualProperty(ItemInit.SPELLBOUND_CROSSBOW.get());
 	}
 
 	private static void addDualProperty(Item i) {
