@@ -1,0 +1,13 @@
+{
+  "attributes": [
+    {
+      "attribute": "dungeonslibs:ranged_damage_multiplier",
+      "amount": 0.075,
+      "operation": 1
+    }
+  ],
+  "built_in_enchantments": [{"enchantment": "dungeonsgear:arrow_hoarder", "level": 1}, {"enchantment": "dungeonsgear:speed_aura", "level": 1}],
+  "material": "minecraft:leather",
+  "unique": true,
+  "rarity": "RARE"
+}

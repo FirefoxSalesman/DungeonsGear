@@ -1,0 +1,13 @@
+{
+  "attributes": [
+    {
+      "attribute": "minecraft:generic.attack_damage",
+      "amount": 0.075,
+      "operation": 1
+    }
+  ],
+  "built_in_enchantments": [{"enchantment": "dungeonsgear:swiftfooted", "level": 1}],
+  "material": "dungeonsgear:medium_plate",
+  "unique": true,
+  "rarity": "RARE"
+}

@@ -210,6 +210,8 @@
   "enchantment.dungeonsgear.swiftfooted.desc": "Rolling makes you move faster for three seconds.",
   "enchantment.dungeonsgear.tumblebee": "Tumblebee",
   "enchantment.dungeonsgear.tumblebee.desc": "Chance to summon a bee when you roll.",
+  "enchantment.dungeonsgear.arrow_hoarder": "Arrow Hoarder",
+  "enchantment.dungeonsgear.arrow_hoarder.desc": "Gives you a chance to find Arrow Bundles. +1/2/3 arrow(s) per bundle.",
   "enchantment.dungeonsgear.melee_aura": "Melee Aura",
   "enchantment.dungeonsgear.melee_aura.desc": "Passively increases melee attack damage of nearby allies.",
   "enchantment.dungeonsgear.snowball": "Snowball",
@@ -702,6 +704,17 @@
   "item.dungeonsgear.curious_boots": "Curious Boots",
   "lore.dungeonsgear.curious_armor": "No one knows where this strange armor came from but it seems familiar to you.",
 
+  "item.dungeonsgear.hunters_chestplate": "Hunter's Vest",
+  "item.dungeonsgear.hunters_helmet": "Hunter's Bandana",
+  "item.dungeonsgear.hunters_leggings": "Hunter's Leggings",
+  "item.dungeonsgear.hunters_boots": "Hunter's Boots",
+  "lore.dungeonsgear.hunters_armor": "Hunter's Armor may not be fit for a knight, but it will stop a blade.",
+  "item.dungeonsgear.archers_chestplate": "Archer's Vest",
+  "item.dungeonsgear.archers_helmet": "Archer's Hood",
+  "item.dungeonsgear.archers_leggings": "Archer's Leggings",
+  "item.dungeonsgear.archers_boots": "Archer's Boots",
+  "lore.dungeonsgear.archers_armor": "Archer's Armor, favored by humble warriors, is cheap to make and still stops a blade.",
+
   "item.dungeonsgear.mercenary_chestplate": "Mercenary Chestplate",
   "item.dungeonsgear.mercenary_helmet": "Mercenary Helmet",
   "item.dungeonsgear.mercenary_leggings": "Mercenary Leggings",
@@ -913,6 +926,9 @@
   "ability.dungeonsgear.tempo_theft": "Steals Speed (Tempo Theft I)",
   "ability.dungeonsgear.wild_rage": "Chance To Enrage Mobs (Wild Rage I)",
   "ability.dungeonsgear.wind_up_atack": "Wind-Up Attack",
+
+  "item.dungeonsgear.arrow_bundle": "Arrow Bundle",
+  "ability.dungeonsgear.arrow_hoarder": "+1 arrow per bundle (Arrow Hoarder I)",
 
   "effect.dungeonsgear.shielding": "Shielding",
   "effect.dungeonsgear.soul_protection": "Soul Protection",

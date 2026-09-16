@@ -25,6 +25,26 @@
         },
 	{
           "type": "item",
+          "name": "dungeonsgear:guards_helmet",
+          "weight": 4
+        },
+	{
+          "type": "item",
+          "name": "dungeonsgear:guards_chestplate",
+          "weight": 4
+        },
+	{
+          "type": "item",
+          "name": "dungeonsgear:guards_leggings",
+          "weight": 4
+        },
+	{
+          "type": "item",
+          "name": "dungeonsgear:guards_boots",
+          "weight": 4
+        },
+	{
+          "type": "item",
           "name": "dungeonsgear:great_axeblade",
           "weight": 2
         },
@@ -46,6 +66,26 @@
 	{
           "type": "item",
           "name": "dungeonsgear:heros_boots",
+          "weight": 2
+        },
+	{
+          "type": "item",
+          "name": "dungeonsgear:curious_helmet",
+          "weight": 2
+        },
+	{
+          "type": "item",
+          "name": "dungeonsgear:curious_chestplate",
+          "weight": 2
+        },
+	{
+          "type": "item",
+          "name": "dungeonsgear:curious_leggings",
+          "weight": 2
+        },
+	{
+          "type": "item",
+          "name": "dungeonsgear:curious_boots",
           "weight": 2
         },
 	{

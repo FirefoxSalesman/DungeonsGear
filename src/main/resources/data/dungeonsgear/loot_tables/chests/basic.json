@@ -75,6 +75,26 @@
         },
 	{
           "type": "item",
+          "name": "dungeonsgear:hunters_helmet",
+          "weight": 4
+        },
+	{
+          "type": "item",
+          "name": "dungeonsgear:hunters_chestplate",
+          "weight": 4
+        },
+	{
+          "type": "item",
+          "name": "dungeonsgear:hunters_leggings",
+          "weight": 4
+        },
+	{
+          "type": "item",
+          "name": "dungeonsgear:hunters_boots",
+          "weight": 4
+        },
+	{
+          "type": "item",
           "name": "dungeonsgear:spelunker_helmet",
           "weight": 4
         },
@@ -336,6 +356,26 @@
 	{
           "type": "item",
           "name": "dungeonsgear:dark_boots",
+          "weight": 2
+        },
+	{
+          "type": "item",
+          "name": "dungeonsgear:archers_helmet",
+          "weight": 2
+        },
+	{
+          "type": "item",
+          "name": "dungeonsgear:archers_chestplate",
+          "weight": 2
+        },
+	{
+          "type": "item",
+          "name": "dungeonsgear:archers_leggings",
+          "weight": 2
+        },
+	{
+          "type": "item",
+          "name": "dungeonsgear:archers_boots",
           "weight": 2
         },
 	{

@@ -1,5 +1,6 @@
 package net.firefoxsalesman.dungeonsgear.registry;
 
+import net.firefoxsalesman.dungeonsgear.items.ArrowBundleItem;
 import net.firefoxsalesman.dungeonsgear.items.CustomArmorMaterial;
 import net.firefoxsalesman.dungeonsgear.items.armor.FreezingResistanceArmorGear;
 import net.firefoxsalesman.dungeonsgear.items.armor.PetBatArmorGear;
@@ -343,10 +344,8 @@ public class ItemInit {
 	public static final RegistryObject<Item> SOUL_LANTERN = registerArtifact("soul_lantern",
 			() -> new SoulLanternItem(PROPERTIES));
 
-	// public static final ArmorSetInit HUNTERS_ARMOR = registerArmorSet("hunters",
-	// BASIC);
-	// public static final ArmorSetInit ARCHERS_ARMOR = registerArmorSet("archers",
-	// BASIC);
+	public static final ArmorSetInit HUNTERS_ARMOR = registerArmorSet("hunters");
+	public static final ArmorSetInit ARCHERS_ARMOR = registerArmorSet("archers");
 	public static final ArmorSetInit BATTLE_ROBES = registerArmorSet("battle_robes");
 	public static final ArmorSetInit CHAMPIONS_ARMOR = registerArmorSet("champions");
 	public static final ArmorSetInit HEROS_ARMOR = registerArmorSet("heros");
@@ -356,10 +355,8 @@ public class ItemInit {
 	public static final ArmorSetInit EMBER_ROBES = registerArmorSet("ember_robes");
 	public static final ArmorSetInit GRIM_ARMOR = registerArmorSet("grim");
 	public static final ArmorSetInit WITHER_ARMOR = registerArmorSet("wither");
-	// public static final ArmorSetInit GUARDS_ARMOR = registerArmorSet("guards",
-	// VILLAGE);
-	// public static final ArmorSetInit CURIOUS_ARMOR = registerArmorSet("curious",
-	// VILLAGE);
+	public static final ArmorSetInit GUARDS_ARMOR = registerArmorSet("guards");
+	public static final ArmorSetInit CURIOUS_ARMOR = registerArmorSet("curious");
 	public static final ArmorSetInit MERCENARY_ARMOR = registerArmorSet("mercenary");
 	public static final ArmorSetInit RENEGADE_ARMOR = registerArmorSet("renegade");
 	public static final ArmorSetInit HUNGRY_HORROR = registerArmorSet("hungry_horror");
@@ -372,8 +369,7 @@ public class ItemInit {
 	public static final ArmorSetInit REINFORCED_MAIL = registerArmorSet("reinforced_mail");
 	public static final ArmorSetInit STALWART_ARMOR = registerArmorSet("stalwart");
 	public static final ArmorSetInit SCALE_MAIL = registerArmorSet("scale_mail");
-	// public static final ArmorSetInit HIGHLAND_ARMOR =
-	// registerArmorSet("highland", BASIC);
+	public static final ArmorSetInit HIGHLAND_ARMOR = registerArmorSet("highland");
 	public static final ArmorSetInit SNOW_ARMOR = registerFreezingResistanceArmorSet("snow");
 	public static final ArmorSetInit FROST_ARMOR = registerFreezingResistanceArmorSet("frost");
 	public static final ArmorSetInit SOUL_ROBES = registerArmorSet("soul");
@@ -404,6 +400,8 @@ public class ItemInit {
 	public static final RegistryObject<Item> CRACKED_GOLD_PIGLIN_HELMET = ITEMS.register(
 			"cracked_gold_piglin_helmet",
 			() -> new PiglinHelmetItem(ArmorMaterials.GOLD, Type.HELMET, new Item.Properties()));
+	public static final RegistryObject<Item> ARROW_BUNDLE = ITEMS.register("arrow_bundle",
+			() -> new ArrowBundleItem(new Item.Properties()));
 
 	private static RegistryObject<Item> registerArmor(String armorId, Supplier<Item> itemSupplier) {
 		if (armorId == null)

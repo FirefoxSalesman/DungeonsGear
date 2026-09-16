@@ -11,6 +11,7 @@ import net.minecraftforge.registries.RegistryObject;
 
 import static net.firefoxsalesman.dungeonsgear.DungeonsGear.MOD_ID;
 
+import net.firefoxsalesman.dungeonsgear.enchantments.armor.chest.ArrowHoarderEnchantment;
 import net.firefoxsalesman.dungeonsgear.enchantments.armor.chest.BagOfSoulsEnchantment;
 import net.firefoxsalesman.dungeonsgear.enchantments.armor.chest.BeastBossEnchantment;
 import net.firefoxsalesman.dungeonsgear.enchantments.armor.chest.BeehiveEnchantment;
@@ -250,6 +251,8 @@ public class EnchantmentInit {
 			SpeedSynergyEnchantment::new);
 	public static RegistryObject<VoidDodgeEnchantment> VOID_DODGE = ENCHANTMENTS.register("void_dodge",
 			VoidDodgeEnchantment::new);
+	public static RegistryObject<ArrowHoarderEnchantment> ARROW_HOARDER = ENCHANTMENTS.register("arrow_hoarder",
+			() -> new ArrowHoarderEnchantment());
 	public static RegistryObject<BeastBurstEnchantment> BEAST_BURST = ENCHANTMENTS.register("beast_burst",
 			BeastBurstEnchantment::new);
 	public static RegistryObject<BeastSurgeEnchantment> BEAST_SURGE = ENCHANTMENTS.register("beast_surge",
