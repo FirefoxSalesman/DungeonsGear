@@ -100,13 +100,13 @@ public class DungeonsGearConfig {
 				.comment("Add enchantments that should be prevented from being applied to any gear. \n"
 						+ "To do so, enter their registry names.")
 				.defineList("enchantmentBlacklist", Lists.newArrayList(
-						"dungeonsmobs:lucky_explorer"),
+						"dungeonsgear:lucky_explorer"),
 						(itemRaw) -> itemRaw instanceof String);
 		TREASURE_ONLY_ENCHANTMENTS = builder
 				.comment("Add enchantments that should be designated as treasure-only. \n"
 						+ "To do so, enter their registry names.")
 				.defineList("treasureOnlyEnchantments", Lists.newArrayList(
-						"dungeonsmobs:masters_call"),
+						"dungeonsgear:masters_call"),
 						(itemRaw) -> itemRaw instanceof String);
 		ENABLE_FRIENDLY_PET_FIRE = builder.comment("Enable Friendly Fire on Pets \n"
 				+ "If you dislike (or outright hate) your pets and would like to kill them, enable this feature. [true / false]")

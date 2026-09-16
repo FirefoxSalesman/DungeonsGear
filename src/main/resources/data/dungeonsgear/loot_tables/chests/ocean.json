@@ -75,6 +75,16 @@
         },
 	{
           "type": "item",
+          "name": "dungeonsgear:satchel_of_snacks",
+          "weight": 2 
+        },
+	{
+          "type": "item",
+          "name": "dungeonsgear:satchel_of_elixirs",
+          "weight": 2 
+        },
+	{
+          "type": "item",
           "name": "dungeonsgear:encrusted_anchor",
           "weight": 1 
         },
@@ -85,7 +95,7 @@
         },
 	{
           "type": "empty",
-          "weight": 54
+          "weight": 58
         }
       ]
     }

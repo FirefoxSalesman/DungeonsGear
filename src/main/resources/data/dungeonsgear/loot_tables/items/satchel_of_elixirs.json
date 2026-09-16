@@ -7,17 +7,12 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "weight": 3,
-          "name": "minecraft:arrow"
-        },
-        {
-          "type": "minecraft:loot_table",
           "functions": [
             {
               "function": "dungeonsgear:add_potion"
             }
           ],
-          "name": "dungeonsgear:items/arrow_bundle/expand_tag"
+          "name": "minecraft:potion"
         }
       ]
     }

@@ -326,9 +326,8 @@ public class ItemInit {
 			() -> new ThunderingQuiverItem(PROPERTIES));
 	public static final RegistryObject<Item> HARPOON_QUIVER = registerArtifact("harpoon_quiver",
 			() -> new HarpoonQuiverItem(PROPERTIES));
-	// public static final RegistryObject<Item> SATCHEL_OF_ELIXIRS =
-	// registerArtifact("satchel_of_elixirs",
-	// () -> new SatchelOfElixirsItem(PROPERTIES));
+	public static final RegistryObject<Item> SATCHEL_OF_ELIXIRS = registerArtifact("satchel_of_elixirs",
+			() -> new SatchelOfElixirsItem(PROPERTIES));
 	public static final RegistryObject<Item> SATCHEL_OF_SNACKS = registerArtifact("satchel_of_snacks",
 			() -> new SatchelOfSnacksItem(PROPERTIES));
 	public static final RegistryObject<Item> SATCHEL_OF_ELEMENTS = registerArtifact("satchel_of_elements",

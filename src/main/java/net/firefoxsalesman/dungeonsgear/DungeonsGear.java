@@ -9,6 +9,7 @@ import net.firefoxsalesman.dungeonsgear.combat.ParcoolEvents;
 import net.firefoxsalesman.dungeonsgear.config.DungeonsGearConfig;
 import net.firefoxsalesman.dungeonsgear.items.DualWieldItemProperties;
 import net.firefoxsalesman.dungeonsgear.items.GearRangedItemModelProperties;
+import net.firefoxsalesman.dungeonsgear.loot.ModLootFunctionTypes;
 import net.firefoxsalesman.dungeonsgear.network.NetworkHandler;
 import net.firefoxsalesman.dungeonsgear.registry.AttributeInit;
 import net.firefoxsalesman.dungeonsgear.registry.EnchantmentInit;
@@ -68,6 +69,7 @@ public class DungeonsGear {
 		ItemInit.register(modEventBus);
 		MobEffectInit.register(modEventBus);
 		EnchantmentInit.register(modEventBus);
+		ModLootFunctionTypes.register(modEventBus);
 
 		if (ModHelper.hasMod("parcool"))
 			new ParcoolEvents().register();
