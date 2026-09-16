@@ -59,12 +59,22 @@ public class UnchantingEnchantment extends DamageBoostEnchantment {
 	}
 
 	@Override
+	public boolean isAllowedOnBooks() {
+		return super.isAllowedOnBooks() && ModHelper.hasMod("enchantwithmob");
+	}
+
+	@Override
+	public boolean isDiscoverable() {
+		return super.isDiscoverable() && ModHelper.hasMod("enchantwithmob");
+	}
+
+	@Override
 	public boolean canEnchant(ItemStack stack) {
-		return super.canEnchant(stack) && !ModHelper.hasMod("enchantwithmob");
+		return super.canEnchant(stack) && ModHelper.hasMod("enchantwithmob");
 	}
 
 	@Override
 	public boolean canApplyAtEnchantingTable(ItemStack stack) {
-		return super.canApplyAtEnchantingTable(stack) && !ModHelper.hasMod("enchantwithmob");
+		return super.canApplyAtEnchantingTable(stack) && ModHelper.hasMod("enchantwithmob");
 	}
 }

@@ -35,6 +35,16 @@ public class MultiRollEnchantment extends JumpingEnchantment {
 	}
 
 	@Override
+	public boolean isDiscoverable() {
+		return super.isDiscoverable() && !ModHelper.hasMod("combatroll");
+	}
+
+	@Override
+	public boolean isAllowedOnBooks() {
+		return super.isAllowedOnBooks() && !ModHelper.hasMod("combatroll");
+	}
+
+	@Override
 	public boolean canEnchant(ItemStack stack) {
 		return super.canEnchant(stack)
 				&& (!ModHelper.hasMod("combatroll") || BuiltInRegistries.ITEM.getKey(stack.getItem())

@@ -20,6 +20,7 @@ public class DungeonsGearConfig {
 	public static ForgeConfigSpec.ConfigValue<Boolean> ENABLE_ENCHANTMENT_TRADES;
 	public static ForgeConfigSpec.ConfigValue<Boolean> ENABLE_FRIENDLY_PET_FIRE;
 	public static ForgeConfigSpec.ConfigValue<Boolean> ENABLE_ENCHANTMENT_LOOT;
+	public static ForgeConfigSpec.ConfigValue<Boolean> RESTRICT_SOUL_ENCHANTMENTS;
 
 	// Enchanting specific values
 	public static ForgeConfigSpec.ConfigValue<Double> BUSY_BEE_BASE_CHANCE;
@@ -121,6 +122,11 @@ public class DungeonsGearConfig {
 						+
 						"Disable this feature if you want to prevent this. [true / false]")
 				.define("enableEnchantmentLoot", true);
+		RESTRICT_SOUL_ENCHANTMENTS = builder
+				.comment("Soul enchantments only appear on items in the soul item tag.\n"
+						+
+						"Disable this feature if you want to prevent this. [true / false]")
+				.define("restrictSoulEnchantments", true);
 		builder.pop();
 
 		builder.comment("Effect Specific Configuration").push("effect_specific_configuration");

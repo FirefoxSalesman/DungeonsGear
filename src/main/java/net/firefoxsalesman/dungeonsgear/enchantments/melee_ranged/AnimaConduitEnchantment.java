@@ -4,6 +4,7 @@ import net.firefoxsalesman.dungeonsgear.enchantments.ModEnchantmentTypes;
 import net.firefoxsalesman.dungeonsgear.enchantments.types.HealingEnchantment;
 import net.firefoxsalesman.dungeonsgear.utilities.GeneralHelper;
 import net.firefoxsalesman.dungeonsgear.utilities.ModEnchantmentHelper;
+import net.firefoxsalesman.dungeonsgear.utilities.SoulHelper;
 import net.firefoxsalesman.dungeonslibs.event.PlayerSoulEvent;
 import net.firefoxsalesman.dungeonslibs.integration.curios.CuriosIntegration;
 import net.minecraft.world.entity.EquipmentSlot;
@@ -69,6 +70,16 @@ public class AnimaConduitEnchantment extends HealingEnchantment {
 		return !(enchantment instanceof HealingEnchantment);
 	}
 
+	@Override
+	public boolean canApplyAtEnchantingTable(ItemStack stack) {
+		return super.canApplyAtEnchantingTable(stack) && SoulHelper.isSoulItem(stack);
+	}
+
+	@Override
+	public boolean canEnchant(ItemStack stack) {
+		return super.canEnchant(stack) && SoulHelper.isSoulItem(stack);
+	}
+
 	@SubscribeEvent
 	public static void onLivingEquipmentChange(LivingEquipmentChangeEvent event) {
 		removeAttribute(event.getFrom(), event.getEntity(), EQUIPMENT_ATTRIBUTE_UUID_MAP.get(event.getSlot()));
@@ -85,7 +96,7 @@ public class AnimaConduitEnchantment extends HealingEnchantment {
 
 	private static void removeAttribute(ItemStack itemStack, LivingEntity livingEntity,
 			UUID attributeModifierUUID) {
-		if (EnchantmentHelper.getItemEnchantmentLevel(ANIMA_CONDUIT.get(), itemStack) > 0) {
+		if (itemStack.getEnchantmentLevel(ANIMA_CONDUIT.get()) > 0) {
 			AttributeInstance attributeInstance = livingEntity.getAttribute(SOUL_GATHERING.get());
 			if (attributeInstance != null && attributeInstance.getModifier(attributeModifierUUID) != null) {
 				attributeInstance.removeModifier(attributeModifierUUID);
@@ -94,7 +105,7 @@ public class AnimaConduitEnchantment extends HealingEnchantment {
 	}
 
 	private static void addAttribute(ItemStack itemStack, LivingEntity livingEntity, UUID attributeModifierUUID) {
-		int itemEnchantmentLevel = EnchantmentHelper.getItemEnchantmentLevel(ANIMA_CONDUIT.get(), itemStack);
+		int itemEnchantmentLevel = itemStack.getEnchantmentLevel(ANIMA_CONDUIT.get());
 		if (itemEnchantmentLevel > 0) {
 			AttributeInstance attributeInstance = livingEntity.getAttribute(SOUL_GATHERING.get());
 			if (attributeInstance != null && attributeInstance.getModifier(attributeModifierUUID) == null) {

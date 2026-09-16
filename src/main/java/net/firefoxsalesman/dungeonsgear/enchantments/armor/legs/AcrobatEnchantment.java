@@ -18,7 +18,6 @@ import net.minecraft.world.entity.ai.attributes.AttributeModifier;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.enchantment.Enchantment;
 import net.minecraft.world.item.enchantment.EnchantmentCategory;
-import net.minecraft.world.item.enchantment.EnchantmentHelper;
 import net.minecraftforge.event.entity.living.LivingEquipmentChangeEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
@@ -43,6 +42,16 @@ public class AcrobatEnchantment extends JumpingEnchantment {
 		return super.canApplyAtEnchantingTable(stack) && !ModHelper.hasMod("combatroll");
 	}
 
+	@Override
+	public boolean isDiscoverable() {
+		return super.isDiscoverable() && !ModHelper.hasMod("combatroll");
+	}
+
+	@Override
+	public boolean isAllowedOnBooks() {
+		return super.isAllowedOnBooks() && !ModHelper.hasMod("combatroll");
+	}
+
 	public int getMaxLevel() {
 		return 3;
 	}
@@ -63,7 +72,7 @@ public class AcrobatEnchantment extends JumpingEnchantment {
 
 	private static void removeAttribute(ItemStack itemStack, LivingEntity livingEntity,
 			UUID attributeModifierUUID) {
-		if (EnchantmentHelper.getItemEnchantmentLevel(ACROBAT.get(), itemStack) > 0) {
+		if (itemStack.getEnchantmentLevel(ACROBAT.get()) > 0) {
 			AttributeInstance attributeInstance = livingEntity.getAttribute(ROLL_COOLDOWN.get());
 			if (attributeInstance != null && attributeInstance.getModifier(attributeModifierUUID) != null) {
 				attributeInstance.removeModifier(attributeModifierUUID);
@@ -72,7 +81,7 @@ public class AcrobatEnchantment extends JumpingEnchantment {
 	}
 
 	private static void addAttribute(ItemStack itemStack, LivingEntity livingEntity, UUID attributeModifierUUID) {
-		int itemEnchantmentLevel = EnchantmentHelper.getItemEnchantmentLevel(ACROBAT.get(), itemStack);
+		int itemEnchantmentLevel = itemStack.getEnchantmentLevel(ACROBAT.get());
 		if (itemEnchantmentLevel > 0) {
 			AttributeInstance attributeInstance = livingEntity.getAttribute(ROLL_COOLDOWN.get());
 			if (attributeInstance != null && attributeInstance.getModifier(attributeModifierUUID) == null) {

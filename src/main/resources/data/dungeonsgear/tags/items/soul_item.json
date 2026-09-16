@@ -1,0 +1,172 @@
+{
+  "values": [
+    "dungeonsgear:eternal_knife",
+    "dungeonsgear:frost_scythe",
+    "dungeonsgear:jailors_scythe",
+    "dungeonsgear:moon_dagger",
+    "dungeonsgear:soul_fist",
+    "dungeonsgear:soul_knife",
+    "dungeonsgear:soul_scythe",
+    "dungeonsgear:truthseeker",
+    "dungeonsgear:bow_of_lost_souls",
+    "dungeonsgear:feral_soul_crossbow",
+    "dungeonsgear:nocturnal_bow",
+    "dungeonsgear:shivering_bow",
+    "dungeonsgear:soul_bow",
+    "dungeonsgear:soul_crossbow",
+    "dungeonsgear:soul_hunter_crossbow",
+    "dungeonsgear:voidcaller",
+    "dungeonsgear:dark_helmet",
+    "dungeonsgear:dark_chestplate",
+    "dungeonsgear:dark_leggings",
+    "dungeonsgear:dark_boots",
+    "dungeonsgear:frost_bite_helmet",
+    "dungeonsgear:frost_bite_chestplate",
+    "dungeonsgear:frost_bite_leggings",
+    "dungeonsgear:frost_bite_boots",
+    "dungeonsgear:grim_helmet",
+    "dungeonsgear:grim_chestplate",
+    "dungeonsgear:grim_leggings",
+    "dungeonsgear:grim_boots",
+    "dungeonsgear:phantom_helmet",
+    "dungeonsgear:phantom_chestplate",
+    "dungeonsgear:phantom_leggings",
+    "dungeonsgear:phantom_boots",
+    "dungeonsgear:soul_helmet",
+    "dungeonsgear:soul_chestplate",
+    "dungeonsgear:soul_leggings",
+    "dungeonsgear:soul_boots",
+    "dungeonsgear:souldancer_helmet",
+    "dungeonsgear:souldancer_chestplate",
+    "dungeonsgear:souldancer_leggings",
+    "dungeonsgear:souldancer_boots",
+    "dungeonsgear:titans_shroud_helmet",
+    "dungeonsgear:titans_shroud_chestplate",
+    "dungeonsgear:titans_shroud_leggings",
+    "dungeonsgear:titans_shroud_boots",
+    "dungeonsgear:wither_helmet",
+    "dungeonsgear:wither_chestplate",
+    "dungeonsgear:wither_leggings",
+    "dungeonsgear:wither_boots",
+    {
+      "id": "goety:black_iron_helmet",
+      "required": false
+    },
+    {
+      "id": "goety:black_iron_chestplate",
+      "required": false
+    },
+    {
+      "id": "goety:black_iron_leggings",
+      "required": false
+    },
+    {
+      "id": "goety:black_iron_boots",
+      "required": false
+    },
+    {
+      "id": "goety:dark_helmet",
+      "required": false
+    },
+    {
+      "id": "goety:dark_chestplate",
+      "required": false
+    },
+    {
+      "id": "goety:dark_leggings",
+      "required": false
+    },
+    {
+      "id": "goety:dark_boots",
+      "required": false
+    },
+    {
+      "id": "goety:dark_hat",
+      "required": false
+    },
+    {
+      "id": "goety:dark_robe",
+      "required": false
+    },
+    {
+      "id": "goety:dark_robe_fancy",
+      "required": false
+    },
+    {
+      "id": "goety:grand_turban",
+      "required": false
+    },
+    {
+      "id": "goety:grand_robe",
+      "required": false
+    },
+    {
+      "id": "goety:frost_crown",
+      "required": false
+    },
+    {
+      "id": "goety:frost_robe",
+      "required": false
+    },
+    {
+      "id": "goety:frost_robe_cryo",
+      "required": false
+    },
+    {
+      "id": "goety:wind_crown",
+      "required": false
+    },
+    {
+      "id": "goety:wind_robe",
+      "required": false
+    },
+    {
+      "id": "goety:storm_crown",
+      "required": false
+    },
+    {
+      "id": "goety:storm_robe",
+      "required": false
+    },
+    {
+      "id": "goety:wild_crown",
+      "required": false
+    },
+    {
+      "id": "goety:wild_robe",
+      "required": false
+    },
+    {
+      "id": "goety:abyss_crown",
+      "required": false
+    },
+    {
+      "id": "goety:abyss_robe",
+      "required": false
+    },
+    {
+      "id": "goety:void_crown",
+      "required": false
+    },
+    {
+      "id": "goety:void_robe",
+      "required": false
+    },
+    {
+      "id": "goety:nether_crown",
+      "required": false
+    },
+    {
+      "id": "goety:nether_robe",
+      "required": false
+    },
+    {
+      "id": "goety:nether_robe_warped",
+      "required": false
+    },
+    {
+      "id": "goety:unholy_robe",
+      "required": false
+    }
+  ]
+}

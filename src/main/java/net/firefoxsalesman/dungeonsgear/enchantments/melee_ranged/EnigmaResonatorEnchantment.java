@@ -1,10 +1,22 @@
 package net.firefoxsalesman.dungeonsgear.enchantments.melee_ranged;
 
+import static net.firefoxsalesman.dungeonsgear.DungeonsGear.MOD_ID;
+import static net.firefoxsalesman.dungeonsgear.DungeonsGear.PROXY;
+import static net.firefoxsalesman.dungeonsgear.registry.EnchantmentInit.ENIGMA_RESONATOR;
+import static net.firefoxsalesman.dungeonslibs.attribute.AttributeRegistry.SOUL_GATHERING;
+
+import java.util.AbstractMap;
+import java.util.Map;
+import java.util.UUID;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
+
 import net.firefoxsalesman.dungeonsgear.enchantments.ModEnchantmentTypes;
 import net.firefoxsalesman.dungeonsgear.enchantments.types.AOEDamageEnchantment;
 import net.firefoxsalesman.dungeonsgear.enchantments.types.DamageBoostEnchantment;
 import net.firefoxsalesman.dungeonsgear.utilities.GeneralHelper;
 import net.firefoxsalesman.dungeonsgear.utilities.ModEnchantmentHelper;
+import net.firefoxsalesman.dungeonsgear.utilities.SoulHelper;
 import net.firefoxsalesman.dungeonslibs.capabilities.soulcaster.SoulCasterHelper;
 import net.firefoxsalesman.dungeonslibs.integration.curios.CuriosIntegration;
 import net.minecraft.core.particles.ParticleTypes;
@@ -16,7 +28,6 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.enchantment.DamageEnchantment;
 import net.minecraft.world.item.enchantment.Enchantment;
-import net.minecraft.world.item.enchantment.EnchantmentHelper;
 import net.minecraftforge.event.entity.living.LivingEquipmentChangeEvent;
 import net.minecraftforge.event.entity.player.CriticalHitEvent;
 import net.minecraftforge.eventbus.api.Event;
@@ -24,17 +35,6 @@ import net.minecraftforge.eventbus.api.EventPriority;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import top.theillusivec4.curios.api.event.CurioChangeEvent;
-
-import java.util.AbstractMap;
-import java.util.Map;
-import java.util.UUID;
-import java.util.stream.Collectors;
-import java.util.stream.Stream;
-
-import static net.firefoxsalesman.dungeonsgear.DungeonsGear.MOD_ID;
-import static net.firefoxsalesman.dungeonsgear.DungeonsGear.PROXY;
-import static net.firefoxsalesman.dungeonsgear.registry.EnchantmentInit.ENIGMA_RESONATOR;
-import static net.firefoxsalesman.dungeonslibs.attribute.AttributeRegistry.SOUL_GATHERING;
 
 @Mod.EventBusSubscriber(modid = MOD_ID)
 public class EnigmaResonatorEnchantment extends DamageBoostEnchantment {
@@ -68,8 +68,7 @@ public class EnigmaResonatorEnchantment extends DamageBoostEnchantment {
 		if (!event.isVanillaCritical()) {
 			boolean success = false;
 			if (ModEnchantmentHelper.hasEnchantment(mainhand, ENIGMA_RESONATOR.get())) {
-				int enigmaResonatorLevel = EnchantmentHelper
-						.getItemEnchantmentLevel(ENIGMA_RESONATOR.get(), mainhand);
+				int enigmaResonatorLevel = mainhand.getEnchantmentLevel(ENIGMA_RESONATOR.get());
 				float soulsCriticalBoostChanceCap;
 				soulsCriticalBoostChanceCap = 0.1F + 0.05F * enigmaResonatorLevel;
 				float soulsCriticalBoostRand = attacker.getRandom().nextFloat();
@@ -87,6 +86,16 @@ public class EnigmaResonatorEnchantment extends DamageBoostEnchantment {
 				PROXY.spawnParticles(attacker, ParticleTypes.SOUL);
 			}
 		}
+	}
+
+	@Override
+	public boolean canApplyAtEnchantingTable(ItemStack stack) {
+		return super.canApplyAtEnchantingTable(stack) && SoulHelper.isSoulItem(stack);
+	}
+
+	@Override
+	public boolean canEnchant(ItemStack stack) {
+		return super.canEnchant(stack) && SoulHelper.isSoulItem(stack);
 	}
 
 	@Override
@@ -117,7 +126,7 @@ public class EnigmaResonatorEnchantment extends DamageBoostEnchantment {
 
 	private static void removeAttribute(ItemStack itemStack, LivingEntity livingEntity,
 			UUID attributeModifierUUID) {
-		if (EnchantmentHelper.getItemEnchantmentLevel(ENIGMA_RESONATOR.get(), itemStack) > 0) {
+		if (itemStack.getEnchantmentLevel(ENIGMA_RESONATOR.get()) > 0) {
 			AttributeInstance attributeInstance = livingEntity.getAttribute(SOUL_GATHERING.get());
 			if (attributeInstance != null && attributeInstance.getModifier(attributeModifierUUID) != null) {
 				attributeInstance.removeModifier(attributeModifierUUID);
@@ -126,7 +135,7 @@ public class EnigmaResonatorEnchantment extends DamageBoostEnchantment {
 	}
 
 	private static void addAttribute(ItemStack itemStack, LivingEntity livingEntity, UUID attributeModifierUUID) {
-		int itemEnchantmentLevel = EnchantmentHelper.getItemEnchantmentLevel(ENIGMA_RESONATOR.get(), itemStack);
+		int itemEnchantmentLevel = itemStack.getEnchantmentLevel(ENIGMA_RESONATOR.get());
 		if (itemEnchantmentLevel > 0) {
 			AttributeInstance attributeInstance = livingEntity.getAttribute(SOUL_GATHERING.get());
 			if (attributeInstance != null && attributeInstance.getModifier(attributeModifierUUID) == null) {

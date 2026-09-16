@@ -1,8 +1,22 @@
 package net.firefoxsalesman.dungeonsgear.enchantments.melee;
 
+import static net.firefoxsalesman.dungeonsgear.DungeonsGear.MOD_ID;
+import static net.firefoxsalesman.dungeonsgear.DungeonsGear.PROXY;
+import static net.firefoxsalesman.dungeonsgear.config.DungeonsGearConfig.SOUL_SIPHON_CHANCE;
+import static net.firefoxsalesman.dungeonsgear.config.DungeonsGearConfig.SOUL_SIPHON_SOULS_PER_LEVEL;
+import static net.firefoxsalesman.dungeonsgear.registry.EnchantmentInit.SOUL_SIPHON;
+import static net.firefoxsalesman.dungeonslibs.attribute.AttributeRegistry.SOUL_GATHERING;
+
+import java.util.AbstractMap;
+import java.util.Map;
+import java.util.UUID;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
+
 import net.firefoxsalesman.dungeonsgear.enchantments.ModEnchantmentTypes;
 import net.firefoxsalesman.dungeonsgear.enchantments.types.DungeonsEnchantment;
 import net.firefoxsalesman.dungeonsgear.utilities.GeneralHelper;
+import net.firefoxsalesman.dungeonsgear.utilities.SoulHelper;
 import net.firefoxsalesman.dungeonslibs.entities.SoulOrbEntity;
 import net.firefoxsalesman.dungeonslibs.integration.curios.CuriosIntegration;
 import net.minecraft.core.particles.ParticleTypes;
@@ -13,24 +27,10 @@ import net.minecraft.world.entity.ai.attributes.AttributeInstance;
 import net.minecraft.world.entity.ai.attributes.AttributeModifier;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.enchantment.EnchantmentHelper;
 import net.minecraftforge.event.entity.living.LivingEquipmentChangeEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import top.theillusivec4.curios.api.event.CurioChangeEvent;
-
-import java.util.AbstractMap;
-import java.util.Map;
-import java.util.UUID;
-import java.util.stream.Collectors;
-import java.util.stream.Stream;
-
-import static net.firefoxsalesman.dungeonsgear.DungeonsGear.MOD_ID;
-import static net.firefoxsalesman.dungeonsgear.DungeonsGear.PROXY;
-import static net.firefoxsalesman.dungeonsgear.config.DungeonsGearConfig.SOUL_SIPHON_CHANCE;
-import static net.firefoxsalesman.dungeonsgear.config.DungeonsGearConfig.SOUL_SIPHON_SOULS_PER_LEVEL;
-import static net.firefoxsalesman.dungeonsgear.registry.EnchantmentInit.SOUL_SIPHON;
-import static net.firefoxsalesman.dungeonslibs.attribute.AttributeRegistry.SOUL_GATHERING;
 
 @Mod.EventBusSubscriber(modid = MOD_ID)
 public class SoulSiphonEnchantment extends DungeonsEnchantment {
@@ -55,6 +55,16 @@ public class SoulSiphonEnchantment extends DungeonsEnchantment {
 
 	public int getMaxLevel() {
 		return 3;
+	}
+
+	@Override
+	public boolean canApplyAtEnchantingTable(ItemStack stack) {
+		return super.canApplyAtEnchantingTable(stack) && SoulHelper.isSoulItem(stack);
+	}
+
+	@Override
+	public boolean canEnchant(ItemStack stack) {
+		return super.canEnchant(stack) && SoulHelper.isSoulItem(stack);
 	}
 
 	@Override
@@ -94,7 +104,7 @@ public class SoulSiphonEnchantment extends DungeonsEnchantment {
 
 	private static void removeAttribute(ItemStack itemStack, LivingEntity livingEntity,
 			UUID attributeModifierUUID) {
-		if (EnchantmentHelper.getItemEnchantmentLevel(SOUL_SIPHON.get(), itemStack) > 0) {
+		if (itemStack.getEnchantmentLevel(SOUL_SIPHON.get()) > 0) {
 			AttributeInstance attributeInstance = livingEntity.getAttribute(SOUL_GATHERING.get());
 			if (attributeInstance != null && attributeInstance.getModifier(attributeModifierUUID) != null) {
 				attributeInstance.removeModifier(attributeModifierUUID);
@@ -103,7 +113,7 @@ public class SoulSiphonEnchantment extends DungeonsEnchantment {
 	}
 
 	private static void addAttribute(ItemStack itemStack, LivingEntity livingEntity, UUID attributeModifierUUID) {
-		int itemEnchantmentLevel = EnchantmentHelper.getItemEnchantmentLevel(SOUL_SIPHON.get(), itemStack);
+		int itemEnchantmentLevel = itemStack.getEnchantmentLevel(SOUL_SIPHON.get());
 		if (itemEnchantmentLevel > 0) {
 			AttributeInstance attributeInstance = livingEntity.getAttribute(SOUL_GATHERING.get());
 			if (attributeInstance != null && attributeInstance.getModifier(attributeModifierUUID) == null) {
