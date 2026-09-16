@@ -1,0 +1,144 @@
+{
+  "values": [
+    "minecraft:enderman",
+    "minecraft:endermite",
+    "minecraft:ender_dragon",
+    "minecraft:shulker",
+    {
+      "id": "dungeonsmobs:watchling",
+      "required": false
+    },
+    {
+      "id": "dungeonsmobs:snareling",
+      "required": false
+    },
+    {
+      "id": "dungeonsmobs:blastling",
+      "required": false
+    },
+    {
+      "id": "dungeonsmobs:endersent",
+      "required": false
+    },
+    {
+      "id": "dungeonsmobs:eye_holder_endersent",
+      "required": false
+    },
+    {
+      "id": "#goety:void_touched_immune",
+      "required": false
+    },
+    {
+      "id": "cataclysm:ender_golem",
+      "required": false
+    },
+    {
+      "id": "cataclysm:ender_guardian",
+      "required": false
+    },
+    {
+      "id": "cataclysm:endermaptera",
+      "required": false
+    },
+    {
+      "id": "legendary_monsters:endersent",
+      "required": false
+    },
+    {
+      "id": "legendary_monsters:chorusling",
+      "required": false
+    },
+    {
+      "id": "legendary_monsters:annihilation_pursuer",
+      "required": false
+    },
+    {
+      "id": "legendary_monsters:flameborn_guard",
+      "required": false
+    },
+    {
+      "id": "legendary_monsters:flameborn_warrior",
+      "required": false
+    },
+    {
+      "id": "bosses_of_mass_destruction:obsidilith",
+      "required": false
+    },
+    {
+      "id": "betterend:dragonfly",
+      "required": false
+    },
+    {
+      "id": "betterend:cubozoa",
+      "required": false
+    },
+    {
+      "id": "betterend:end_fish",
+      "required": false
+    },
+    {
+      "id": "betterend:end_slime",
+      "required": false
+    },
+    {
+      "id": "betterend:shadow_walker",
+      "required": false
+    },
+    {
+      "id": "alexsmobs:cosmic_cod",
+      "required": false
+    },
+    {
+      "id": "alexsmobs:enderiophage",
+      "required": false
+    },
+    {
+      "id": "alexsmobs:endergrade",
+      "required": false
+    },
+    {
+      "id": "alexsmobs:void_worm",
+      "required": false
+    },
+    {
+      "id": "alexsmobs:spectre",
+      "required": false
+    },
+    {
+      "id": "endergetic:puff_bug",
+      "required": false
+    },
+    {
+      "id": "endergetic:booflo_baby",
+      "required": false
+    },
+    {
+      "id": "endergetic:booflo_adolescent",
+      "required": false
+    },
+    {
+      "id": "endergetic:booflo",
+      "required": false
+    },
+    {
+      "id": "endergetic:charger_eetle",
+      "required": false
+    },
+    {
+      "id": "endergetic:glider_eetle",
+      "required": false
+    },
+    {
+      "id": "endergetic:brood_eetle",
+      "required": false
+    },
+    {
+      "id": "endergetic:eetle_egg",
+      "required": false
+    },
+    {
+      "id": "endergetic:purpoid",
+      "required": false
+    }
+  ]
+}

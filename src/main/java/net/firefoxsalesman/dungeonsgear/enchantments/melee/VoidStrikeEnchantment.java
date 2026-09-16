@@ -3,6 +3,7 @@ package net.firefoxsalesman.dungeonsgear.enchantments.melee;
 import net.firefoxsalesman.dungeonsgear.enchantments.types.DamageBoostEnchantment;
 import net.firefoxsalesman.dungeonsgear.registry.EnchantmentInit;
 import net.firefoxsalesman.dungeonsgear.registry.MobEffectInit;
+import net.firefoxsalesman.dungeonsgear.tags.EntityTags;
 import net.firefoxsalesman.dungeonsgear.utilities.ModEnchantmentHelper;
 import net.firefoxsalesman.dungeonsgear.enchantments.types.AOEDamageEnchantment;
 import net.minecraft.world.item.ItemStack;
@@ -37,19 +38,21 @@ public class VoidStrikeEnchantment extends DamageBoostEnchantment {
 
 	@SubscribeEvent
 	public static void onLivingDamageEvent(LivingDamageEvent event) {
-		if (event.getEntity().getEffect(MobEffectInit.VOID_SHOT.get()) != null)
+		LivingEntity defender = event.getEntity();
+		if (defender.getEffect(MobEffectInit.VOID_SHOT.get()) != null
+				|| defender.getType().is(EntityTags.VOID_STRIKE_IMMUNE))
 			return;
-		MobEffectInstance voidStrike = event.getEntity().getEffect(MobEffectInit.VOID_STRIKE.get());
+		MobEffectInstance voidStrike = defender.getEffect(MobEffectInit.VOID_STRIKE.get());
 		if (voidStrike != null) {
 			float voidStrikeAmplifier = (float) Math.max(25,
 					(voidStrike.getAmplifier() + 1) * (101 - voidStrike.getDuration()) * 2) / 100F;
 			event.setAmount((event.getAmount() * voidStrikeAmplifier) + event.getAmount());
-			event.getEntity().removeEffect(MobEffectInit.VOID_STRIKE.get());
+			defender.removeEffect(MobEffectInit.VOID_STRIKE.get());
 
 		} else if (event.getSource().getEntity() instanceof LivingEntity attacker) {
 			ItemStack mainhand = attacker.getMainHandItem();
 			if (ModEnchantmentHelper.hasEnchantment(mainhand, EnchantmentInit.VOID_STRIKE.get()))
-				event.getEntity().addEffect(new MobEffectInstance(MobEffectInit.VOID_STRIKE.get(), 100,
+				defender.addEffect(new MobEffectInstance(MobEffectInit.VOID_STRIKE.get(), 100,
 						mainhand.getEnchantmentLevel(EnchantmentInit.VOID_STRIKE.get()) - 1));
 
 		}

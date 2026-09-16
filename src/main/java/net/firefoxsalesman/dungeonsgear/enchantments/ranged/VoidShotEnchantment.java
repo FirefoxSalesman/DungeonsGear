@@ -3,6 +3,7 @@ package net.firefoxsalesman.dungeonsgear.enchantments.ranged;
 import net.firefoxsalesman.dungeonsgear.enchantments.types.DamageBoostEnchantment;
 import net.firefoxsalesman.dungeonsgear.registry.EnchantmentInit;
 import net.firefoxsalesman.dungeonsgear.registry.MobEffectInit;
+import net.firefoxsalesman.dungeonsgear.tags.EntityTags;
 import net.firefoxsalesman.dungeonsgear.utilities.ModEnchantmentHelper;
 import net.firefoxsalesman.dungeonsgear.enchantments.types.AOEDamageEnchantment;
 import net.minecraft.world.item.ItemStack;
@@ -37,20 +38,21 @@ public class VoidShotEnchantment extends DamageBoostEnchantment {
 
 	@SubscribeEvent
 	public static void onLivingDamageEvent(LivingDamageEvent event) {
-		if (event.getEntity().getEffect(MobEffectInit.VOID_STRIKE.get()) != null)
+		LivingEntity defender = event.getEntity();
+		if (defender.getEffect(MobEffectInit.VOID_STRIKE.get()) != null
+				|| defender.getType().is(EntityTags.VOID_STRIKE_IMMUNE))
 			return;
-		MobEffectInstance voidShot = event.getEntity().getEffect(MobEffectInit.VOID_SHOT.get());
+		MobEffectInstance voidShot = defender.getEffect(MobEffectInit.VOID_SHOT.get());
 		if (voidShot != null) {
 			float voidShotAmplifier = (float) Math.max(25,
 					(voidShot.getAmplifier() + 1) * (101 - voidShot.getDuration())) / 100F;
-			System.out.println("amount " + event.getAmount() + " amplifier " + voidShotAmplifier);
 			event.setAmount((event.getAmount() * voidShotAmplifier) + event.getAmount());
-			event.getEntity().removeEffect(MobEffectInit.VOID_SHOT.get());
+			defender.removeEffect(MobEffectInit.VOID_SHOT.get());
 
 		} else if (event.getSource().getEntity() instanceof LivingEntity attacker) {
 			ItemStack mainhand = attacker.getMainHandItem();
 			if (ModEnchantmentHelper.hasEnchantment(mainhand, EnchantmentInit.VOID_SHOT.get()))
-				event.getEntity().addEffect(new MobEffectInstance(MobEffectInit.VOID_SHOT.get(), 100,
+				defender.addEffect(new MobEffectInstance(MobEffectInit.VOID_SHOT.get(), 100,
 						mainhand.getEnchantmentLevel(EnchantmentInit.VOID_SHOT.get()) - 1));
 
 		}

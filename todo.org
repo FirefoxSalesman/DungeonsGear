@@ -3,17 +3,17 @@
 * TODO Void strike shouldn't affect end mobs
 + Use a tag (probably)
 + Mobs that should not be affected
-  - [ ] Enderman
-  - [ ] Bird
-  - [ ] Shulker
-  - [ ] Dungeons mobs enderlings
-  - [ ] Goety enderlings, ender keeper
-  - [ ] Chorusling, chorussent, & flameborn from legendary monsters
-  - [ ] Ender golem, endermaptera, & ender guardian from cataclysm
-  - [ ] Obsidian monolith from bosses of mass destruction
-  - [ ] Dragonfly, end slime, & end fish from better end
-  - [ ] cosmic cod, spectre, enderphage, endergrade, & void worm from alex's mobs
-  - [ ] Booflo & puffbug from endergetic expansion
+  - [X] Enderman
+  - [X] Bird
+  - [X] Shulker
+  - [X] Dungeons mobs enderlings
+  - [X] Goety enderlings, ender keeper
+  - [X] Chorusling, chorussent, & flameborn from legendary monsters
+  - [X] Ender golem, endermaptera, & ender guardian from cataclysm
+  - [X] Obsidian monolith from bosses of mass destruction
+  - [X] Dragonfly, end slime, & end fish from better end
+  - [X] cosmic cod, spectre, enderphage, endergrade, & void worm from alex's mobs
+  - [X] Booflo & puffbug from endergetic expansion
 * TODO Obsidian claymore
 + [ ] Without better combat, its critical hits do more damage.
 + [ ] With better combat, it does extra damage on the last hit in its moveset
