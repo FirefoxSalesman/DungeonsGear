@@ -50,6 +50,11 @@
         },
 	{
           "type": "item",
+          "name": "dungeonsgear:skull_scythe",
+          "weight": 2
+        },
+	{
+          "type": "item",
           "name": "dungeonsgear:freezing_foil",
           "weight": 2
         },
@@ -260,7 +265,7 @@
         },
 	{
           "type": "empty",
-          "weight": 126
+          "weight": 128
         }
       ]
     }

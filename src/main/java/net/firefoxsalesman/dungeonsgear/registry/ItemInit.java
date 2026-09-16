@@ -104,6 +104,7 @@ public class ItemInit {
 	// DPS 9.1, crits once per 1.53 seconds
 	public static final RegistryObject<Item> SOUL_SCYTHE = registerMeleeWeapon("soul_scythe", meleeSupplier);
 	public static final RegistryObject<Item> FROST_SCYTHE = registerMeleeWeapon("frost_scythe", meleeSupplier);
+	public static final RegistryObject<Item> SKULL_SCYTHE = registerMeleeWeapon("skull_scythe", meleeSupplier);
 	public static final RegistryObject<Item> JAILORS_SCYTHE = registerMeleeWeapon("jailors_scythe", meleeSupplier);
 
 	// DPS 7.2, crits once per 1.11 seconds
