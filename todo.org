@@ -1,5 +1,2 @@
-* TODO Obsidian claymore
-+ [ ] Without better combat, its critical hits do more damage.
-+ [ ] With better combat, it does extra damage on the last hit in its moveset
 * TODO Rebalance the custom loot tables
 * DONE Put the electrified damage source in the library

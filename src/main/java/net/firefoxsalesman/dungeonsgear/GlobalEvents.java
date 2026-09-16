@@ -128,7 +128,7 @@ public class GlobalEvents {
 		ItemStack is = event.getEntity().getMainHandItem();
 		if (!ModHelper.hasMod("bettercombat")
 				&& is.is(ItemInit.OBSIDIAN_CLAYMORE.get())) {
-			event.setDamageModifier(event.getDamageModifier() + 1);
+			event.setDamageModifier(event.getDamageModifier() + .5F);
 		}
 		if (event.getEntity().getMainHandItem().getItem() instanceof IDualWieldWeapon)
 
