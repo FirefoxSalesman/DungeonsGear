@@ -12,6 +12,12 @@ import java.io.File;
 import java.util.List;
 
 public class DungeonsGearConfig {
+	public enum SoulSpeedType {
+		VANILLA,
+		DUNGEONS,
+		HYBRID
+	}
+
 	private static final ForgeConfigSpec.Builder builder = new ForgeConfigSpec.Builder();
 	public static ForgeConfigSpec.ConfigValue<Boolean> ENABLE_ENCHANTS_ON_NON_DUNGEONS_GEAR;
 
@@ -23,6 +29,7 @@ public class DungeonsGearConfig {
 	public static ForgeConfigSpec.ConfigValue<Boolean> RESTRICT_SOUL_ENCHANTMENTS;
 
 	// Enchanting specific values
+	public static ForgeConfigSpec.ConfigValue<SoulSpeedType> SOUL_SPEED_OVERHAUL;
 	public static ForgeConfigSpec.ConfigValue<Double> BUSY_BEE_BASE_CHANCE;
 	public static ForgeConfigSpec.ConfigValue<Double> BUSY_BEE_CHANCE_PER_LEVEL;
 	public static ForgeConfigSpec.ConfigValue<Double> TUMBLE_BEE_CHANCE_PER_LEVEL;
@@ -136,6 +143,9 @@ public class DungeonsGearConfig {
 		builder.pop();
 
 		builder.comment("Enchantment Specific Configuration").push("enchantment_specific_configuration");
+		SOUL_SPEED_OVERHAUL = builder
+				.comment("How the soul speed enchantment should behave [DUNGEONS, VANILLA, HYBRID], default: VANILLA")
+				.defineEnum("soulSpeedOverhaul", SoulSpeedType.VANILLA);
 		BUSY_BEE_BASE_CHANCE = builder
 				.comment("The decimal base chance for a busy bee to spawn [0.0-1.0, default: 0.1]")
 				.defineInRange("busyBeeBaseChance", 0.1, 0, 1.0);

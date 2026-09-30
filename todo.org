@@ -1,0 +1,17 @@
+* TODO Add goety support for this, too
+
+[[file:~/projects/DungeonsGear/src/main/java/net/firefoxsalesman/dungeonsgear/enchantments/melee_ranged/AnimaConduitEnchantment.java::@SubscribeEvent]]
+* TODO Add goety support for pickup soul events
+
+[[file:~/projects/DungeonsGear/src/main/java/net/firefoxsalesman/dungeonsgear/items/armor/ArmorEvents.java::public static void onSoulOrb(PlayerSoulEvent.PickupSoul event) {]]
+* TODO Replace this with a tag
+
+[[file:~/projects/DungeonsGear/src/main/java/net/firefoxsalesman/dungeonsgear/config/DungeonsGearConfig.java::(itemRaw) -> itemRaw instanceof String);]]
+* TODO Make sword enchantments play nice with axes & tridents
++ Probably needs a mixin
++ Turn it off in the config
+* TODO Make bow & crossbow enchantments play nice with one another
++ Probably needs a mixin
++ Turn it off in the config
+* TODO Soulspeed overhaul
++ Config has 3 settings: dungeons, vanilla, & hybrid (uses dungeons by default)
