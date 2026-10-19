@@ -31,17 +31,6 @@ public class AOECloudHelper {
 		attacker.level().addFreshEntity(areaeffectcloudentity);
 	}
 
-	public static void spawnCritCloud(LivingEntity attacker, LivingEntity victim, float radius) {
-		AreaEffectCloud areaeffectcloudentity = new AreaEffectCloud(victim.level(), victim.getX(),
-				victim.getY(),
-				victim.getZ());
-		areaeffectcloudentity.setOwner(attacker);
-		areaeffectcloudentity.setParticle(ParticleTypes.CRIT);
-		areaeffectcloudentity.setRadius(radius);
-		areaeffectcloudentity.setDuration(0);
-		attacker.level().addFreshEntity(areaeffectcloudentity);
-	}
-
 	public static void spawnRegenCloud(LivingEntity attacker, int amplifier) {
 		AreaEffectCloud areaeffectcloudentity = new AreaEffectCloud(attacker.level(), attacker.getX(),
 				attacker.getY(), attacker.getZ());

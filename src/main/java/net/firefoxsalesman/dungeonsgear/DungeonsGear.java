@@ -18,6 +18,7 @@ import net.firefoxsalesman.dungeonsgear.registry.ItemInit;
 import net.firefoxsalesman.dungeonsgear.registry.MobEffectInit;
 import net.firefoxsalesman.dungeonsgear.registry.ParticleInit;
 import net.firefoxsalesman.dungeonsgear.registry.SoundEventInit;
+import net.firefoxsalesman.dungeonsgear.utilities.GeneralHelper;
 import net.firefoxsalesman.dungeonslibs.client.ClientProxy;
 import net.firefoxsalesman.dungeonsgear.entities.SoulWizardEntity;
 import net.minecraft.world.item.CreativeModeTabs;
@@ -36,7 +37,6 @@ import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.registries.RegistryObject;
 import net.firefoxsalesman.dungeonslibs.network.CommonProxy;
-import net.firefoxsalesman.dungeonslibs.utils.ModHelper;
 
 // The value here should match an entry in the META-INF/mods.toml file
 @Mod(DungeonsGear.MOD_ID)
@@ -71,8 +71,7 @@ public class DungeonsGear {
 		EnchantmentInit.register(modEventBus);
 		ModLootFunctionTypes.register(modEventBus);
 
-		if (ModHelper.hasMod("parcool"))
-			new ParcoolEvents().register();
+		GeneralHelper.PARCOOL.runWithMod(() -> new ParcoolEvents().register());
 	}
 
 	private void commonSetup(final FMLCommonSetupEvent event) {

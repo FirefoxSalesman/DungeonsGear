@@ -10,7 +10,6 @@ import java.util.UUID;
 import net.firefoxsalesman.dungeonsgear.DungeonsGear;
 import net.firefoxsalesman.dungeonsgear.enchantments.types.JumpingEnchantment;
 import net.firefoxsalesman.dungeonsgear.utilities.GeneralHelper;
-import net.firefoxsalesman.dungeonslibs.utils.ModHelper;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.ai.attributes.AttributeInstance;
@@ -34,22 +33,22 @@ public class AcrobatEnchantment extends JumpingEnchantment {
 
 	@Override
 	public boolean canEnchant(ItemStack stack) {
-		return super.canEnchant(stack) && !ModHelper.hasMod("combatroll");
+		return super.canEnchant(stack) && !GeneralHelper.COMBATROLL.hasMod();
 	}
 
 	@Override
 	public boolean canApplyAtEnchantingTable(ItemStack stack) {
-		return super.canApplyAtEnchantingTable(stack) && !ModHelper.hasMod("combatroll");
+		return super.canApplyAtEnchantingTable(stack) && !GeneralHelper.COMBATROLL.hasMod();
 	}
 
 	@Override
 	public boolean isDiscoverable() {
-		return super.isDiscoverable() && !ModHelper.hasMod("combatroll");
+		return super.isDiscoverable() && !GeneralHelper.COMBATROLL.hasMod();
 	}
 
 	@Override
 	public boolean isAllowedOnBooks() {
-		return super.isAllowedOnBooks() && !ModHelper.hasMod("combatroll");
+		return super.isAllowedOnBooks() && !GeneralHelper.COMBATROLL.hasMod();
 	}
 
 	public int getMaxLevel() {

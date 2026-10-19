@@ -6,7 +6,6 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.enchantment.DamageEnchantment;
 import net.minecraft.world.item.enchantment.Enchantment;
-import net.minecraft.world.item.enchantment.EnchantmentHelper;
 import net.minecraftforge.event.entity.player.CriticalHitEvent;
 import net.minecraftforge.eventbus.api.Event;
 import net.minecraftforge.eventbus.api.EventPriority;
@@ -19,7 +18,6 @@ import net.firefoxsalesman.dungeonsgear.enchantments.ModEnchantmentTypes;
 import net.firefoxsalesman.dungeonsgear.enchantments.types.AOEDamageEnchantment;
 import net.firefoxsalesman.dungeonsgear.enchantments.types.DamageBoostEnchantment;
 import net.firefoxsalesman.dungeonsgear.registry.EnchantmentInit;
-import net.firefoxsalesman.dungeonsgear.utilities.AOECloudHelper;
 import net.firefoxsalesman.dungeonsgear.utilities.AreaOfEffectHelper;
 import net.firefoxsalesman.dungeonsgear.utilities.ModEnchantmentHelper;
 import net.firefoxsalesman.dungeonsgear.utilities.SoundHelper;
@@ -59,12 +57,12 @@ public class ShockwaveEnchantment extends AOEDamageEnchantment {
 			if (attacker.getLastHurtMobTimestamp() == attacker.tickCount)
 				return;
 			if (ModEnchantmentHelper.hasEnchantment(mainhand, EnchantmentInit.SHOCKWAVE.get())) {
-				int shockwaveLevel = EnchantmentHelper
-						.getItemEnchantmentLevel(EnchantmentInit.SHOCKWAVE.get(), mainhand);
+				int shockwaveLevel = mainhand.getEnchantmentLevel(EnchantmentInit.SHOCKWAVE.get());
 				float shockwaveDamage = 4;
 				shockwaveDamage *= (shockwaveLevel + 1) / 2.0F;
 				SoundHelper.playBoltImpactSound(attacker);
-				AOECloudHelper.spawnCritCloud(attacker, victim, 3.0f);
+				net.firefoxsalesman.dungeonslibs.utils.AreaOfEffectHelper.spawnCritCloud(attacker,
+						victim, 3.0f);
 				AreaOfEffectHelper.causeShockwave(attacker, victim, shockwaveDamage, 6.0f);
 			}
 		}

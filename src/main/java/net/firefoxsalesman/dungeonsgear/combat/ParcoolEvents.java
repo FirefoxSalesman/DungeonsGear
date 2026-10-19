@@ -7,7 +7,7 @@ import com.alrex.parcool.common.action.impl.Roll;
 
 import net.firefoxsalesman.dungeonsgear.GlobalEvents;
 import net.firefoxsalesman.dungeonsgear.registry.AttributeInit;
-import net.firefoxsalesman.dungeonslibs.utils.ModHelper;
+import net.firefoxsalesman.dungeonsgear.utilities.GeneralHelper;
 import net.minecraft.world.entity.ai.attributes.AttributeInstance;
 import net.minecraft.world.entity.player.Player;
 import net.minecraftforge.common.MinecraftForge;
@@ -21,7 +21,7 @@ public class ParcoolEvents {
 
 	@SubscribeEvent
 	public void onParcoolAction(ParCoolActionEvent.Start.Post event) {
-		if (ModHelper.hasMod("parcool")) {
+		GeneralHelper.PARCOOL.runWithMod(() -> {
 			Player player = event.getPlayer();
 			Object action = event.getAction();
 			if (player != null && (action instanceof Roll || action instanceof Dodge)) {
@@ -38,6 +38,6 @@ public class ParcoolEvents {
 					}
 				}
 			}
-		}
+		});
 	}
 }

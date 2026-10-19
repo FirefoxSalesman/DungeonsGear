@@ -30,20 +30,21 @@ public class UnchantingEnchantment extends DamageBoostEnchantment {
 	@SubscribeEvent(priority = EventPriority.LOWEST)
 	public static void onDamage(LivingDamageEvent event) {
 		LivingEntity defender = event.getEntity();
-		if (ModHelper.hasMod("enchantwithmob")
-				&& event.getSource().getEntity() instanceof LivingEntity attacker) {
-			MobEnchantCapability enchantCap = defender instanceof IEnchantCap enchantedEntity
-					? enchantedEntity.getEnchantCap()
-					: new MobEnchantCapability();
-			ItemStack mainhand = attacker.getMainHandItem();
-			if (enchantCap.hasEnchant() && ModEnchantmentHelper.hasEnchantment(mainhand,
-					EnchantmentInit.UNCHANTING.get()))
-				event.setAmount(event.getAmount() + (event.getAmount()
-						* (((mainhand.getEnchantmentLevel(EnchantmentInit.UNCHANTING.get())
-								- 1)
-								* .25F) + .25F)));
-
-		}
+		ModHelper.ENCHANTWITHMOB.runWithMod(() -> {
+			if (event.getSource().getEntity() instanceof LivingEntity attacker) {
+				MobEnchantCapability enchantCap = defender instanceof IEnchantCap enchantedEntity
+						? enchantedEntity.getEnchantCap()
+						: new MobEnchantCapability();
+				ItemStack mainhand = attacker.getMainHandItem();
+				if (enchantCap.hasEnchant() && ModEnchantmentHelper.hasEnchantment(mainhand,
+						EnchantmentInit.UNCHANTING.get()))
+					event.setAmount(event.getAmount() + (event.getAmount()
+							* (((mainhand.getEnchantmentLevel(
+									EnchantmentInit.UNCHANTING.get())
+									- 1)
+									* .25F) + .25F)));
+			}
+		});
 	}
 
 	@Override
@@ -60,21 +61,21 @@ public class UnchantingEnchantment extends DamageBoostEnchantment {
 
 	@Override
 	public boolean isAllowedOnBooks() {
-		return super.isAllowedOnBooks() && ModHelper.hasMod("enchantwithmob");
+		return super.isAllowedOnBooks() && ModHelper.ENCHANTWITHMOB.hasMod();
 	}
 
 	@Override
 	public boolean isDiscoverable() {
-		return super.isDiscoverable() && ModHelper.hasMod("enchantwithmob");
+		return super.isDiscoverable() && ModHelper.ENCHANTWITHMOB.hasMod();
 	}
 
 	@Override
 	public boolean canEnchant(ItemStack stack) {
-		return super.canEnchant(stack) && ModHelper.hasMod("enchantwithmob");
+		return super.canEnchant(stack) && ModHelper.ENCHANTWITHMOB.hasMod();
 	}
 
 	@Override
 	public boolean canApplyAtEnchantingTable(ItemStack stack) {
-		return super.canApplyAtEnchantingTable(stack) && ModHelper.hasMod("enchantwithmob");
+		return super.canApplyAtEnchantingTable(stack) && ModHelper.ENCHANTWITHMOB.hasMod();
 	}
 }

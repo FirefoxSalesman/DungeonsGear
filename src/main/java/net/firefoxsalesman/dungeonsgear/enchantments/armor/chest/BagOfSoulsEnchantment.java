@@ -10,7 +10,6 @@ import net.minecraft.world.entity.ai.attributes.AttributeInstance;
 import net.minecraft.world.entity.ai.attributes.AttributeModifier;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.enchantment.EnchantmentCategory;
-import net.minecraft.world.item.enchantment.EnchantmentHelper;
 import net.minecraftforge.event.entity.living.LivingEquipmentChangeEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
@@ -68,7 +67,7 @@ public class BagOfSoulsEnchantment extends DungeonsEnchantment {
 
 	private static void removeAttribute(ItemStack itemStack, LivingEntity livingEntity,
 			UUID attributeModifierUUID) {
-		if (EnchantmentHelper.getItemEnchantmentLevel(BAG_OF_SOULS.get(), itemStack) > 0) {
+		if (itemStack.getEnchantmentLevel(BAG_OF_SOULS.get()) > 0) {
 			AttributeInstance attributeInstance = livingEntity.getAttribute(SOUL_GATHERING.get());
 			if (attributeInstance != null && attributeInstance.getModifier(attributeModifierUUID) != null
 					&& !ModHelper.hasGoety()) {
@@ -82,9 +81,9 @@ public class BagOfSoulsEnchantment extends DungeonsEnchantment {
 	}
 
 	private static void addAttribute(ItemStack itemStack, LivingEntity livingEntity, UUID attributeModifierUUID) {
-		int itemEnchantmentLevel = EnchantmentHelper.getItemEnchantmentLevel(BAG_OF_SOULS.get(), itemStack);
+		int itemEnchantmentLevel = itemStack.getEnchantmentLevel(BAG_OF_SOULS.get());
 		if (itemEnchantmentLevel > 0) {
-			if (ModHelper.hasGoety()) {
+			if (ModHelper.GOETY.hasMod()) {
 				AttributeInstance attributeInstance = livingEntity.getAttribute(SOUL_GATHERING.get());
 				if (attributeInstance != null
 						&& attributeInstance.getModifier(attributeModifierUUID) == null) {
@@ -114,5 +113,4 @@ public class BagOfSoulsEnchantment extends DungeonsEnchantment {
 			}
 		}
 	}
-
 }

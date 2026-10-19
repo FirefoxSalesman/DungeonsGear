@@ -7,7 +7,6 @@ import net.firefoxsalesman.dungeonsgear.enchantments.ModEnchantmentTypes;
 import net.firefoxsalesman.dungeonsgear.enchantments.types.AOEDamageEnchantment;
 import net.firefoxsalesman.dungeonsgear.enchantments.types.DamageBoostEnchantment;
 import net.firefoxsalesman.dungeonsgear.registry.EnchantmentInit;
-import net.firefoxsalesman.dungeonsgear.utilities.AOECloudHelper;
 import net.firefoxsalesman.dungeonsgear.utilities.AreaOfEffectHelper;
 import net.firefoxsalesman.dungeonsgear.utilities.ModEnchantmentHelper;
 import net.firefoxsalesman.dungeonsgear.utilities.SoundHelper;
@@ -18,7 +17,6 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.enchantment.DamageEnchantment;
 import net.minecraft.world.item.enchantment.Enchantment;
-import net.minecraft.world.item.enchantment.EnchantmentHelper;
 import net.minecraftforge.event.entity.player.CriticalHitEvent;
 import net.minecraftforge.eventbus.api.Event;
 import net.minecraftforge.eventbus.api.EventPriority;
@@ -50,8 +48,7 @@ public class SwirlingEnchantment extends AOEDamageEnchantment {
 			if (event.getResult() != Event.Result.ALLOW)
 				return;
 			if (ModEnchantmentHelper.hasEnchantment(mainhand, EnchantmentInit.SWIRLING.get())) {
-				int swirlingLevel = EnchantmentHelper
-						.getItemEnchantmentLevel(EnchantmentInit.SWIRLING.get(), mainhand);
+				int swirlingLevel = mainhand.getEnchantmentLevel(EnchantmentInit.SWIRLING.get());
 				// gets the attack damage of the original attack before any enchantment
 				// modifiers are added
 				float attackDamage = (float) attacker.getAttributeValue(Attributes.ATTACK_DAMAGE);
@@ -62,7 +59,8 @@ public class SwirlingEnchantment extends AOEDamageEnchantment {
 				float swirlingDamage = attackDamage * SWIRLING_DAMAGE_MULTIPLIER;
 				swirlingDamage *= (swirlingLevel + 1) / 2.0F;
 				SoundHelper.playAttackSweepSound(attacker);
-				AOECloudHelper.spawnCritCloud(attacker, victim, 1.5f);
+				net.firefoxsalesman.dungeonslibs.utils.AreaOfEffectHelper.spawnCritCloud(attacker,
+						victim, 1.5f);
 				AreaOfEffectHelper.causeSwirlingAttack(attacker, victim, swirlingDamage, 3f);
 			}
 		}

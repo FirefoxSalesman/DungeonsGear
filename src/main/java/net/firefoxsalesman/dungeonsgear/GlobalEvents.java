@@ -19,9 +19,9 @@ import net.firefoxsalesman.dungeonsgear.registry.EnchantmentInit;
 import net.firefoxsalesman.dungeonsgear.registry.ItemInit;
 import net.firefoxsalesman.dungeonsgear.registry.MobEffectInit;
 import net.firefoxsalesman.dungeonsgear.utilities.ArmorEffectHelper;
+import net.firefoxsalesman.dungeonsgear.utilities.GeneralHelper;
 import net.firefoxsalesman.dungeonsgear.utilities.ProjectileEffectHelper;
 import net.firefoxsalesman.dungeonslibs.items.interfaces.IComboWeapon;
-import net.firefoxsalesman.dungeonslibs.utils.ModHelper;
 import net.firefoxsalesman.dungeonslibs.utils.PetHelper;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.server.level.ServerPlayer;
@@ -77,17 +77,6 @@ public class GlobalEvents {
 		}
 	}
 
-	// TODO Handle this when we're good & ready
-	// private static void dropGildedItem(ServerPlayer entity, Item item) {
-	// ItemStack sword = new ItemStack(item);
-	// ItemStack gildedItem = GildedItemHelper.getGildedItem(entity.getRandom(),
-	// sword);
-	// ItemEntity gildedItemDrop = new ItemEntity(entity.level(), entity.getX(),
-	// entity.getY(), entity.getZ(),
-	// gildedItem);
-	// entity.level().addFreshEntity(gildedItemDrop);
-	// }
-
 	private static void handleRangedEnchantments(AbstractArrow arrowEntity, LivingEntity shooter, ItemStack stack) {
 		int fuseShotLevel = stack.getEnchantmentLevel(EnchantmentInit.FUSE_SHOT.get());
 		if (fuseShotLevel > 0) {
@@ -126,7 +115,7 @@ public class GlobalEvents {
 	@SubscribeEvent(priority = EventPriority.HIGHEST)
 	public static void comboForceCrit(CriticalHitEvent event) {
 		ItemStack is = event.getEntity().getMainHandItem();
-		if (!ModHelper.hasMod("bettercombat")
+		if (!GeneralHelper.BETTERCOMBAT.hasMod()
 				&& is.is(ItemInit.OBSIDIAN_CLAYMORE.get())) {
 			event.setDamageModifier(event.getDamageModifier() + .5F);
 		}
@@ -171,7 +160,7 @@ public class GlobalEvents {
 			}
 		}
 
-		if (!ModHelper.hasMod("combatroll") && living instanceof Player player) {
+		if (!GeneralHelper.COMBATROLL.hasMod() && living instanceof Player player) {
 			Combo comboCap = ComboHelper.getComboCapability(player);
 			int jumpCounter = comboCap.getJumpCounter();
 			if (comboCap.getJumpCooldownTimer() <= 0 && jumpCounter > 0) {
@@ -247,7 +236,7 @@ public class GlobalEvents {
 
 	@SubscribeEvent
 	public static void handleJumpAbilities(LivingEvent.LivingJumpEvent event) {
-		if (ModHelper.hasMod("combatroll") || ModHelper.hasMod("parcool"))
+		if (GeneralHelper.COMBATROLL.hasMod() || GeneralHelper.PARCOOL.hasMod())
 			return;
 		LivingEntity jumper = event.getEntity();
 		if (jumper instanceof Player) {
@@ -275,11 +264,10 @@ public class GlobalEvents {
 	}
 
 	public static void registerCombatRoll() {
-		if (ModHelper.hasMod("combatroll")) {
-			ServerSideRollEvents.PLAYER_START_ROLLING.register((player, vec) -> {
-				doRollEffects(player);
-			});
-		}
+		GeneralHelper.COMBATROLL
+				.runWithMod(() -> ServerSideRollEvents.PLAYER_START_ROLLING.register((player, vec) -> {
+					doRollEffects(player);
+				}));
 	}
 
 }

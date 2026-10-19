@@ -10,7 +10,6 @@ import java.util.UUID;
 import net.firefoxsalesman.dungeonsgear.DungeonsGear;
 import net.firefoxsalesman.dungeonsgear.enchantments.types.JumpingEnchantment;
 import net.firefoxsalesman.dungeonsgear.utilities.GeneralHelper;
-import net.firefoxsalesman.dungeonslibs.utils.ModHelper;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.LivingEntity;
@@ -36,25 +35,25 @@ public class MultiRollEnchantment extends JumpingEnchantment {
 
 	@Override
 	public boolean isDiscoverable() {
-		return super.isDiscoverable() && !ModHelper.hasMod("combatroll");
+		return super.isDiscoverable() && !GeneralHelper.COMBATROLL.hasMod();
 	}
 
 	@Override
 	public boolean isAllowedOnBooks() {
-		return super.isAllowedOnBooks() && !ModHelper.hasMod("combatroll");
+		return super.isAllowedOnBooks() && !GeneralHelper.COMBATROLL.hasMod();
 	}
 
 	@Override
 	public boolean canEnchant(ItemStack stack) {
 		return super.canEnchant(stack)
-				&& (!ModHelper.hasMod("combatroll") || BuiltInRegistries.ITEM.getKey(stack.getItem())
+				&& (!GeneralHelper.COMBATROLL.hasMod() || BuiltInRegistries.ITEM.getKey(stack.getItem())
 						.equals(GeneralHelper.modLoc("goat_leggings")));
 	}
 
 	@Override
 	public boolean canApplyAtEnchantingTable(ItemStack stack) {
 		return super.canApplyAtEnchantingTable(stack)
-				&& (!ModHelper.hasMod("combatroll") || BuiltInRegistries.ITEM.getKey(stack.getItem())
+				&& (!GeneralHelper.COMBATROLL.hasMod() || BuiltInRegistries.ITEM.getKey(stack.getItem())
 						.equals(GeneralHelper.modLoc("goat_leggings")));
 	}
 

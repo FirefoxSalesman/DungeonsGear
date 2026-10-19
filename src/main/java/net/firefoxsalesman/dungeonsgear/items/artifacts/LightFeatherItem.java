@@ -4,10 +4,8 @@ import net.firefoxsalesman.dungeonsgear.registry.MobEffectInit;
 import net.firefoxsalesman.dungeonslibs.items.artifacts.ArtifactItem;
 import net.firefoxsalesman.dungeonslibs.items.artifacts.ArtifactUseContext;
 import net.firefoxsalesman.dungeonslibs.network.BreakItemMessage;
-import net.firefoxsalesman.dungeonslibs.utils.ModHelper;
 import net.firefoxsalesman.dungeonsgear.GlobalEvents;
 import net.firefoxsalesman.dungeonsgear.network.NetworkHandler;
-import net.minecraft.client.player.LocalPlayer;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.InteractionResultHolder;
@@ -22,9 +20,6 @@ import net.minecraft.world.phys.Vec3;
 import net.minecraftforge.network.PacketDistributor;
 
 import java.util.List;
-
-import com.alrex.parcool.common.action.impl.Roll;
-import com.alrex.parcool.common.capability.Parkourability;
 
 import static net.firefoxsalesman.dungeonsgear.DungeonsGear.PROXY;
 import static net.firefoxsalesman.dungeonslibs.utils.PetHelper.isPetOf;

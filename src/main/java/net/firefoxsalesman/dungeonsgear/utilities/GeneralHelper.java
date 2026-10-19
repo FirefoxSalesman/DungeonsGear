@@ -1,5 +1,6 @@
 package net.firefoxsalesman.dungeonsgear.utilities;
 
+import net.firefoxsalesman.dungeonslibs.utils.ModHelper;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.EquipmentSlot;
 
@@ -12,6 +13,10 @@ import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 public class GeneralHelper {
+	public static ModHelper PARCOOL = new ModHelper("parcool");
+	public static ModHelper BETTERCOMBAT = new ModHelper("bettercombat");
+	public static ModHelper COMBATROLL = new ModHelper("combatroll");
+
 	public static ResourceLocation modLoc(String resource) {
 		return new ResourceLocation(MOD_ID, resource);
 	}
