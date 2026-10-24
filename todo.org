@@ -15,3 +15,4 @@
 + Turn it off in the config
 * TODO Soulspeed overhaul
 + Config has 3 settings: dungeons, vanilla, & hybrid (uses dungeons by default)
+* TODO Support gilded items

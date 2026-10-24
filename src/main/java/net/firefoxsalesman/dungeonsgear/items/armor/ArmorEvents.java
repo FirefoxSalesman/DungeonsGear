@@ -149,7 +149,7 @@ public class ArmorEvents {
 	private static void doSoulSpeed(Player player) {
 		if (!DungeonsGearConfig.SOUL_SPEED_OVERHAUL.get().equals(DungeonsGearConfig.SoulSpeedType.VANILLA)
 				&& ModEnchantmentHelper.hasEnchantment(player, Enchantments.SOUL_SPEED)) {
-			player.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 1 + (2
+			player.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 1 + (40
 					* EnchantmentHelper.getEnchantmentLevel(Enchantments.SOUL_SPEED, player))));
 		}
 	}
