@@ -1,7 +1,6 @@
 package net.firefoxsalesman.dungeonsgear.items.artifacts;
 
 import static net.firefoxsalesman.dungeonsgear.DungeonsGear.PROXY;
-import static net.firefoxsalesman.dungeonsgear.config.DungeonsGearConfig.LOVE_MEDALLION_BLACKLIST;
 import static net.firefoxsalesman.dungeonslibs.utils.AreaOfEffectHelper.applyToNearbyEntities;
 
 import net.firefoxsalesman.dungeonslibs.capabilities.minionmaster.Follower;
@@ -11,6 +10,7 @@ import net.firefoxsalesman.dungeonslibs.items.artifacts.ArtifactItem;
 import net.firefoxsalesman.dungeonslibs.items.artifacts.ArtifactUseContext;
 import net.firefoxsalesman.dungeonslibs.network.BreakItemMessage;
 import net.firefoxsalesman.dungeonsgear.network.NetworkHandler;
+import net.firefoxsalesman.dungeonsgear.tags.EntityTags;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.InteractionResultHolder;
@@ -20,7 +20,6 @@ import net.minecraft.world.entity.monster.Monster;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraftforge.network.PacketDistributor;
-import net.minecraftforge.registries.ForgeRegistries;
 
 public class LoveMedallionItem extends ArtifactItem {
 	public LoveMedallionItem(Properties properties) {
@@ -36,8 +35,7 @@ public class LoveMedallionItem extends ArtifactItem {
 						&& !FollowerLeaderHelper.isFollower(nearbyEntity)
 						&& nearbyEntity.isAlive()
 						&& nearbyEntity.canChangeDimensions()
-						&& !LOVE_MEDALLION_BLACKLIST.get().contains(ForgeRegistries.ENTITY_TYPES
-								.getKey(nearbyEntity.getType()).toString()),
+						&& !nearbyEntity.getType().is(EntityTags.LOVE_MEDALLION_IMMUNE),
 				(LivingEntity nearbyEntity) -> makeMinionOf(playerIn, nearbyEntity));
 
 		itemstack.hurtAndBreak(1, playerIn,

@@ -4,9 +4,6 @@
 * TODO Add goety support for pickup soul events
 
 [[file:~/projects/DungeonsGear/src/main/java/net/firefoxsalesman/dungeonsgear/items/armor/ArmorEvents.java::public static void onSoulOrb(PlayerSoulEvent.PickupSoul event) {]]
-* TODO Replace this with a tag
-
-[[file:~/projects/DungeonsGear/src/main/java/net/firefoxsalesman/dungeonsgear/config/DungeonsGearConfig.java::(itemRaw) -> itemRaw instanceof String);]]
 * TODO Make sword enchantments play nice with axes & tridents
 + Probably needs a mixin
 + Turn it off in the config
